@@ -1,0 +1,119 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+//            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
+            url dopplMavenDeploy
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'net.ltgt.gradle:gradle-apt-plugin:0.5'
+        classpath 'co.touchlab.doppel:doppelgradle:0.4.0-SNAPSHOT'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://raw.github.com/Raizlabs/maven-releases/master/releases' }
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+//            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
+            url dopplMavenDeploy
+        }
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'net.ltgt.apt'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'junit:junit:4.11'
+
+    provided 'co.touchlab.doppel:androidbase:0.4.0-SNAPSHOT'
+    testCompile 'co.touchlab.doppel:androidbasetest:0.4.0-SNAPSHOT'
+
+    doppel 'co.touchlab.doppel:androidbase:0.4.0-SNAPSHOT@dop'
+    doppel 'co.touchlab.doppel:androidbasetest:0.4.0-SNAPSHOT@dop'
+
+    testCompile 'org.mockito:mockito-core:1.9.5'
+    testApt 'co.touchlab.doppel:testapt:0.4.0-SNAPSHOT'
+
+    provided 'javax.inject:javax.inject:1'
+
+    compile 'com.google.guava:guava:19.0'
+
+    provided 'com.intellij:annotations:9.0.4'
+    doppel 'doppl.com.intellij:intellijannotations:9.0.4@dop'
+
+    provided 'com.google.code.findbugs:jsr305:3.0.0'
+}
+
+group = 'doppl.com.google.truth'
+version = '1.0-SNAPSHOT'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId 'truth'
+            from components.java
+
+            artifact doppelArchive
+        }
+    }
+    repositories {
+        maven {
+            // change to point to your repo, e.g. http://my.org/repo
+            url dopplMavenDeploy
+        }
+    }
+}
+
+test{
+    enabled = false
+}
+
+j2objcConfig {
+//    frameworkName="RxJava"
+
+    // copyMainOutput="ios/truthframework/main"
+    // copyTestOutput="ios/truthframework/test"
+    // copyDependencies true
+    // ignoreWeakAnnotations false
+
+    /*translateArgs '--prefix', 'rx.annotations=RXAN'
+    translateArgs '--prefix', 'rx.exceptions=RXEX'
+    translateArgs '--prefix', 'rx.functions=RXFN'
+    translateArgs '--prefix', 'rx.internal.operators=RXINOP'
+    translateArgs '--prefix', 'rx.internal.producers=RXINPR'
+    translateArgs '--prefix', 'rx.internal.schedulers=RXINSCH'
+    translateArgs '--prefix', 'rx.internal.subscriptions=RXINSUB'
+    translateArgs '--prefix', 'rx.internal.util.atomic=RXINUTAT'
+    translateArgs '--prefix', 'rx.internal.util.unsafe=RXINUTUN'
+    translateArgs '--prefix', 'rx.observables=RXOBA'
+    translateArgs '--prefix', 'rx.observers=RXOBS'
+    translateArgs '--prefix', 'rx.plugins=RXPLUG'
+    translateArgs '--prefix', 'rx.schedulers=RXSC'
+    translateArgs '--prefix', 'rx.singles=RXSING'
+    translateArgs '--prefix', 'rx.subjects=RXSUBJ'
+    translateArgs '--prefix', 'rx.subscriptions=RXSUBS'
+    translateArgs '--prefix', 'rx=RX'*/
+//    xcodeTestProjectDir 'ios'  //  suggested directory name
+//    xcodeTestTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+}
