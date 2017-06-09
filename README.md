@@ -1,23 +1,24 @@
-# Truth
+# Doppl Fork
 
-***We've made failure a strategy***
+This is a wildly divergent fork of Google's truth. It's a quick and dirty way to
+get Dagger's tests up and running for Doppl. If you plan to seriously use truth,
+please consider creating and actual tracking fork and push real versions. We may, but
+probably not till much bigger fish are fried.
 
-[![Main Site][gh-pages-shield]][gh-pages-link]
-[![Build Status][travis-shield]][travis-link]
-[![Maven Release][maven-shield]][maven-link]
-[![Stackoverflow][stackoverflow-shield]][stackoverflow-link]
+## Versions
 
-## What is Truth?
+[0.0.2](https://github.com/doppllib/truth/tree/doppel-notest)
 
-Truth is an assertion/proposition framework appropriate for testing, inspired by
-FEST, and driven by some extensibility needs, written nearly entirely by Google
-employees in their spare time or contributing in their capacity as Java core
-librarians.
+## Usage
 
-Truth can be used in place of JUnit's assertions, FEST, or Hamcrest's matchers,
-or it can be used alongside where other approaches seem more suitable.
+Don't, but if you must:
 
-The full documentation for Truth is available at [its main website](http://google.github.io/truth)
+```groovy
+dependencies {
+  testCompile "com.google.truth:truth:0.30"
+  testDoppl "co.doppl.com.google.truth:truth:0.0.2"
+}
+```
 
 ## License
 
