@@ -23,8 +23,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveChar
 
 @implementation ComGoogleCommonTruthPrimitiveCharArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                              withCharArray:(IOSCharArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                              withCharArray:(IOSCharArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveCharArraySubject_initWithComGoogleCommonTruthFailureStrategy_withCharArray_(self, failureStrategy, o);
   return self;
 }
@@ -37,7 +37,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveChar
   return ComGoogleCommonPrimitivesChars_asListWithCharArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   IOSCharArray *actual = [self actual];
   if (actual == expected) {
     return;
@@ -53,7 +53,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveChar
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   IOSCharArray *actual = [self actual];
   @try {
     IOSCharArray *expectedArray = (IOSCharArray *) cast_chk(expected, [IOSCharArray class]);

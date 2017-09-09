@@ -10,15 +10,16 @@
 #include "java/lang/CharSequence.h"
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/StackTraceElement.h"
+#include "java/lang/Throwable.h"
 #include "java/util/Arrays.h"
 
 @interface ComGoogleCommonTruthFailureStrategy ()
 
-+ (void)stripTruthStackFramesWithNSException:(NSException *)throwable;
++ (void)stripTruthStackFramesWithJavaLangThrowable:(JavaLangThrowable * __nonnull)throwable;
 
 @end
 
-__attribute__((unused)) static void ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithNSException_(NSException *throwable);
+__attribute__((unused)) static void ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithJavaLangThrowable_(JavaLangThrowable *throwable);
 
 @implementation ComGoogleCommonTruthFailureStrategy
 
@@ -29,34 +30,34 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)failWithNSString:(NSString *)message {
-  [self failWithNSString:message withNSException:nil];
+- (void)failWithNSString:(NSString * __nonnull)message {
+  [self failWithNSString:message withJavaLangThrowable:nil];
 }
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause {
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause {
   JavaLangAssertionError *up = create_JavaLangAssertionError_initWithId_(message);
   if (cause == nil) {
     cause = create_JavaLangAssertionError_initWithId_(message);
   }
   @try {
-    [up initCauseWithNSException:cause];
+    [up initCauseWithJavaLangThrowable:cause];
   }
   @catch (JavaLangIllegalStateException *alreadyInitializedBecauseOfHarmonyBug) {
     @throw create_JavaLangAssertionError_initWithId_(cause);
   }
-  ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithNSException_(up);
+  ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithJavaLangThrowable_(up);
   @throw up;
 }
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   [self failWithNSString:ComGoogleCommonTruthStringUtil_messageForWithNSString_withJavaLangCharSequence_withJavaLangCharSequence_(message, expected, actual)];
 }
 
-+ (void)stripTruthStackFramesWithNSException:(NSException *)throwable {
-  ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithNSException_(throwable);
++ (void)stripTruthStackFramesWithJavaLangThrowable:(JavaLangThrowable * __nonnull)throwable {
+  ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithJavaLangThrowable_(throwable);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -71,11 +72,11 @@ J2OBJC_IGNORE_DESIGNATED_END
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(failWithNSString:);
-  methods[2].selector = @selector(failWithNSString:withNSException:);
+  methods[2].selector = @selector(failWithNSString:withJavaLangThrowable:);
   methods[3].selector = @selector(failComparingWithNSString:withJavaLangCharSequence:withJavaLangCharSequence:);
-  methods[4].selector = @selector(stripTruthStackFramesWithNSException:);
+  methods[4].selector = @selector(stripTruthStackFramesWithJavaLangThrowable:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "fail", "LNSString;", "LNSString;LNSException;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "stripTruthStackFrames", "LNSException;" };
+  static const void *ptrTable[] = { "fail", "LNSString;", "LNSString;LJavaLangThrowable;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "stripTruthStackFrames", "LJavaLangThrowable;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthFailureStrategy = { "FailureStrategy", "com.google.common.truth", ptrTable, methods, NULL, 7, 0x401, 5, 0, -1, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthFailureStrategy;
 }
@@ -86,9 +87,9 @@ void ComGoogleCommonTruthFailureStrategy_init(ComGoogleCommonTruthFailureStrateg
   NSObject_init(self);
 }
 
-void ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithNSException_(NSException *throwable) {
+void ComGoogleCommonTruthFailureStrategy_stripTruthStackFramesWithJavaLangThrowable_(JavaLangThrowable *throwable) {
   ComGoogleCommonTruthFailureStrategy_initialize();
-  IOSObjectArray *stackTrace = [((NSException *) nil_chk(throwable)) getStackTrace];
+  IOSObjectArray *stackTrace = [((JavaLangThrowable *) nil_chk(throwable)) getStackTrace];
   jint i = 0;
   while (i < ((IOSObjectArray *) nil_chk(stackTrace))->size_ && [((NSString *) nil_chk([((JavaLangStackTraceElement *) nil_chk(IOSObjectArray_Get(stackTrace, i))) getClassName])) java_hasPrefix:@"com.google.common.truth"]) {
     i++;

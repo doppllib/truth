@@ -33,18 +33,18 @@
 
 #pragma mark Public
 
-- (void)hasFirstEntryWithId:(id)key
-                     withId:(id)value;
+- (void)hasFirstEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value;
 
-- (void)hasFirstKeyWithId:(id)key;
+- (void)hasFirstKeyWithId:(id __nullable)key;
 
-- (void)hasLastEntryWithId:(id)key
-                    withId:(id)value;
+- (void)hasLastEntryWithId:(id __nullable)key
+                    withId:(id __nullable)value;
 
-- (void)hasLastKeyWithId:(id)key;
+- (void)hasLastKeyWithId:(id __nullable)key;
 
-- (ComGoogleCommonTruthSortedMapSubject *)namedWithNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthSortedMapSubject *)namedWithNSString:(NSString * __nonnull)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -54,8 +54,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                      withJavaUtilSortedMap:(id<JavaUtilSortedMap>)map;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)map;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                            withJavaUtilMap:(id<JavaUtilMap> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

@@ -50,7 +50,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthFloatSubject_
   jfloat val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject * __nonnull)outer$
                                                withFloat:(jfloat)capture$0;
 
 - (void)ofWithFloat:(jfloat)expected;
@@ -71,7 +71,7 @@ __attribute__((unused)) static ComGoogleCommonTruthFloatSubject_1 *create_ComGoo
   jfloat val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject * __nonnull)outer$
                                                withFloat:(jfloat)capture$0;
 
 - (void)ofWithFloat:(jfloat)expected;
@@ -90,8 +90,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthFloatSubject)
 
 @implementation ComGoogleCommonTruthFloatSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                          withJavaLangFloat:(JavaLangFloat *)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                          withJavaLangFloat:(JavaLangFloat * __nullable)subject {
   ComGoogleCommonTruthFloatSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangFloat_(self, failureStrategy, subject);
   return self;
 }
@@ -104,15 +104,15 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthFloatSubject)
   return create_ComGoogleCommonTruthFloatSubject_2_initWithComGoogleCommonTruthFloatSubject_withFloat_(self, tolerance);
 }
 
-- (void)isEqualToWithJavaLangFloat:(JavaLangFloat *)other {
+- (void)isEqualToWithJavaLangFloat:(JavaLangFloat * __nullable)other {
   [super isEqualToWithId:other];
 }
 
-- (void)isNotEqualToWithJavaLangFloat:(JavaLangFloat *)other {
+- (void)isNotEqualToWithJavaLangFloat:(JavaLangFloat * __nullable)other {
   [super isNotEqualToWithId:other];
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangFloat *)other {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangFloat * __nonnull)other {
   [super isEquivalentAccordingToCompareToWithJavaLangComparable:other];
 }
 
@@ -259,7 +259,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   [self doesNotRecognizeSelector:_cmd];
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"If you meant to compare floats, use .of(float) instead.");
 }
 
@@ -308,7 +308,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthFloatSubject_TolerantFloatC
 
 @implementation ComGoogleCommonTruthFloatSubject_1
 
-- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject * __nonnull)outer$
                                                withFloat:(jfloat)capture$0 {
   ComGoogleCommonTruthFloatSubject_1_initWithComGoogleCommonTruthFloatSubject_withFloat_(self, outer$, capture$0);
   return self;
@@ -365,7 +365,7 @@ ComGoogleCommonTruthFloatSubject_1 *create_ComGoogleCommonTruthFloatSubject_1_in
 
 @implementation ComGoogleCommonTruthFloatSubject_2
 
-- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthFloatSubject:(ComGoogleCommonTruthFloatSubject * __nonnull)outer$
                                                withFloat:(jfloat)capture$0 {
   ComGoogleCommonTruthFloatSubject_2_initWithComGoogleCommonTruthFloatSubject_withFloat_(self, outer$, capture$0);
   return self;

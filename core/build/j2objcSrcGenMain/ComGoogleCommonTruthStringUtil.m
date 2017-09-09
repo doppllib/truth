@@ -35,14 +35,14 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-+ (NSString *)messageForWithNSString:(NSString *)message
-            withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-            withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
++ (NSString *)messageForWithNSString:(NSString * __nonnull)message
+            withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+            withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   return ComGoogleCommonTruthStringUtil_messageForWithNSString_withJavaLangCharSequence_withJavaLangCharSequence_(message, expected, actual);
 }
 
-+ (NSString *)formatWithNSString:(NSString *)template_
-               withNSObjectArray:(IOSObjectArray *)args {
++ (NSString *)formatWithNSString:(NSString * __nullable)template_
+               withNSObjectArray:(IOSObjectArray * __nonnull)args {
   return ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(template_, args);
 }
 

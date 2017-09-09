@@ -50,7 +50,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthDoubleSubject
   jdouble val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject * __nonnull)outer$
                                                withDouble:(jdouble)capture$0;
 
 - (void)ofWithDouble:(jdouble)expected;
@@ -71,7 +71,7 @@ __attribute__((unused)) static ComGoogleCommonTruthDoubleSubject_1 *create_ComGo
   jdouble val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject * __nonnull)outer$
                                                withDouble:(jdouble)capture$0;
 
 - (void)ofWithDouble:(jdouble)expected;
@@ -90,8 +90,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthDoubleSubject)
 
 @implementation ComGoogleCommonTruthDoubleSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                         withJavaLangDouble:(JavaLangDouble *)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                         withJavaLangDouble:(JavaLangDouble * __nullable)subject {
   ComGoogleCommonTruthDoubleSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangDouble_(self, failureStrategy, subject);
   return self;
 }
@@ -104,15 +104,15 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthDoubleSubject)
   return create_ComGoogleCommonTruthDoubleSubject_2_initWithComGoogleCommonTruthDoubleSubject_withDouble_(self, tolerance);
 }
 
-- (void)isEqualToWithJavaLangDouble:(JavaLangDouble *)other {
+- (void)isEqualToWithJavaLangDouble:(JavaLangDouble * __nullable)other {
   [super isEqualToWithId:other];
 }
 
-- (void)isNotEqualToWithJavaLangDouble:(JavaLangDouble *)other {
+- (void)isNotEqualToWithJavaLangDouble:(JavaLangDouble * __nullable)other {
   [super isNotEqualToWithId:other];
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangDouble *)other {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangDouble * __nonnull)other {
   [super isEquivalentAccordingToCompareToWithJavaLangComparable:other];
 }
 
@@ -259,7 +259,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   [self doesNotRecognizeSelector:_cmd];
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"If you meant to compare doubles, use .of(double) instead.");
 }
 
@@ -308,7 +308,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthDoubleSubject_TolerantDoubl
 
 @implementation ComGoogleCommonTruthDoubleSubject_1
 
-- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject * __nonnull)outer$
                                                withDouble:(jdouble)capture$0 {
   ComGoogleCommonTruthDoubleSubject_1_initWithComGoogleCommonTruthDoubleSubject_withDouble_(self, outer$, capture$0);
   return self;
@@ -365,7 +365,7 @@ ComGoogleCommonTruthDoubleSubject_1 *create_ComGoogleCommonTruthDoubleSubject_1_
 
 @implementation ComGoogleCommonTruthDoubleSubject_2
 
-- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthDoubleSubject:(ComGoogleCommonTruthDoubleSubject * __nonnull)outer$
                                                withDouble:(jdouble)capture$0 {
   ComGoogleCommonTruthDoubleSubject_2_initWithComGoogleCommonTruthDoubleSubject_withDouble_(self, outer$, capture$0);
   return self;

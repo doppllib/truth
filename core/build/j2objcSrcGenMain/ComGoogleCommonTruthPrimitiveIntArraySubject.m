@@ -23,8 +23,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveIntA
 
 @implementation ComGoogleCommonTruthPrimitiveIntArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withIntArray:(IOSIntArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withIntArray:(IOSIntArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveIntArraySubject_initWithComGoogleCommonTruthFailureStrategy_withIntArray_(self, failureStrategy, o);
   return self;
 }
@@ -37,7 +37,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveIntA
   return ComGoogleCommonPrimitivesInts_asListWithIntArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   IOSIntArray *actual = [self actual];
   if (actual == expected) {
     return;
@@ -53,7 +53,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveIntA
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   IOSIntArray *actual = [self actual];
   @try {
     IOSIntArray *expectedArray = (IOSIntArray *) cast_chk(expected, [IOSIntArray class]);

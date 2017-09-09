@@ -11,6 +11,7 @@
 #include "com/google/common/base/Objects.h"
 #include "java/lang/AssertionError.h"
 #include "java/lang/CharSequence.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/annotation/Annotation.h"
 #include "javax/annotation/Nullable.h"
 
@@ -18,12 +19,12 @@
 
 @interface ComGoogleCommonTruthThrowableSubject ()
 
-+ (ComGoogleCommonTruthFailureStrategy *)causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)delegate
-                                                                                       withNSException:(NSException *)defaultCause;
++ (ComGoogleCommonTruthFailureStrategy *)causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)delegate
+                                                                                 withJavaLangThrowable:(JavaLangThrowable * __nonnull)defaultCause;
 
 @end
 
-__attribute__((unused)) static ComGoogleCommonTruthFailureStrategy *ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *delegate, NSException *defaultCause);
+__attribute__((unused)) static ComGoogleCommonTruthFailureStrategy *ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *delegate, JavaLangThrowable *defaultCause);
 
 __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthThrowableSubject__Annotations$0();
 
@@ -32,41 +33,41 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthThrowableSubj
 @interface ComGoogleCommonTruthThrowableSubject_1 : ComGoogleCommonTruthFailureStrategy {
  @public
   ComGoogleCommonTruthFailureStrategy *val$delegate_;
-  NSException *val$defaultCause_;
+  JavaLangThrowable *val$defaultCause_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)capture$0
-                                            withNSException:(NSException *)capture$1;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)capture$0
+                                      withJavaLangThrowable:(JavaLangThrowable * __nonnull)capture$1;
 
-- (void)failWithNSString:(NSString *)message;
+- (void)failWithNSString:(NSString * __nonnull)message;
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause;
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleCommonTruthThrowableSubject_1)
 
-__attribute__((unused)) static void ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthThrowableSubject_1 *self, ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1);
+__attribute__((unused)) static void ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthThrowableSubject_1 *self, ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1);
 
-__attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *new_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *new_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1);
+__attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1);
 
 @implementation ComGoogleCommonTruthThrowableSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withNSException:(NSException *)throwable {
-  ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(self, failureStrategy, throwable);
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaLangThrowable:(JavaLangThrowable * __nullable)throwable {
+  ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(self, failureStrategy, throwable);
   return self;
 }
 
-- (void)hasMessageWithNSString:(NSString *)expected {
-  NSString *actual = [((NSException *) nil_chk([self actual])) getMessage];
+- (void)hasMessageWithNSString:(NSString * __nullable)expected {
+  NSString *actual = [((JavaLangThrowable *) nil_chk([self actual])) getMessage];
   if (!ComGoogleCommonBaseObjects_equalWithId_withId_(expected, actual)) {
     if (expected != nil && actual != nil) {
       [((ComGoogleCommonTruthFailureStrategy *) nil_chk(failureStrategy_)) failComparingWithNSString:JreStrcat("$$$C", [self actualAsString], @" does not have message <", expected, '>') withJavaLangCharSequence:expected withJavaLangCharSequence:actual];
@@ -77,9 +78,9 @@ __attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *create_Co
   }
 }
 
-+ (ComGoogleCommonTruthFailureStrategy *)causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)delegate
-                                                                                       withNSException:(NSException *)defaultCause {
-  return ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withNSException_(delegate, defaultCause);
++ (ComGoogleCommonTruthFailureStrategy *)causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)delegate
+                                                                                 withJavaLangThrowable:(JavaLangThrowable * __nonnull)defaultCause {
+  return ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(delegate, defaultCause);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -90,32 +91,32 @@ __attribute__((unused)) static ComGoogleCommonTruthThrowableSubject_1 *create_Co
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initWithComGoogleCommonTruthFailureStrategy:withNSException:);
+  methods[0].selector = @selector(initWithComGoogleCommonTruthFailureStrategy:withJavaLangThrowable:);
   methods[1].selector = @selector(hasMessageWithNSString:);
-  methods[2].selector = @selector(causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:withNSException:);
+  methods[2].selector = @selector(causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:withJavaLangThrowable:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;LNSException;", (void *)&ComGoogleCommonTruthThrowableSubject__Annotations$0, "hasMessage", "LNSString;", (void *)&ComGoogleCommonTruthThrowableSubject__Annotations$1, "causeInsertingStrategy", "Lcom/google/common/truth/Subject<Lcom/google/common/truth/ThrowableSubject;Ljava/lang/Throwable;>;" };
+  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;LJavaLangThrowable;", (void *)&ComGoogleCommonTruthThrowableSubject__Annotations$0, "hasMessage", "LNSString;", (void *)&ComGoogleCommonTruthThrowableSubject__Annotations$1, "causeInsertingStrategy", "Lcom/google/common/truth/Subject<Lcom/google/common/truth/ThrowableSubject;Ljava/lang/Throwable;>;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthThrowableSubject = { "ThrowableSubject", "com.google.common.truth", ptrTable, methods, NULL, 7, 0x11, 3, 0, -1, -1, -1, 6, -1 };
   return &_ComGoogleCommonTruthThrowableSubject;
 }
 
 @end
 
-void ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthThrowableSubject *self, ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable) {
-  ComGoogleCommonTruthSubject_initWithComGoogleCommonTruthFailureStrategy_withId_(self, ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withNSException_(failureStrategy, throwable), throwable);
+void ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthThrowableSubject *self, ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable) {
+  ComGoogleCommonTruthSubject_initWithComGoogleCommonTruthFailureStrategy_withId_(self, ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(failureStrategy, throwable), throwable);
 }
 
-ComGoogleCommonTruthThrowableSubject *new_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable) {
-  J2OBJC_NEW_IMPL(ComGoogleCommonTruthThrowableSubject, initWithComGoogleCommonTruthFailureStrategy_withNSException_, failureStrategy, throwable)
+ComGoogleCommonTruthThrowableSubject *new_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable) {
+  J2OBJC_NEW_IMPL(ComGoogleCommonTruthThrowableSubject, initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_, failureStrategy, throwable)
 }
 
-ComGoogleCommonTruthThrowableSubject *create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable) {
-  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthThrowableSubject, initWithComGoogleCommonTruthFailureStrategy_withNSException_, failureStrategy, throwable)
+ComGoogleCommonTruthThrowableSubject *create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable) {
+  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthThrowableSubject, initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_, failureStrategy, throwable)
 }
 
-ComGoogleCommonTruthFailureStrategy *ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *delegate, NSException *defaultCause) {
+ComGoogleCommonTruthFailureStrategy *ComGoogleCommonTruthThrowableSubject_causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *delegate, JavaLangThrowable *defaultCause) {
   ComGoogleCommonTruthThrowableSubject_initialize();
-  return create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(delegate, defaultCause);
+  return create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(delegate, defaultCause);
 }
 
 IOSObjectArray *ComGoogleCommonTruthThrowableSubject__Annotations$0() {
@@ -130,29 +131,29 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthThrowableSubject)
 
 @implementation ComGoogleCommonTruthThrowableSubject_1
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)capture$0
-                                            withNSException:(NSException *)capture$1 {
-  ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(self, capture$0, capture$1);
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)capture$0
+                                      withJavaLangThrowable:(JavaLangThrowable * __nonnull)capture$1 {
+  ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(self, capture$0, capture$1);
   return self;
 }
 
-- (void)failWithNSString:(NSString *)message {
-  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(val$delegate_)) failWithNSString:message withNSException:val$defaultCause_];
+- (void)failWithNSString:(NSString * __nonnull)message {
+  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(val$delegate_)) failWithNSString:message withJavaLangThrowable:val$defaultCause_];
 }
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause {
-  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(val$delegate_)) failWithNSString:message withNSException:cause];
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause {
+  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(val$delegate_)) failWithNSString:message withJavaLangThrowable:cause];
 }
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   @try {
     [((ComGoogleCommonTruthFailureStrategy *) nil_chk(val$delegate_)) failComparingWithNSString:message withJavaLangCharSequence:expected withJavaLangCharSequence:actual];
   }
   @catch (JavaLangAssertionError *e) {
-    [((JavaLangAssertionError *) nil_chk(e)) initCauseWithNSException:val$defaultCause_];
+    [e initCauseWithJavaLangThrowable:val$defaultCause_];
     @throw e;
   }
 }
@@ -172,32 +173,32 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthThrowableSubject)
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initWithComGoogleCommonTruthFailureStrategy:withNSException:);
+  methods[0].selector = @selector(initWithComGoogleCommonTruthFailureStrategy:withJavaLangThrowable:);
   methods[1].selector = @selector(failWithNSString:);
-  methods[2].selector = @selector(failWithNSString:withNSException:);
+  methods[2].selector = @selector(failWithNSString:withJavaLangThrowable:);
   methods[3].selector = @selector(failComparingWithNSString:withJavaLangCharSequence:withJavaLangCharSequence:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$delegate_", "LComGoogleCommonTruthFailureStrategy;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$defaultCause_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$defaultCause_", "LJavaLangThrowable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "fail", "LNSString;", "LNSString;LNSException;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LComGoogleCommonTruthThrowableSubject;", "causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:withNSException:" };
+  static const void *ptrTable[] = { "fail", "LNSString;", "LNSString;LJavaLangThrowable;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LComGoogleCommonTruthThrowableSubject;", "causeInsertingStrategyWithComGoogleCommonTruthFailureStrategy:withJavaLangThrowable:" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthThrowableSubject_1 = { "", "com.google.common.truth", ptrTable, methods, fields, 7, 0x8018, 4, 2, 5, -1, 6, -1, -1 };
   return &_ComGoogleCommonTruthThrowableSubject_1;
 }
 
 @end
 
-void ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthThrowableSubject_1 *self, ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1) {
+void ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthThrowableSubject_1 *self, ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1) {
   JreStrongAssign(&self->val$delegate_, capture$0);
   JreStrongAssign(&self->val$defaultCause_, capture$1);
   ComGoogleCommonTruthFailureStrategy_init(self);
 }
 
-ComGoogleCommonTruthThrowableSubject_1 *new_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleCommonTruthThrowableSubject_1, initWithComGoogleCommonTruthFailureStrategy_withNSException_, capture$0, capture$1)
+ComGoogleCommonTruthThrowableSubject_1 *new_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleCommonTruthThrowableSubject_1, initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_, capture$0, capture$1)
 }
 
-ComGoogleCommonTruthThrowableSubject_1 *create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *capture$0, NSException *capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthThrowableSubject_1, initWithComGoogleCommonTruthFailureStrategy_withNSException_, capture$0, capture$1)
+ComGoogleCommonTruthThrowableSubject_1 *create_ComGoogleCommonTruthThrowableSubject_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *capture$0, JavaLangThrowable *capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthThrowableSubject_1, initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_, capture$0, capture$1)
 }

@@ -33,23 +33,23 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy;
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)aboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory;
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)aboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory;
 
 - (void)fail;
 
-- (void)failWithNSString:(NSString *)format
-       withNSObjectArray:(IOSObjectArray *)args;
+- (void)failWithNSString:(NSString * __nullable)format
+       withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
-- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString *)failureMessage;
+- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage;
 
-- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString *)format
-                                                   withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                                   withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -79,15 +79,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthAbstractVerb)
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                     withComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                     withComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory;
 
-- (ComGoogleCommonTruthSubject *)thatWithId:(id)target;
+- (ComGoogleCommonTruthSubject *)thatWithId:(id __nullable)target;
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString *)failureMessage;
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage;
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString *)format
-                                                                 withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                                                 withNSObjectArray:(IOSObjectArray * __nonnull)args;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
@@ -111,23 +115,28 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthAbstractVerb_DelegatedVerb)
 #include "ComGoogleCommonTruthFailureStrategy.h"
 
 @class ComGoogleCommonTruthFailureContext;
+@class JavaLangThrowable;
 @protocol JavaLangCharSequence;
 
 @interface ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy : ComGoogleCommonTruthFailureStrategy
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)delegate
-                     withComGoogleCommonTruthFailureContext:(ComGoogleCommonTruthFailureContext *)messageHolder;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)delegate
+                     withComGoogleCommonTruthFailureContext:(ComGoogleCommonTruthFailureContext * __nonnull)messageHolder;
 
-- (void)failWithNSString:(NSString *)message;
+- (void)failWithNSString:(NSString * __nonnull)message;
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause;
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

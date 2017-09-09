@@ -33,43 +33,43 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)actual;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)actual;
 
-- (jboolean)isEqual:(id)o;
+- (jboolean)isEqual:(id __nullable)o;
 
 - (NSUInteger)hash;
 
-- (void)isAnyOfWithId:(id)first
-               withId:(id)second
-    withNSObjectArray:(IOSObjectArray *)rest;
+- (void)isAnyOfWithId:(id __nullable)first
+               withId:(id __nullable)second
+    withNSObjectArray:(IOSObjectArray * __nullable)rest;
 
-- (void)isEqualToWithId:(id)other;
+- (void)isEqualToWithId:(id __nullable)other;
 
-- (void)isInWithJavaLangIterable:(id<JavaLangIterable>)iterable;
+- (void)isInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable;
 
-- (void)isInstanceOfWithIOSClass:(IOSClass *)clazz;
+- (void)isInstanceOfWithIOSClass:(IOSClass * __nonnull)clazz;
 
-- (void)isNoneOfWithId:(id)first
-                withId:(id)second
-     withNSObjectArray:(IOSObjectArray *)rest;
+- (void)isNoneOfWithId:(id __nullable)first
+                withId:(id __nullable)second
+     withNSObjectArray:(IOSObjectArray * __nullable)rest;
 
-- (void)isNotEqualToWithId:(id)other;
+- (void)isNotEqualToWithId:(id __nullable)other;
 
-- (void)isNotInWithJavaLangIterable:(id<JavaLangIterable>)iterable;
+- (void)isNotInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable;
 
-- (void)isNotInstanceOfWithIOSClass:(IOSClass *)clazz;
+- (void)isNotInstanceOfWithIOSClass:(IOSClass * __nonnull)clazz;
 
 - (void)isNotNull;
 
-- (void)isNotSameAsWithId:(id)other;
+- (void)isNotSameAsWithId:(id __nullable)other;
 
 - (void)isNull;
 
-- (void)isSameAsWithId:(id)other;
+- (void)isSameAsWithId:(id __nullable)other;
 
-- (ComGoogleCommonTruthSubject *)namedWithNSString:(NSString *)format
-                                 withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthSubject *)namedWithNSString:(NSString * __nonnull)format
+                                 withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -81,35 +81,39 @@
 
 - (ComGoogleCommonTruthTestVerb *)check;
 
-- (void)failWithNSString:(NSString *)proposition;
+- (void)failWithNSString:(NSString * __nonnull)proposition;
 
-- (void)failWithNSString:(NSString *)verb
-                  withId:(id)other;
+- (void)failWithNSString:(NSString * __nonnull)verb
+                  withId:(id __nonnull)other;
 
-- (void)failWithNSString:(NSString *)verb
-       withNSObjectArray:(IOSObjectArray *)messageParts;
+- (void)failWithNSString:(NSString * __nonnull)verb
+       withNSObjectArray:(IOSObjectArray * __nonnull)messageParts;
 
-- (void)failWithBadResultsWithNSString:(NSString *)verb
-                                withId:(id)expected
-                          withNSString:(NSString *)failVerb
-                                withId:(id)actual;
+- (void)failWithBadResultsWithNSString:(NSString * __nonnull)verb
+                                withId:(id __nonnull)expected
+                          withNSString:(NSString * __nonnull)failVerb
+                                withId:(id __nonnull)actual;
 
-- (void)failWithCustomSubjectWithNSString:(NSString *)verb
-                                   withId:(id)expected
-                                   withId:(id)actual;
+- (void)failWithCustomSubjectWithNSString:(NSString * __nonnull)verb
+                                   withId:(id __nonnull)expected
+                                   withId:(id __nonnull)actual;
 
-- (void)failWithoutActualWithNSString:(NSString *)proposition;
+- (void)failWithoutActualWithNSString:(NSString * __nonnull)proposition;
 
-- (void)failWithoutSubjectWithNSString:(NSString *)proposition;
+- (void)failWithoutSubjectWithNSString:(NSString * __nonnull)proposition;
 
-- (void)failWithRawMessageWithNSString:(NSString *)message
-                     withNSObjectArray:(IOSObjectArray *)parameters;
+- (void)failWithRawMessageWithNSString:(NSString * __nonnull)message
+                     withNSObjectArray:(IOSObjectArray * __nonnull)parameters;
 
 - (NSString *)getDisplaySubject;
 
 - (id)getSubject;
 
 - (NSString *)internalCustomName;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

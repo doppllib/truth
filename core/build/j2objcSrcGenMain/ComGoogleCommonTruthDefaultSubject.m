@@ -17,8 +17,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthDefaultSubjec
 
 @implementation ComGoogleCommonTruthDefaultSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)o {
   ComGoogleCommonTruthDefaultSubject_initWithComGoogleCommonTruthFailureStrategy_withId_(self, failureStrategy, o);
   return self;
 }

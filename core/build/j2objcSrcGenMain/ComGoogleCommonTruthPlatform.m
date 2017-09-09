@@ -20,19 +20,19 @@
 
 - (instancetype)init;
 
-+ (void)addInterfaceNamesWithIOSClassArray:(IOSObjectArray *)interfaces
-                           withJavaUtilSet:(id<JavaUtilSet>)types;
++ (void)addInterfaceNamesWithIOSClassArray:(IOSObjectArray * __nonnull)interfaces
+                           withJavaUtilSet:(id<JavaUtilSet> __nonnull)types;
 
-+ (void)addTypeNamesWithIOSClass:(IOSClass *)clazz
-                 withJavaUtilSet:(id<JavaUtilSet>)types;
++ (void)addTypeNamesWithIOSClass:(IOSClass * __nonnull)clazz
+                 withJavaUtilSet:(id<JavaUtilSet> __nonnull)types;
 
-+ (NSString *)typeOnlyWithNSString:(NSString *)type;
++ (NSString *)typeOnlyWithNSString:(NSString * __nonnull)type;
 
-+ (NSString *)stripIfPrefixedWithNSString:(NSString *)string
-                             withNSString:(NSString *)prefix;
++ (NSString *)stripIfPrefixedWithNSString:(NSString * __nonnull)string
+                             withNSString:(NSString * __nonnull)prefix;
 
-+ (NSString *)stripIfInPackageWithNSString:(NSString *)type
-                              withNSString:(NSString *)packagePrefix;
++ (NSString *)stripIfInPackageWithNSString:(NSString * __nonnull)type
+                              withNSString:(NSString * __nonnull)packagePrefix;
 
 @end
 
@@ -58,6 +58,10 @@ JavaUtilRegexPattern *ComGoogleCommonTruthPlatform_TYPE_PATTERN;
 
 @implementation ComGoogleCommonTruthPlatform
 
++ (JavaUtilRegexPattern *)TYPE_PATTERN {
+  return ComGoogleCommonTruthPlatform_TYPE_PATTERN;
+}
+
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComGoogleCommonTruthPlatform_init(self);
@@ -65,65 +69,65 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-+ (jboolean)isInstanceOfTypeWithId:(id)instance
-                      withIOSClass:(IOSClass *)clazz {
++ (jboolean)isInstanceOfTypeWithId:(id __nonnull)instance
+                      withIOSClass:(IOSClass * __nonnull)clazz {
   return ComGoogleCommonTruthPlatform_isInstanceOfTypeWithId_withIOSClass_(instance, clazz);
 }
 
-+ (jboolean)isInstanceOfTypeJavaWithId:(id)instance
-                          withIOSClass:(IOSClass *)clazz {
++ (jboolean)isInstanceOfTypeJavaWithId:(id __nonnull)instance
+                          withIOSClass:(IOSClass * __nonnull)clazz {
   return ComGoogleCommonTruthPlatform_isInstanceOfTypeJavaWithId_withIOSClass_(instance, clazz);
 }
 
-+ (jboolean)isInstanceOfTypeGWTWithId:(id)instance
-                         withIOSClass:(IOSClass *)clazz {
++ (jboolean)isInstanceOfTypeGWTWithId:(id __nonnull)instance
+                         withIOSClass:(IOSClass * __nonnull)clazz {
   return ComGoogleCommonTruthPlatform_isInstanceOfTypeGWTWithId_withIOSClass_(instance, clazz);
 }
 
-+ (void)addInterfaceNamesWithIOSClassArray:(IOSObjectArray *)interfaces
-                           withJavaUtilSet:(id<JavaUtilSet>)types {
++ (void)addInterfaceNamesWithIOSClassArray:(IOSObjectArray * __nonnull)interfaces
+                           withJavaUtilSet:(id<JavaUtilSet> __nonnull)types {
   ComGoogleCommonTruthPlatform_addInterfaceNamesWithIOSClassArray_withJavaUtilSet_(interfaces, types);
 }
 
-+ (void)addTypeNamesWithIOSClass:(IOSClass *)clazz
-                 withJavaUtilSet:(id<JavaUtilSet>)types {
++ (void)addTypeNamesWithIOSClass:(IOSClass * __nonnull)clazz
+                 withJavaUtilSet:(id<JavaUtilSet> __nonnull)types {
   ComGoogleCommonTruthPlatform_addTypeNamesWithIOSClass_withJavaUtilSet_(clazz, types);
 }
 
-+ (NSString *)compressTypeWithNSString:(NSString *)type {
++ (NSString *)compressTypeWithNSString:(NSString * __nonnull)type {
   return ComGoogleCommonTruthPlatform_compressTypeWithNSString_(type);
 }
 
-+ (NSString *)typeOnlyWithNSString:(NSString *)type {
++ (NSString *)typeOnlyWithNSString:(NSString * __nonnull)type {
   return ComGoogleCommonTruthPlatform_typeOnlyWithNSString_(type);
 }
 
-+ (NSString *)stripIfPrefixedWithNSString:(NSString *)string
-                             withNSString:(NSString *)prefix {
++ (NSString *)stripIfPrefixedWithNSString:(NSString * __nonnull)string
+                             withNSString:(NSString * __nonnull)prefix {
   return ComGoogleCommonTruthPlatform_stripIfPrefixedWithNSString_withNSString_(string, prefix);
 }
 
-+ (NSString *)stripIfInPackageWithNSString:(NSString *)type
-                              withNSString:(NSString *)packagePrefix {
++ (NSString *)stripIfInPackageWithNSString:(NSString * __nonnull)type
+                              withNSString:(NSString * __nonnull)packagePrefix {
   return ComGoogleCommonTruthPlatform_stripIfInPackageWithNSString_withNSString_(type, packagePrefix);
 }
 
-+ (JavaLangAssertionError *)comparisonFailureWithNSString:(NSString *)message
-                                             withNSString:(NSString *)expected
-                                             withNSString:(NSString *)actual {
++ (JavaLangAssertionError *)comparisonFailureWithNSString:(NSString * __nonnull)message
+                                             withNSString:(NSString * __nonnull)expected
+                                             withNSString:(NSString * __nonnull)actual {
   return ComGoogleCommonTruthPlatform_comparisonFailureWithNSString_withNSString_withNSString_(message, expected, actual);
 }
 
-+ (jboolean)containsMatchWithNSString:(NSString *)subject
-                         withNSString:(NSString *)regex {
++ (jboolean)containsMatchWithNSString:(NSString * __nonnull)subject
+                         withNSString:(NSString * __nonnull)regex {
   return ComGoogleCommonTruthPlatform_containsMatchWithNSString_withNSString_(subject, regex);
 }
 
-+ (jint)getArrayLengthWithId:(id)array {
++ (jint)getArrayLengthWithId:(id __nonnull)array {
   return ComGoogleCommonTruthPlatform_getArrayLengthWithId_(array);
 }
 
-+ (id)getFromArrayWithId:(id)array
++ (id)getFromArrayWithId:(id __nonnull)array
                  withInt:(jint)i {
   return ComGoogleCommonTruthPlatform_getFromArrayWithId_withInt_(array, i);
 }

@@ -21,8 +21,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAbstractArray
 
 @implementation ComGoogleCommonTruthAbstractArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)subject {
   ComGoogleCommonTruthAbstractArraySubject_initWithComGoogleCommonTruthFailureStrategy_withId_(self, failureStrategy, subject);
   return self;
 }
@@ -62,7 +62,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAbstractArray
   return ([self internalCustomName] == nil) ? JreStrcat("C$$$@", '(', [self underlyingType], [self brackets], @") ", [self listRepresentation]) : @"";
 }
 
-- (void)failWithBadTypeWithId:(id)expected {
+- (void)failWithBadTypeWithId:(id __nonnull)expected {
   NSString *expectedBrackets = @"";
   IOSClass *expectedType = [nil_chk(expected) java_getClass];
   while ([((IOSClass *) nil_chk(expectedType)) isArray]) {

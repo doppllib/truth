@@ -35,13 +35,13 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthFailureContex
 
 @implementation ComGoogleCommonTruthFailureContext
 
-- (instancetype)initWithNSString:(NSString *)format
-               withNSObjectArray:(IOSObjectArray *)args {
+- (instancetype)initWithNSString:(NSString * __nullable)format
+               withNSObjectArray:(IOSObjectArray * __nullable)args {
   ComGoogleCommonTruthFailureContext_initWithNSString_withNSObjectArray_(self, format, args);
   return self;
 }
 
-- (NSString *)getFailureMessage {
+- (NSString * __nullable)getFailureMessage {
   return [self hasFailureMessage] ? ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(format_, args_) : nil;
 }
 
@@ -49,7 +49,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthFailureContex
   return format_ != nil;
 }
 
-+ (jint)countPlaceholdersWithNSString:(NSString *)template_ {
++ (jint)countPlaceholdersWithNSString:(NSString * __nullable)template_ {
   return ComGoogleCommonTruthFailureContext_countPlaceholdersWithNSString_(template_);
 }
 

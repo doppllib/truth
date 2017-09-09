@@ -26,32 +26,34 @@
 
 @interface ComGoogleCommonTruthPlatform : NSObject
 
++ (JavaUtilRegexPattern *)TYPE_PATTERN;
+
 #pragma mark Public
 
-+ (JavaLangAssertionError *)comparisonFailureWithNSString:(NSString *)message
-                                             withNSString:(NSString *)expected
-                                             withNSString:(NSString *)actual;
++ (JavaLangAssertionError *)comparisonFailureWithNSString:(NSString * __nonnull)message
+                                             withNSString:(NSString * __nonnull)expected
+                                             withNSString:(NSString * __nonnull)actual;
 
-+ (NSString *)compressTypeWithNSString:(NSString *)type;
++ (NSString *)compressTypeWithNSString:(NSString * __nonnull)type;
 
-+ (jboolean)containsMatchWithNSString:(NSString *)subject
-                         withNSString:(NSString *)regex;
++ (jboolean)containsMatchWithNSString:(NSString * __nonnull)subject
+                         withNSString:(NSString * __nonnull)regex;
 
-+ (jboolean)isInstanceOfTypeWithId:(id)instance
-                      withIOSClass:(IOSClass *)clazz;
++ (jboolean)isInstanceOfTypeWithId:(id __nonnull)instance
+                      withIOSClass:(IOSClass * __nonnull)clazz;
 
 #pragma mark Package-Private
 
-+ (jint)getArrayLengthWithId:(id)array;
++ (jint)getArrayLengthWithId:(id __nonnull)array;
 
-+ (id)getFromArrayWithId:(id)array
++ (id)getFromArrayWithId:(id __nonnull)array
                  withInt:(jint)i;
 
-+ (jboolean)isInstanceOfTypeGWTWithId:(id)instance
-                         withIOSClass:(IOSClass *)clazz;
++ (jboolean)isInstanceOfTypeGWTWithId:(id __nonnull)instance
+                         withIOSClass:(IOSClass * __nonnull)clazz;
 
-+ (jboolean)isInstanceOfTypeJavaWithId:(id)instance
-                          withIOSClass:(IOSClass *)clazz;
++ (jboolean)isInstanceOfTypeJavaWithId:(id __nonnull)instance
+                          withIOSClass:(IOSClass * __nonnull)clazz;
 
 @end
 

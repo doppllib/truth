@@ -49,16 +49,16 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject__A
   ComGoogleCommonTruthCorrespondence *correspondence_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthMapSubject:(ComGoogleCommonTruthMapSubject *)outer$
-                withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (instancetype)initWithComGoogleCommonTruthMapSubject:(ComGoogleCommonTruthMapSubject * __nonnull)outer$
+                withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
 - (id<ComGoogleCommonTruthOrdered>)containsExactly;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id)k0
-                                                  withId:(id)v0
-                                       withNSObjectArray:(IOSObjectArray *)rest;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id __nullable)k0
+                                                  withId:(id __nullable)v0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)rest;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap>)expectedMap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap> __nonnull)expectedMap;
 
 - (id<JavaUtilMap>)getCastSubject;
 
@@ -82,13 +82,13 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_Us
 
 @implementation ComGoogleCommonTruthMapSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withJavaUtilMap:(id<JavaUtilMap>)map {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                            withJavaUtilMap:(id<JavaUtilMap> __nullable)map {
   ComGoogleCommonTruthMapSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilMap_(self, failureStrategy, map);
   return self;
 }
 
-- (void)isEqualToWithId:(id)other {
+- (void)isEqualToWithId:(id __nullable)other {
   if (!ComGoogleCommonBaseObjects_equalWithId_withId_([self actual], other)) {
     if ([JavaUtilMap_class_() isInstance:other]) {
       id<ComGoogleCommonCollectMapDifference> diff = ComGoogleCommonCollectMaps_differenceWithJavaUtilMap_withJavaUtilMap_((id<JavaUtilMap>) cast_check(other, JavaUtilMap_class_()), [self actual]);
@@ -136,20 +136,20 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_Us
   }
 }
 
-- (void)containsKeyWithId:(id)key {
+- (void)containsKeyWithId:(id __nullable)key {
   if (![((id<JavaUtilMap>) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"contains key" withId:key];
   }
 }
 
-- (void)doesNotContainKeyWithId:(id)key {
+- (void)doesNotContainKeyWithId:(id __nullable)key {
   if ([((id<JavaUtilMap>) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"does not contain key" withId:key];
   }
 }
 
-- (void)containsEntryWithId:(id)key
-                     withId:(id)value {
+- (void)containsEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value {
   id<JavaUtilMap_Entry> entry_ = ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value);
   if (![((id<JavaUtilSet>) nil_chk([((id<JavaUtilMap>) nil_chk([self actual])) entrySet])) containsWithId:entry_]) {
     if ([((id<JavaUtilMap>) nil_chk([self actual])) containsKeyWithId:key]) {
@@ -168,8 +168,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_Us
   }
 }
 
-- (void)doesNotContainEntryWithId:(id)key
-                           withId:(id)value {
+- (void)doesNotContainEntryWithId:(id __nullable)key
+                           withId:(id __nullable)value {
   id<JavaUtilMap_Entry> entry_ = ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value);
   if ([((id<JavaUtilSet>) nil_chk([((id<JavaUtilMap>) nil_chk([self actual])) entrySet])) containsWithId:entry_]) {
     [self failWithNSString:@"does not contain entry" withId:entry_];
@@ -180,9 +180,9 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_Us
   return [((ComGoogleCommonTruthIterableSubject *) nil_chk([((ComGoogleCommonTruthTestVerb *) nil_chk([self check])) thatWithJavaLangIterable:[((id<JavaUtilMap>) nil_chk([self actual])) entrySet]])) containsExactlyWithNSObjectArray:[IOSObjectArray arrayWithLength:0 type:NSObject_class_()]];
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id)k0
-                                                  withId:(id)v0
-                                       withNSObjectArray:(IOSObjectArray *)rest {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id __nullable)k0
+                                                  withId:(id __nullable)v0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)rest {
   ComGoogleCommonBasePreconditions_checkArgumentWithBoolean_withNSString_withNSObjectArray_(((IOSObjectArray *) nil_chk(rest))->size_ % 2 == 0, @"There must be an equal number of key/value pairs (i.e., the number of key/value parameters (%s) must be even).", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(rest->size_ + 2) } count:1 type:NSObject_class_()]);
   id<JavaUtilMap> expectedMap = ComGoogleCommonCollectMaps_newLinkedHashMap();
   [((id<JavaUtilMap>) nil_chk(expectedMap)) putWithId:k0 withId:v0];
@@ -197,11 +197,11 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_Us
   return [self containsExactlyEntriesInWithJavaUtilMap:expectedMap];
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap>)expectedMap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap> __nonnull)expectedMap {
   return [((ComGoogleCommonTruthIterableSubject *) nil_chk([((ComGoogleCommonTruthTestVerb *) nil_chk([self check])) thatWithJavaLangIterable:[((id<JavaUtilMap>) nil_chk([self actual])) entrySet]])) containsExactlyElementsInWithJavaLangIterable:[((id<JavaUtilMap>) nil_chk(expectedMap)) entrySet]];
 }
 
-- (ComGoogleCommonTruthMapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (ComGoogleCommonTruthMapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   return create_ComGoogleCommonTruthMapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMapSubject_withComGoogleCommonTruthCorrespondence_(self, correspondence);
 }
 
@@ -288,14 +288,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMapSubject)
 
 @implementation ComGoogleCommonTruthMapSubject_UsingCorrespondence
 
-- (instancetype)initWithComGoogleCommonTruthMapSubject:(ComGoogleCommonTruthMapSubject *)outer$
-                withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (instancetype)initWithComGoogleCommonTruthMapSubject:(ComGoogleCommonTruthMapSubject * __nonnull)outer$
+                withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   ComGoogleCommonTruthMapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMapSubject_withComGoogleCommonTruthCorrespondence_(self, outer$, correspondence);
   return self;
 }
 
-- (void)containsEntryWithId:(id)expectedKey
-                     withId:(id)expectedValue {
+- (void)containsEntryWithId:(id __nullable)expectedKey
+                     withId:(id __nullable)expectedValue {
   if ([((id<JavaUtilMap>) nil_chk([this$0_ actual])) containsKeyWithId:expectedKey]) {
     id actualValue = [((id<JavaUtilMap>) nil_chk(ComGoogleCommonTruthMapSubject_UsingCorrespondence_getCastSubject(self))) getWithId:expectedKey];
     if ([((ComGoogleCommonTruthCorrespondence *) nil_chk(correspondence_)) compareWithId:actualValue withId:expectedValue]) {
@@ -319,8 +319,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMapSubject)
   }
 }
 
-- (void)doesNotContainEntryWithId:(id)excludedKey
-                           withId:(id)excludedValue {
+- (void)doesNotContainEntryWithId:(id __nullable)excludedKey
+                           withId:(id __nullable)excludedValue {
   if ([((id<JavaUtilMap>) nil_chk([this$0_ actual])) containsKeyWithId:excludedKey]) {
     id actualValue = [((id<JavaUtilMap>) nil_chk(ComGoogleCommonTruthMapSubject_UsingCorrespondence_getCastSubject(self))) getWithId:excludedKey];
     if ([((ComGoogleCommonTruthCorrespondence *) nil_chk(correspondence_)) compareWithId:actualValue withId:excludedValue]) {
@@ -333,13 +333,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMapSubject)
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id)k0
-                                                  withId:(id)v0
-                                       withNSObjectArray:(IOSObjectArray *)rest {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id __nullable)k0
+                                                  withId:(id __nullable)v0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)rest {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap>)expectedMap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap> __nonnull)expectedMap {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 

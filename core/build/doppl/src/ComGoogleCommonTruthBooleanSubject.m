@@ -26,8 +26,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthBooleanSubjec
 
 @implementation ComGoogleCommonTruthBooleanSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                        withJavaLangBoolean:(JavaLangBoolean *)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                        withJavaLangBoolean:(JavaLangBoolean * __nullable)subject {
   ComGoogleCommonTruthBooleanSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangBoolean_(self, failureStrategy, subject);
   return self;
 }

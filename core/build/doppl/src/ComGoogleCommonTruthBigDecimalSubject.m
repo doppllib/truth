@@ -16,7 +16,7 @@
 
 @interface ComGoogleCommonTruthBigDecimalSubject ()
 
-- (void)compareValuesWithJavaMathBigDecimal:(JavaMathBigDecimal *)expected;
+- (void)compareValuesWithJavaMathBigDecimal:(JavaMathBigDecimal * __nonnull)expected;
 
 @end
 
@@ -28,17 +28,17 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthBigDecimalSub
 
 @implementation ComGoogleCommonTruthBigDecimalSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaMathBigDecimal:(JavaMathBigDecimal *)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)subject {
   ComGoogleCommonTruthBigDecimalSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaMathBigDecimal_(self, failureStrategy, subject);
   return self;
 }
 
-- (void)isEqualToIgnoringScaleWithJavaMathBigDecimal:(JavaMathBigDecimal *)expected {
+- (void)isEqualToIgnoringScaleWithJavaMathBigDecimal:(JavaMathBigDecimal * __nonnull)expected {
   ComGoogleCommonTruthBigDecimalSubject_compareValuesWithJavaMathBigDecimal_(self, expected);
 }
 
-- (void)isEqualToIgnoringScaleWithNSString:(NSString *)expected {
+- (void)isEqualToIgnoringScaleWithNSString:(NSString * __nonnull)expected {
   ComGoogleCommonTruthBigDecimalSubject_compareValuesWithJavaMathBigDecimal_(self, create_JavaMathBigDecimal_initWithNSString_(expected));
 }
 
@@ -46,15 +46,15 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthBigDecimalSub
   ComGoogleCommonTruthBigDecimalSubject_compareValuesWithJavaMathBigDecimal_(self, create_JavaMathBigDecimal_initWithLong_(expected));
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nullable)expected {
   [super isEqualToWithId:expected];
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaMathBigDecimal *)expected {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaMathBigDecimal * __nonnull)expected {
   ComGoogleCommonTruthBigDecimalSubject_compareValuesWithJavaMathBigDecimal_(self, expected);
 }
 
-- (void)compareValuesWithJavaMathBigDecimal:(JavaMathBigDecimal *)expected {
+- (void)compareValuesWithJavaMathBigDecimal:(JavaMathBigDecimal * __nonnull)expected {
   ComGoogleCommonTruthBigDecimalSubject_compareValuesWithJavaMathBigDecimal_(self, expected);
 }
 

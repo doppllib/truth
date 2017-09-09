@@ -34,17 +34,17 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAtomicLongMap
 
 @implementation ComGoogleCommonTruthAtomicLongMapSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-             withComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)map {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+             withComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)map {
   ComGoogleCommonTruthAtomicLongMapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonUtilConcurrentAtomicLongMap_(self, failureStrategy, map);
   return self;
 }
 
-- (void)isEqualToWithId:(id)other {
+- (void)isEqualToWithId:(id __nullable)other {
   [super isEqualToWithId:other];
 }
 
-- (void)isNotEqualToWithId:(id)other {
+- (void)isNotEqualToWithId:(id __nullable)other {
   [super isNotEqualToWithId:other];
 }
 
@@ -75,21 +75,21 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAtomicLongMap
   }
 }
 
-- (void)containsKeyWithId:(id)key {
+- (void)containsKeyWithId:(id __nonnull)key {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_withId_(key, @"AtomicLongMap does not support null keys");
   if (![((ComGoogleCommonUtilConcurrentAtomicLongMap *) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"contains key" withId:key];
   }
 }
 
-- (void)doesNotContainKeyWithId:(id)key {
+- (void)doesNotContainKeyWithId:(id __nonnull)key {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_withId_(key, @"AtomicLongMap does not support null keys");
   if ([((ComGoogleCommonUtilConcurrentAtomicLongMap *) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"does not contain key" withId:key];
   }
 }
 
-- (void)containsEntryWithId:(id)key
+- (void)containsEntryWithId:(id __nonnull)key
                    withLong:(jlong)value {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_withId_(key, @"AtomicLongMap does not support null keys");
   jlong actualValue = [((ComGoogleCommonUtilConcurrentAtomicLongMap *) nil_chk(([self actual]))) getWithId:key];
@@ -98,7 +98,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAtomicLongMap
   }
 }
 
-- (void)doesNotContainEntryWithId:(id)key
+- (void)doesNotContainEntryWithId:(id __nullable)key
                          withLong:(jlong)value {
   if (key != nil) {
     jlong actualValue = [((ComGoogleCommonUtilConcurrentAtomicLongMap *) nil_chk(([self actual]))) getWithId:key];

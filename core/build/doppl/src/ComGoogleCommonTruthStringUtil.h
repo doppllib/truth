@@ -27,12 +27,12 @@
 
 #pragma mark Package-Private
 
-+ (NSString *)formatWithNSString:(NSString *)template_
-               withNSObjectArray:(IOSObjectArray *)args;
++ (NSString *)formatWithNSString:(NSString * __nullable)template_
+               withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
-+ (NSString *)messageForWithNSString:(NSString *)message
-            withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-            withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
++ (NSString *)messageForWithNSString:(NSString * __nonnull)message
+            withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+            withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
 @end
 

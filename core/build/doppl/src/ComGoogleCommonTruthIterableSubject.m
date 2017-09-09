@@ -51,27 +51,27 @@
 
 @interface ComGoogleCommonTruthIterableSubject ()
 
-- (void)containsAnyWithNSString:(NSString *)failVerb
-           withJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)containsAnyWithNSString:(NSString * __nonnull)failVerb
+           withJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-+ (id<JavaUtilCollection>)iterableToCollectionWithJavaLangIterable:(id<JavaLangIterable>)iterable;
++ (id<JavaUtilCollection>)iterableToCollectionWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable;
 
-+ (id<JavaUtilList>)iterableToListWithJavaLangIterable:(id<JavaLangIterable>)iterable;
++ (id<JavaUtilList>)iterableToListWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable;
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllWithNSString:(NSString *)failVerb
-                                      withJavaLangIterable:(id<JavaLangIterable>)expectedIterable;
+- (id<ComGoogleCommonTruthOrdered>)containsAllWithNSString:(NSString * __nonnull)failVerb
+                                      withJavaLangIterable:(id<JavaLangIterable> __nonnull)expectedIterable;
 
-+ (void)moveElementsWithJavaUtilList:(id<JavaUtilList>)input
-              withJavaUtilCollection:(id<JavaUtilCollection>)output
++ (void)moveElementsWithJavaUtilList:(id<JavaUtilList> __nonnull)input
+              withJavaUtilCollection:(id<JavaUtilCollection> __nonnull)output
                              withInt:(jint)maxElements;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)required
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)required
                                                                      withBoolean:(jboolean)addElementsInWarning;
 
-- (void)containsNoneWithNSString:(NSString *)failVerb
-            withJavaLangIterable:(id<JavaLangIterable>)excluded;
+- (void)containsNoneWithNSString:(NSString * __nonnull)failVerb
+            withJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded;
 
-- (void)pairwiseCheckWithComGoogleCommonTruthIterableSubject_PairwiseChecker:(id<ComGoogleCommonTruthIterableSubject_PairwiseChecker>)checker;
+- (void)pairwiseCheckWithComGoogleCommonTruthIterableSubject_PairwiseChecker:(id<ComGoogleCommonTruthIterableSubject_PairwiseChecker> __nonnull)checker;
 
 @end
 
@@ -128,9 +128,9 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthIterableSubje
   id<JavaLangIterable> required_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                               withNSString:(NSString *)check
-                                       withJavaLangIterable:(id<JavaLangIterable>)required;
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                               withNSString:(NSString * __nonnull)check
+                                       withJavaLangIterable:(id<JavaLangIterable> __nonnull)required;
 
 - (void)inOrder;
 
@@ -167,8 +167,8 @@ __attribute__((unused)) static ComGoogleCommonTruthIterableSubject_1 *create_Com
 
 @protocol ComGoogleCommonTruthIterableSubject_PairwiseChecker < JavaObject >
 
-- (void)checkWithId:(id)prev
-             withId:(id)next;
+- (void)checkWithId:(id __nonnull)prev
+             withId:(id __nonnull)next;
 
 @end
 
@@ -186,11 +186,11 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthIterableSubject_PairwiseChecker)
   id<JavaUtilComparator> val$comparator_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                     withJavaUtilComparator:(id<JavaUtilComparator>)capture$0;
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                     withJavaUtilComparator:(id<JavaUtilComparator> __nonnull)capture$0;
 
-- (void)checkWithId:(id)prev
-             withId:(id)next;
+- (void)checkWithId:(id __nonnull)prev
+             withId:(id __nonnull)next;
 
 @end
 
@@ -208,11 +208,11 @@ __attribute__((unused)) static ComGoogleCommonTruthIterableSubject_2 *create_Com
   id<JavaUtilComparator> val$comparator_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                     withJavaUtilComparator:(id<JavaUtilComparator>)capture$0;
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                     withJavaUtilComparator:(id<JavaUtilComparator> __nonnull)capture$0;
 
-- (void)checkWithId:(id)prev
-             withId:(id)next;
+- (void)checkWithId:(id __nonnull)prev
+             withId:(id __nonnull)next;
 
 @end
 
@@ -230,36 +230,36 @@ __attribute__((unused)) static ComGoogleCommonTruthIterableSubject_3 *create_Com
   ComGoogleCommonTruthCorrespondence *correspondence_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
-- (jboolean)correspondInOrderExactlyWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                    withJavaUtilIterator:(id<JavaUtilIterator>)expected;
+- (jboolean)correspondInOrderExactlyWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                    withJavaUtilIterator:(id<JavaUtilIterator> __nonnull)expected;
 
-- (ComGoogleCommonCollectImmutableSetMultimap *)findCandidateMappingWithJavaUtilList:(id<JavaUtilList>)actual
-                                                                    withJavaUtilList:(id<JavaUtilList>)expected;
+- (ComGoogleCommonCollectImmutableSetMultimap *)findCandidateMappingWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                                                    withJavaUtilList:(id<JavaUtilList> __nonnull)expected;
 
-- (ComGoogleCommonBaseOptional *)describeMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)extra
-                                                       withJavaUtilList:(id<JavaUtilList>)missing;
+- (ComGoogleCommonBaseOptional *)describeMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)extra
+                                                       withJavaUtilList:(id<JavaUtilList> __nonnull)missing;
 
-- (id<JavaUtilList>)findNotIndexedWithJavaUtilList:(id<JavaUtilList>)list
-                                   withJavaUtilSet:(id<JavaUtilSet>)indexes;
+- (id<JavaUtilList>)findNotIndexedWithJavaUtilList:(id<JavaUtilList> __nonnull)list
+                                   withJavaUtilSet:(id<JavaUtilSet> __nonnull)indexes;
 
-- (NSString *)formatMissingWithJavaUtilList:(id<JavaUtilList>)missing;
+- (NSString *)formatMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)missing;
 
-- (ComGoogleCommonCollectImmutableBiMap *)findMaximalOneToOneMappingWithComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)edges;
+- (ComGoogleCommonCollectImmutableBiMap *)findMaximalOneToOneMappingWithComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)edges;
 
-- (jboolean)correspondInOrderAllInWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                  withJavaUtilIterator:(id<JavaUtilIterator>)expected;
+- (jboolean)correspondInOrderAllInWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                  withJavaUtilIterator:(id<JavaUtilIterator> __nonnull)expected;
 
-- (jboolean)findCorrespondingWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                           withId:(id)expectedElement;
+- (jboolean)findCorrespondingWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                           withId:(id __nonnull)expectedElement;
 
-- (void)containsAnyWithNSString:(NSString *)failVerb
-           withJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)containsAnyWithNSString:(NSString * __nonnull)failVerb
+           withJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (void)containsNoneWithNSString:(NSString *)excludedPrefix
-            withJavaLangIterable:(id<JavaLangIterable>)excluded;
+- (void)containsNoneWithNSString:(NSString * __nonnull)excludedPrefix
+            withJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded;
 
 - (id<JavaLangIterable>)getCastActual;
 
@@ -319,8 +319,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthIterableSubject)
 
 @implementation ComGoogleCommonTruthIterableSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                       withJavaLangIterable:(id<JavaLangIterable>)list {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                       withJavaLangIterable:(id<JavaLangIterable> __nullable)list {
   ComGoogleCommonTruthIterableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangIterable_(self, failureStrategy, list);
   return self;
 }
@@ -345,13 +345,13 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthIterableSubject)
   }
 }
 
-- (void)containsWithId:(id)element {
+- (void)containsWithId:(id __nullable)element {
   if (!ComGoogleCommonCollectIterables_containsWithJavaLangIterable_withId_([self actual], element)) {
     [self failWithRawMessageWithNSString:@"%s should have contained <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], element } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)doesNotContainWithId:(id)element {
+- (void)doesNotContainWithId:(id __nullable)element {
   if (ComGoogleCommonCollectIterables_containsWithJavaLangIterable_withId_([self actual], element)) {
     [self failWithRawMessageWithNSString:@"%s should not have contained <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], element } count:2 type:NSObject_class_()]];
   }
@@ -369,84 +369,84 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthIterableSubject)
   }
 }
 
-- (void)containsAnyOfWithId:(id)first
-                     withId:(id)second
-          withNSObjectArray:(IOSObjectArray *)rest {
+- (void)containsAnyOfWithId:(id __nullable)first
+                     withId:(id __nullable)second
+          withNSObjectArray:(IOSObjectArray * __nullable)rest {
   ComGoogleCommonTruthIterableSubject_containsAnyWithNSString_withJavaLangIterable_(self, @"contains any of", ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest));
 }
 
-- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthIterableSubject_containsAnyWithNSString_withJavaLangIterable_(self, @"contains any element in", expected);
 }
 
-- (void)containsAnyWithNSString:(NSString *)failVerb
-           withJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)containsAnyWithNSString:(NSString * __nonnull)failVerb
+           withJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthIterableSubject_containsAnyWithNSString_withJavaLangIterable_(self, failVerb, expected);
 }
 
-+ (id<JavaUtilCollection>)iterableToCollectionWithJavaLangIterable:(id<JavaLangIterable>)iterable {
++ (id<JavaUtilCollection>)iterableToCollectionWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable {
   return ComGoogleCommonTruthIterableSubject_iterableToCollectionWithJavaLangIterable_(iterable);
 }
 
-+ (id<JavaUtilList>)iterableToListWithJavaLangIterable:(id<JavaLangIterable>)iterable {
++ (id<JavaUtilList>)iterableToListWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable {
   return ComGoogleCommonTruthIterableSubject_iterableToListWithJavaLangIterable_(iterable);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id)firstExpected
-                                                withId:(id)secondExpected
-                                     withNSObjectArray:(IOSObjectArray *)restOfExpected {
+- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id __nullable)firstExpected
+                                                withId:(id __nullable)secondExpected
+                                     withNSObjectArray:(IOSObjectArray * __nullable)restOfExpected {
   return ComGoogleCommonTruthIterableSubject_containsAllWithNSString_withJavaLangIterable_(self, @"contains all of", ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(firstExpected, secondExpected, restOfExpected));
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   return ComGoogleCommonTruthIterableSubject_containsAllWithNSString_withJavaLangIterable_(self, @"contains all elements in", expected);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllWithNSString:(NSString *)failVerb
-                                      withJavaLangIterable:(id<JavaLangIterable>)expectedIterable {
+- (id<ComGoogleCommonTruthOrdered>)containsAllWithNSString:(NSString * __nonnull)failVerb
+                                      withJavaLangIterable:(id<JavaLangIterable> __nonnull)expectedIterable {
   return ComGoogleCommonTruthIterableSubject_containsAllWithNSString_withJavaLangIterable_(self, failVerb, expectedIterable);
 }
 
-+ (void)moveElementsWithJavaUtilList:(id<JavaUtilList>)input
-              withJavaUtilCollection:(id<JavaUtilCollection>)output
++ (void)moveElementsWithJavaUtilList:(id<JavaUtilList> __nonnull)input
+              withJavaUtilCollection:(id<JavaUtilCollection> __nonnull)output
                              withInt:(jint)maxElements {
   ComGoogleCommonTruthIterableSubject_moveElementsWithJavaUtilList_withJavaUtilCollection_withInt_(input, output, maxElements);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray *)varargs {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray * __nullable)varargs {
   id<JavaUtilList> expected = (varargs == nil) ? ComGoogleCommonCollectLists_newArrayListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ nil } count:1 type:NSObject_class_()]) : JavaUtilArrays_asListWithNSObjectArray_(varargs);
   return ComGoogleCommonTruthIterableSubject_containsExactlyElementsInWithJavaLangIterable_withBoolean_(self, expected, varargs != nil && varargs->size_ == 1 && [JavaLangIterable_class_() isInstance:IOSObjectArray_Get(varargs, 0)]);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   return ComGoogleCommonTruthIterableSubject_containsExactlyElementsInWithJavaLangIterable_withBoolean_(self, expected, false);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)required
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)required
                                                                      withBoolean:(jboolean)addElementsInWarning {
   return ComGoogleCommonTruthIterableSubject_containsExactlyElementsInWithJavaLangIterable_withBoolean_(self, required, addElementsInWarning);
 }
 
-- (void)failWithBadResultsAndSuffixWithNSString:(NSString *)verb
-                                         withId:(id)expected
-                                   withNSString:(NSString *)failVerb
-                                         withId:(id)actual
-                                   withNSString:(NSString *)suffix {
+- (void)failWithBadResultsAndSuffixWithNSString:(NSString * __nonnull)verb
+                                         withId:(id __nonnull)expected
+                                   withNSString:(NSString * __nonnull)failVerb
+                                         withId:(id __nonnull)actual
+                                   withNSString:(NSString * __nonnull)suffix {
   ComGoogleCommonTruthIterableSubject_failWithBadResultsAndSuffixWithNSString_withId_withNSString_withId_withNSString_(self, verb, expected, failVerb, actual, suffix);
 }
 
-- (void)containsNoneOfWithId:(id)firstExcluded
-                      withId:(id)secondExcluded
-           withNSObjectArray:(IOSObjectArray *)restOfExcluded {
+- (void)containsNoneOfWithId:(id __nullable)firstExcluded
+                      withId:(id __nullable)secondExcluded
+           withNSObjectArray:(IOSObjectArray * __nullable)restOfExcluded {
   ComGoogleCommonTruthIterableSubject_containsNoneWithNSString_withJavaLangIterable_(self, @"contains none of", ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(firstExcluded, secondExcluded, restOfExcluded));
 }
 
-- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable>)excluded {
+- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded {
   ComGoogleCommonTruthIterableSubject_containsNoneWithNSString_withJavaLangIterable_(self, @"contains no elements in", excluded);
 }
 
-- (void)containsNoneWithNSString:(NSString *)failVerb
-            withJavaLangIterable:(id<JavaLangIterable>)excluded {
+- (void)containsNoneWithNSString:(NSString * __nonnull)failVerb
+            withJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded {
   ComGoogleCommonTruthIterableSubject_containsNoneWithNSString_withJavaLangIterable_(self, failVerb, excluded);
 }
 
@@ -454,7 +454,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthIterableSubject)
   ComGoogleCommonTruthIterableSubject_isStrictlyOrderedWithJavaUtilComparator_(self, ComGoogleCommonCollectOrdering_natural());
 }
 
-- (void)isStrictlyOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator {
+- (void)isStrictlyOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator {
   ComGoogleCommonTruthIterableSubject_isStrictlyOrderedWithJavaUtilComparator_(self, comparator);
 }
 
@@ -466,19 +466,19 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthIterableSubject)
   ComGoogleCommonTruthIterableSubject_isOrdered(self);
 }
 
-- (void)isOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator {
+- (void)isOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator {
   ComGoogleCommonTruthIterableSubject_isOrderedWithJavaUtilComparator_(self, comparator);
 }
 
-- (void)isPartiallyOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator {
+- (void)isPartiallyOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator {
   ComGoogleCommonTruthIterableSubject_isOrderedWithJavaUtilComparator_(self, comparator);
 }
 
-- (void)pairwiseCheckWithComGoogleCommonTruthIterableSubject_PairwiseChecker:(id<ComGoogleCommonTruthIterableSubject_PairwiseChecker>)checker {
+- (void)pairwiseCheckWithComGoogleCommonTruthIterableSubject_PairwiseChecker:(id<ComGoogleCommonTruthIterableSubject_PairwiseChecker> __nonnull)checker {
   ComGoogleCommonTruthIterableSubject_pairwiseCheckWithComGoogleCommonTruthIterableSubject_PairwiseChecker_(self, checker);
 }
 
-- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)comparingElementsUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)comparingElementsUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   return create_ComGoogleCommonTruthIterableSubject_UsingCorrespondence_initWithComGoogleCommonTruthIterableSubject_withComGoogleCommonTruthCorrespondence_(self, correspondence);
 }
 
@@ -770,9 +770,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthIterableSubject)
 
 @implementation ComGoogleCommonTruthIterableSubject_NotInOrder
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                               withNSString:(NSString *)check
-                                       withJavaLangIterable:(id<JavaLangIterable>)required {
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                               withNSString:(NSString * __nonnull)check
+                                       withJavaLangIterable:(id<JavaLangIterable> __nonnull)required {
   ComGoogleCommonTruthIterableSubject_NotInOrder_initWithComGoogleCommonTruthIterableSubject_withNSString_withJavaLangIterable_(self, outer$, check, required);
   return self;
 }
@@ -889,14 +889,14 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthIterableSubject_Pairwis
 
 @implementation ComGoogleCommonTruthIterableSubject_2
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                     withJavaUtilComparator:(id<JavaUtilComparator>)capture$0 {
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                     withJavaUtilComparator:(id<JavaUtilComparator> __nonnull)capture$0 {
   ComGoogleCommonTruthIterableSubject_2_initWithComGoogleCommonTruthIterableSubject_withJavaUtilComparator_(self, outer$, capture$0);
   return self;
 }
 
-- (void)checkWithId:(id)prev
-             withId:(id)next {
+- (void)checkWithId:(id __nonnull)prev
+             withId:(id __nonnull)next {
   if ([((id<JavaUtilComparator>) nil_chk((val$comparator_))) compareWithId:prev withId:next] >= 0) {
     [this$0_ failWithNSString:@"is strictly ordered" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ prev, next } count:2 type:NSObject_class_()]];
   }
@@ -945,14 +945,14 @@ ComGoogleCommonTruthIterableSubject_2 *create_ComGoogleCommonTruthIterableSubjec
 
 @implementation ComGoogleCommonTruthIterableSubject_3
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                                     withJavaUtilComparator:(id<JavaUtilComparator>)capture$0 {
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                                     withJavaUtilComparator:(id<JavaUtilComparator> __nonnull)capture$0 {
   ComGoogleCommonTruthIterableSubject_3_initWithComGoogleCommonTruthIterableSubject_withJavaUtilComparator_(self, outer$, capture$0);
   return self;
 }
 
-- (void)checkWithId:(id)prev
-             withId:(id)next {
+- (void)checkWithId:(id __nonnull)prev
+             withId:(id __nonnull)next {
   if ([((id<JavaUtilComparator>) nil_chk((val$comparator_))) compareWithId:prev withId:next] > 0) {
     [this$0_ failWithNSString:@"is ordered" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ prev, next } count:2 type:NSObject_class_()]];
   }
@@ -1001,13 +1001,13 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
 
 @implementation ComGoogleCommonTruthIterableSubject_UsingCorrespondence
 
-- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject *)outer$
-                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (instancetype)initWithComGoogleCommonTruthIterableSubject:(ComGoogleCommonTruthIterableSubject * __nonnull)outer$
+                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_initWithComGoogleCommonTruthIterableSubject_withComGoogleCommonTruthCorrespondence_(self, outer$, correspondence);
   return self;
 }
 
-- (void)containsWithId:(id)expected {
+- (void)containsWithId:(id __nullable)expected {
   for (id __strong actual in nil_chk(ComGoogleCommonTruthIterableSubject_UsingCorrespondence_getCastActual(self))) {
     if ([((ComGoogleCommonTruthCorrespondence *) nil_chk(correspondence_)) compareWithId:actual withId:expected]) {
       return;
@@ -1016,7 +1016,7 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   [this$0_ failWithNSString:JreStrcat("$@", @"contains at least one element that ", correspondence_) withId:expected];
 }
 
-- (void)doesNotContainWithId:(id)excluded {
+- (void)doesNotContainWithId:(id __nullable)excluded {
   id<JavaUtilList> matchingElements = create_JavaUtilArrayList_init();
   for (id __strong actual in nil_chk(ComGoogleCommonTruthIterableSubject_UsingCorrespondence_getCastActual(self))) {
     if ([((ComGoogleCommonTruthCorrespondence *) nil_chk(correspondence_)) compareWithId:actual withId:excluded]) {
@@ -1028,11 +1028,11 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   }
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray *)expected {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray * __nullable)expected {
   return [self containsExactlyElementsInWithJavaLangIterable:(expected == nil) ? ComGoogleCommonCollectLists_newArrayListWithNSObjectArray_([IOSObjectArray arrayWithObjects:(id[]){ nil } count:1 type:NSObject_class_()]) : JavaUtilArrays_asListWithNSObjectArray_(expected)];
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   id<JavaUtilList> actualList = ComGoogleCommonTruthIterableSubject_iterableToListWithJavaLangIterable_(ComGoogleCommonTruthIterableSubject_UsingCorrespondence_getCastActual(self));
   id<JavaUtilList> expectedList = ComGoogleCommonTruthIterableSubject_iterableToListWithJavaLangIterable_(expected);
   if (ComGoogleCommonTruthIterableSubject_UsingCorrespondence_correspondInOrderExactlyWithJavaUtilIterator_withJavaUtilIterator_(self, [((id<JavaUtilList>) nil_chk(actualList)) iterator], [((id<JavaUtilList>) nil_chk(expectedList)) iterator])) {
@@ -1045,19 +1045,19 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   return create_ComGoogleCommonTruthIterableSubject_NotInOrder_initWithComGoogleCommonTruthIterableSubject_withNSString_withJavaLangIterable_(this$0_, JreStrcat("$@$", @"contains, in order, exactly one element that ", correspondence_, @" each element of"), expected);
 }
 
-- (jboolean)correspondInOrderExactlyWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                    withJavaUtilIterator:(id<JavaUtilIterator>)expected {
+- (jboolean)correspondInOrderExactlyWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                    withJavaUtilIterator:(id<JavaUtilIterator> __nonnull)expected {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_correspondInOrderExactlyWithJavaUtilIterator_withJavaUtilIterator_(self, actual, expected);
 }
 
-- (ComGoogleCommonCollectImmutableSetMultimap *)findCandidateMappingWithJavaUtilList:(id<JavaUtilList>)actual
-                                                                    withJavaUtilList:(id<JavaUtilList>)expected {
+- (ComGoogleCommonCollectImmutableSetMultimap *)findCandidateMappingWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                                                    withJavaUtilList:(id<JavaUtilList> __nonnull)expected {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findCandidateMappingWithJavaUtilList_withJavaUtilList_(self, actual, expected);
 }
 
-- (void)failIfCandidateMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)actual
-                                               withJavaUtilList:(id<JavaUtilList>)expected
-                    withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)mapping {
+- (void)failIfCandidateMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                               withJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                    withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)mapping {
   id<JavaUtilList> extra = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, actual, [((ComGoogleCommonCollectImmutableMultimap *) nil_chk(mapping)) keySet]);
   id<JavaUtilList> missing = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, expected, [((ComGoogleCommonCollectImmutableMultimap *) nil_chk([mapping inverse])) keySet]);
   ComGoogleCommonBaseOptional *missingOrExtraMessage = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_describeMissingOrExtraWithJavaUtilList_withJavaUtilList_(self, extra, missing);
@@ -1066,27 +1066,27 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   }
 }
 
-- (ComGoogleCommonBaseOptional *)describeMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)extra
-                                                       withJavaUtilList:(id<JavaUtilList>)missing {
+- (ComGoogleCommonBaseOptional *)describeMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)extra
+                                                       withJavaUtilList:(id<JavaUtilList> __nonnull)missing {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_describeMissingOrExtraWithJavaUtilList_withJavaUtilList_(self, extra, missing);
 }
 
-- (id<JavaUtilList>)findNotIndexedWithJavaUtilList:(id<JavaUtilList>)list
-                                   withJavaUtilSet:(id<JavaUtilSet>)indexes {
+- (id<JavaUtilList>)findNotIndexedWithJavaUtilList:(id<JavaUtilList> __nonnull)list
+                                   withJavaUtilSet:(id<JavaUtilSet> __nonnull)indexes {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, list, indexes);
 }
 
-- (NSString *)formatMissingWithJavaUtilList:(id<JavaUtilList>)missing {
+- (NSString *)formatMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)missing {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_formatMissingWithJavaUtilList_(self, missing);
 }
 
-- (ComGoogleCommonCollectImmutableBiMap *)findMaximalOneToOneMappingWithComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)edges {
+- (ComGoogleCommonCollectImmutableBiMap *)findMaximalOneToOneMappingWithComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)edges {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findMaximalOneToOneMappingWithComGoogleCommonCollectImmutableMultimap_(self, edges);
 }
 
-- (void)failIfOneToOneMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)actual
-                                              withJavaUtilList:(id<JavaUtilList>)expected
-                               withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)mapping {
+- (void)failIfOneToOneMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                              withJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                               withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)mapping {
   id<JavaUtilList> extra = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, actual, [((id<ComGoogleCommonCollectBiMap>) nil_chk(mapping)) keySet]);
   id<JavaUtilList> missing = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, expected, [mapping values]);
   ComGoogleCommonBaseOptional *missingOrExtraMessage = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_describeMissingOrExtraWithJavaUtilList_withJavaUtilList_(self, extra, missing);
@@ -1095,13 +1095,13 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   }
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id)first
-                                                withId:(id)second
-                                     withNSObjectArray:(IOSObjectArray *)rest {
+- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id __nullable)first
+                                                withId:(id __nullable)second
+                                     withNSObjectArray:(IOSObjectArray * __nullable)rest {
   return [self containsAllInWithJavaLangIterable:ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest)];
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   id<JavaUtilList> actualList = ComGoogleCommonTruthIterableSubject_iterableToListWithJavaLangIterable_(ComGoogleCommonTruthIterableSubject_UsingCorrespondence_getCastActual(self));
   id<JavaUtilList> expectedList = ComGoogleCommonTruthIterableSubject_iterableToListWithJavaLangIterable_(expected);
   if (ComGoogleCommonTruthIterableSubject_UsingCorrespondence_correspondInOrderAllInWithJavaUtilIterator_withJavaUtilIterator_(self, [((id<JavaUtilList>) nil_chk(actualList)) iterator], [((id<JavaUtilList>) nil_chk(expectedList)) iterator])) {
@@ -1114,59 +1114,59 @@ ComGoogleCommonTruthIterableSubject_3 *create_ComGoogleCommonTruthIterableSubjec
   return create_ComGoogleCommonTruthIterableSubject_NotInOrder_initWithComGoogleCommonTruthIterableSubject_withNSString_withJavaLangIterable_(this$0_, JreStrcat("$@$", @"contains, in order, at least one element that ", correspondence_, @" each element of"), expected);
 }
 
-- (jboolean)correspondInOrderAllInWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                  withJavaUtilIterator:(id<JavaUtilIterator>)expected {
+- (jboolean)correspondInOrderAllInWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                  withJavaUtilIterator:(id<JavaUtilIterator> __nonnull)expected {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_correspondInOrderAllInWithJavaUtilIterator_withJavaUtilIterator_(self, actual, expected);
 }
 
-- (jboolean)findCorrespondingWithJavaUtilIterator:(id<JavaUtilIterator>)actual
-                                           withId:(id)expectedElement {
+- (jboolean)findCorrespondingWithJavaUtilIterator:(id<JavaUtilIterator> __nonnull)actual
+                                           withId:(id __nonnull)expectedElement {
   return ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findCorrespondingWithJavaUtilIterator_withId_(self, actual, expectedElement);
 }
 
-- (void)failIfCandidateMappingHasMissingWithJavaUtilList:(id<JavaUtilList>)expected
-             withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)mapping {
+- (void)failIfCandidateMappingHasMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)expected
+             withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)mapping {
   id<JavaUtilList> missing = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, expected, [((ComGoogleCommonCollectImmutableMultimap *) nil_chk([((ComGoogleCommonCollectImmutableMultimap *) nil_chk(mapping)) inverse])) keySet]);
   if (![((id<JavaUtilList>) nil_chk(missing)) isEmpty]) {
     [this$0_ failWithRawMessageWithNSString:@"Not true that %s contains at least one element that %s each element of <%s>. It is missing an element that %s %s" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [this$0_ actualAsString], correspondence_, expected, correspondence_, ComGoogleCommonTruthIterableSubject_UsingCorrespondence_formatMissingWithJavaUtilList_(self, missing) } count:5 type:NSObject_class_()]];
   }
 }
 
-- (void)failIfOneToOneMappingHasMissingWithJavaUtilList:(id<JavaUtilList>)expected
-                        withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)mapping {
+- (void)failIfOneToOneMappingHasMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                        withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)mapping {
   id<JavaUtilList> missing = ComGoogleCommonTruthIterableSubject_UsingCorrespondence_findNotIndexedWithJavaUtilList_withJavaUtilSet_(self, expected, [((id<ComGoogleCommonCollectBiMap>) nil_chk(mapping)) values]);
   if (![((id<JavaUtilList>) nil_chk(missing)) isEmpty]) {
     [this$0_ failWithRawMessageWithNSString:@"Not true that %s contains at least one element that %s each element of <%s>. It contains at least one element that matches each expected element, but there was no 1:1 mapping between all the expected elements and any subset of the actual elements. Using the most complete 1:1 mapping (or one such mapping, if there is a tie), it is missing an element that %s %s" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [this$0_ actualAsString], correspondence_, expected, correspondence_, ComGoogleCommonTruthIterableSubject_UsingCorrespondence_formatMissingWithJavaUtilList_(self, missing) } count:5 type:NSObject_class_()]];
   }
 }
 
-- (void)containsAnyOfWithId:(id)first
-                     withId:(id)second
-          withNSObjectArray:(IOSObjectArray *)rest {
+- (void)containsAnyOfWithId:(id __nullable)first
+                     withId:(id __nullable)second
+          withNSObjectArray:(IOSObjectArray * __nullable)rest {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsAnyWithNSString_withJavaLangIterable_(self, ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(@"contains at least one element that %s any of", [IOSObjectArray arrayWithObjects:(id[]){ correspondence_ } count:1 type:NSObject_class_()]), ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest));
 }
 
-- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsAnyWithNSString_withJavaLangIterable_(self, ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(@"contains at least one element that %s any element in", [IOSObjectArray arrayWithObjects:(id[]){ correspondence_ } count:1 type:NSObject_class_()]), expected);
 }
 
-- (void)containsAnyWithNSString:(NSString *)failVerb
-           withJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)containsAnyWithNSString:(NSString * __nonnull)failVerb
+           withJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsAnyWithNSString_withJavaLangIterable_(self, failVerb, expected);
 }
 
-- (void)containsNoneOfWithId:(id)firstExcluded
-                      withId:(id)secondExcluded
-           withNSObjectArray:(IOSObjectArray *)restOfExcluded {
+- (void)containsNoneOfWithId:(id __nullable)firstExcluded
+                      withId:(id __nullable)secondExcluded
+           withNSObjectArray:(IOSObjectArray * __nullable)restOfExcluded {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsNoneWithNSString_withJavaLangIterable_(self, @"any of", ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(firstExcluded, secondExcluded, restOfExcluded));
 }
 
-- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable>)excluded {
+- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsNoneWithNSString_withJavaLangIterable_(self, @"any element in", excluded);
 }
 
-- (void)containsNoneWithNSString:(NSString *)excludedPrefix
-            withJavaLangIterable:(id<JavaLangIterable>)excluded {
+- (void)containsNoneWithNSString:(NSString * __nonnull)excludedPrefix
+            withJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded {
   ComGoogleCommonTruthIterableSubject_UsingCorrespondence_containsNoneWithNSString_withJavaLangIterable_(self, excludedPrefix, excluded);
 }
 

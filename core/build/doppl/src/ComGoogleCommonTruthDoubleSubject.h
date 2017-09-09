@@ -28,14 +28,15 @@
 @class ComGoogleCommonTruthFailureStrategy;
 @class IOSObjectArray;
 @class JavaLangDouble;
+@protocol JavaLangComparable;
 
 @interface ComGoogleCommonTruthDoubleSubject : ComGoogleCommonTruthComparableSubject
 
 #pragma mark Public
 
-- (void)isEqualToWithJavaLangDouble:(JavaLangDouble *)other;
+- (void)isEqualToWithJavaLangDouble:(JavaLangDouble * __nullable)other;
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangDouble *)other;
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangDouble * __nonnull)other;
 
 - (void)isFinite;
 
@@ -45,7 +46,7 @@
 
 - (void)isNonZero;
 
-- (void)isNotEqualToWithJavaLangDouble:(JavaLangDouble *)other;
+- (void)isNotEqualToWithJavaLangDouble:(JavaLangDouble * __nullable)other;
 
 - (void)isNotNaN;
 
@@ -57,8 +58,8 @@
 
 - (void)isZero;
 
-- (ComGoogleCommonTruthDoubleSubject *)namedWithNSString:(NSString *)arg0
-                                       withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthDoubleSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -68,10 +69,15 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                         withJavaLangDouble:(JavaLangDouble *)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                         withJavaLangDouble:(JavaLangDouble * __nullable)subject;
 
 + (void)checkToleranceWithDouble:(jdouble)tolerance;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -96,7 +102,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthDoubleSubject)
 
 #pragma mark Public
 
-- (jboolean)isEqual:(id)o;
+- (jboolean)isEqual:(id __nullable)o;
 
 - (NSUInteger)hash;
 

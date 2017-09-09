@@ -26,7 +26,7 @@
 
 #pragma mark Public
 
-+ (IOSClass *)typeParameterWithIOSClass:(IOSClass *)clazz
++ (IOSClass *)typeParameterWithIOSClass:(IOSClass * __nonnull)clazz
                                 withInt:(jint)paramIndex;
 
 @end

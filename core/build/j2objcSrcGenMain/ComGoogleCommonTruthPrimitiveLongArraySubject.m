@@ -23,8 +23,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveLong
 
 @implementation ComGoogleCommonTruthPrimitiveLongArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                              withLongArray:(IOSLongArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                              withLongArray:(IOSLongArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveLongArraySubject_initWithComGoogleCommonTruthFailureStrategy_withLongArray_(self, failureStrategy, o);
   return self;
 }
@@ -37,7 +37,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveLong
   return ComGoogleCommonPrimitivesLongs_asListWithLongArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   IOSLongArray *actual = [self actual];
   if (actual == expected) {
     return;
@@ -53,7 +53,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveLong
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   IOSLongArray *actual = [self actual];
   @try {
     IOSLongArray *expectedArray = (IOSLongArray *) cast_chk(expected, [IOSLongArray class]);

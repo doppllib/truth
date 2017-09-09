@@ -33,29 +33,29 @@
 
 #pragma mark Public
 
-- (void)comparesEqualToWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)comparesEqualToWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isAtLeastWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)isAtLeastWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isAtMostWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)isAtMostWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isGreaterThanWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)isGreaterThanWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange *)range;
+- (void)isInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange * __nonnull)range;
 
-- (void)isLessThanWithJavaLangComparable:(id<JavaLangComparable>)other;
+- (void)isLessThanWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other;
 
-- (void)isNotInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange *)range;
+- (void)isNotInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange * __nonnull)range;
 
-- (ComGoogleCommonTruthComparableSubject *)namedWithNSString:(NSString *)arg0
-                                           withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthComparableSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                           withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaLangComparable:(id<JavaLangComparable>)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaLangComparable:(id<JavaLangComparable> __nullable)subject;
 
 - (id<JavaLangComparable>)actual;
 

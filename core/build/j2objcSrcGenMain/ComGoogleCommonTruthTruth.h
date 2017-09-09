@@ -72,6 +72,7 @@
 @class JavaLangFloat;
 @class JavaLangInteger;
 @class JavaLangLong;
+@class JavaLangThrowable;
 @class JavaMathBigDecimal;
 @protocol ComGoogleCommonCollectListMultimap;
 @protocol ComGoogleCommonCollectMultimap;
@@ -86,78 +87,80 @@
 
 @interface ComGoogleCommonTruthTruth : NSObject
 
++ (ComGoogleCommonTruthFailureStrategy *)THROW_ASSERTION_ERROR;
+
 #pragma mark Public
 
 + (ComGoogleCommonTruthTestVerb *)assert_;
 
-+ (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)assertAboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory;
++ (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)assertAboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory;
 
-+ (ComGoogleCommonTruthAtomicLongMapSubject *)assertThatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)target;
++ (ComGoogleCommonTruthAtomicLongMapSubject *)assertThatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)target;
 
-+ (ComGoogleCommonTruthBigDecimalSubject *)assertThatWithJavaMathBigDecimal:(JavaMathBigDecimal *)target;
++ (ComGoogleCommonTruthBigDecimalSubject *)assertThatWithJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)target;
 
-+ (ComGoogleCommonTruthBooleanSubject *)assertThatWithJavaLangBoolean:(JavaLangBoolean *)target;
++ (ComGoogleCommonTruthBooleanSubject *)assertThatWithJavaLangBoolean:(JavaLangBoolean * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)assertThatWithBooleanArray:(IOSBooleanArray *)target;
++ (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)assertThatWithBooleanArray:(IOSBooleanArray * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveByteArraySubject *)assertThatWithByteArray:(IOSByteArray *)target;
++ (ComGoogleCommonTruthPrimitiveByteArraySubject *)assertThatWithByteArray:(IOSByteArray * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveCharArraySubject *)assertThatWithCharArray:(IOSCharArray *)target;
++ (ComGoogleCommonTruthPrimitiveCharArraySubject *)assertThatWithCharArray:(IOSCharArray * __nullable)target;
 
-+ (ComGoogleCommonTruthClassSubject *)assertThatWithIOSClass:(IOSClass *)target;
++ (ComGoogleCommonTruthClassSubject *)assertThatWithIOSClass:(IOSClass * __nullable)target;
 
-+ (ComGoogleCommonTruthDoubleSubject *)assertThatWithJavaLangDouble:(JavaLangDouble *)target;
++ (ComGoogleCommonTruthDoubleSubject *)assertThatWithJavaLangDouble:(JavaLangDouble * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)assertThatWithDoubleArray:(IOSDoubleArray *)target;
++ (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)assertThatWithDoubleArray:(IOSDoubleArray * __nullable)target;
 
-+ (ComGoogleCommonTruthFloatSubject *)assertThatWithJavaLangFloat:(JavaLangFloat *)target;
++ (ComGoogleCommonTruthFloatSubject *)assertThatWithJavaLangFloat:(JavaLangFloat * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveFloatArraySubject *)assertThatWithFloatArray:(IOSFloatArray *)target;
++ (ComGoogleCommonTruthPrimitiveFloatArraySubject *)assertThatWithFloatArray:(IOSFloatArray * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveIntArraySubject *)assertThatWithIntArray:(IOSIntArray *)target;
++ (ComGoogleCommonTruthPrimitiveIntArraySubject *)assertThatWithIntArray:(IOSIntArray * __nullable)target;
 
-+ (ComGoogleCommonTruthIntegerSubject *)assertThatWithJavaLangInteger:(JavaLangInteger *)target;
++ (ComGoogleCommonTruthIntegerSubject *)assertThatWithJavaLangInteger:(JavaLangInteger * __nullable)target;
 
-+ (ComGoogleCommonTruthIterableSubject *)assertThatWithJavaLangIterable:(id<JavaLangIterable>)target;
++ (ComGoogleCommonTruthIterableSubject *)assertThatWithJavaLangIterable:(id<JavaLangIterable> __nullable)target;
 
-+ (ComGoogleCommonTruthListMultimapSubject *)assertThatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)target;
++ (ComGoogleCommonTruthListMultimapSubject *)assertThatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)target;
 
-+ (ComGoogleCommonTruthLongSubject *)assertThatWithJavaLangLong:(JavaLangLong *)target;
++ (ComGoogleCommonTruthLongSubject *)assertThatWithJavaLangLong:(JavaLangLong * __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveLongArraySubject *)assertThatWithLongArray:(IOSLongArray *)target;
++ (ComGoogleCommonTruthPrimitiveLongArraySubject *)assertThatWithLongArray:(IOSLongArray * __nullable)target;
 
-+ (ComGoogleCommonTruthMapSubject *)assertThatWithJavaUtilMap:(id<JavaUtilMap>)target;
++ (ComGoogleCommonTruthMapSubject *)assertThatWithJavaUtilMap:(id<JavaUtilMap> __nullable)target;
 
-+ (ComGoogleCommonTruthMultimapSubject *)assertThatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)target;
++ (ComGoogleCommonTruthMultimapSubject *)assertThatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)target;
 
-+ (ComGoogleCommonTruthMultisetSubject *)assertThatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)target;
++ (ComGoogleCommonTruthMultisetSubject *)assertThatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)target;
 
-+ (ComGoogleCommonTruthSubject *)assertThatWithId:(id)target;
++ (ComGoogleCommonTruthSubject *)assertThatWithId:(id __nullable)target;
 
-+ (ComGoogleCommonTruthGuavaOptionalSubject *)assertThatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional *)target;
++ (ComGoogleCommonTruthGuavaOptionalSubject *)assertThatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional * __nullable)target;
 
-+ (ComGoogleCommonTruthSetMultimapSubject *)assertThatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)target;
++ (ComGoogleCommonTruthSetMultimapSubject *)assertThatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)target;
 
-+ (ComGoogleCommonTruthPrimitiveShortArraySubject *)assertThatWithShortArray:(IOSShortArray *)target;
++ (ComGoogleCommonTruthPrimitiveShortArraySubject *)assertThatWithShortArray:(IOSShortArray * __nullable)target;
 
-+ (ComGoogleCommonTruthSortedMapSubject *)assertThatWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)target;
++ (ComGoogleCommonTruthSortedMapSubject *)assertThatWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nullable)target;
 
-+ (ComGoogleCommonTruthSortedSetSubject *)assertThatWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)target;
++ (ComGoogleCommonTruthSortedSetSubject *)assertThatWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nullable)target;
 
-+ (ComGoogleCommonTruthStringSubject *)assertThatWithNSString:(NSString *)target;
++ (ComGoogleCommonTruthStringSubject *)assertThatWithNSString:(NSString * __nullable)target;
 
-+ (ComGoogleCommonTruthComparableSubject *)assertThatWithJavaLangComparable:(id<JavaLangComparable>)target;
++ (ComGoogleCommonTruthComparableSubject *)assertThatWithJavaLangComparable:(id<JavaLangComparable> __nullable)target;
 
-+ (ComGoogleCommonTruthObjectArraySubject *)assertThatWithNSObjectArray:(IOSObjectArray *)target;
++ (ComGoogleCommonTruthObjectArraySubject *)assertThatWithNSObjectArray:(IOSObjectArray * __nullable)target;
 
-+ (ComGoogleCommonTruthTableSubject *)assertThatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)target;
++ (ComGoogleCommonTruthTableSubject *)assertThatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)target;
 
-+ (ComGoogleCommonTruthThrowableSubject *)assertThatWithNSException:(NSException *)target;
++ (ComGoogleCommonTruthThrowableSubject *)assertThatWithJavaLangThrowable:(JavaLangThrowable * __nullable)target;
 
-+ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString *)messageToPrepend;
++ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString * __nonnull)messageToPrepend;
 
-+ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString *)format
-                                              withNSObjectArray:(IOSObjectArray *)args;
++ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString * __nonnull)format
+                                              withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 @end
 
@@ -184,7 +187,7 @@ FOUNDATION_EXPORT ComGoogleCommonTruthSubject *ComGoogleCommonTruthTruth_assertT
 
 FOUNDATION_EXPORT ComGoogleCommonTruthClassSubject *ComGoogleCommonTruthTruth_assertThatWithIOSClass_(IOSClass *target);
 
-FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *ComGoogleCommonTruthTruth_assertThatWithNSException_(NSException *target);
+FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *ComGoogleCommonTruthTruth_assertThatWithJavaLangThrowable_(JavaLangThrowable *target);
 
 FOUNDATION_EXPORT ComGoogleCommonTruthLongSubject *ComGoogleCommonTruthTruth_assertThatWithJavaLangLong_(JavaLangLong *target);
 

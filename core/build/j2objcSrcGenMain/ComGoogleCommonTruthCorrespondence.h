@@ -26,10 +26,10 @@
 
 - (instancetype)init;
 
-- (jboolean)compareWithId:(id)actual
-                   withId:(id)expected;
+- (jboolean)compareWithId:(id __nullable)actual
+                   withId:(id __nullable)expected;
 
-- (jboolean)isEqual:(id)o;
+- (jboolean)isEqual:(id __nullable)o;
 
 - (NSUInteger)hash;
 

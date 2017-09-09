@@ -20,6 +20,7 @@
 #if !defined (ComGoogleCommonTruthFailureStrategy_) && (INCLUDE_ALL_ComGoogleCommonTruthFailureStrategy || defined(INCLUDE_ComGoogleCommonTruthFailureStrategy))
 #define ComGoogleCommonTruthFailureStrategy_
 
+@class JavaLangThrowable;
 @protocol JavaLangCharSequence;
 
 @interface ComGoogleCommonTruthFailureStrategy : NSObject
@@ -28,14 +29,14 @@
 
 - (instancetype)init;
 
-- (void)failWithNSString:(NSString *)message;
+- (void)failWithNSString:(NSString * __nonnull)message;
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause;
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
 @end
 

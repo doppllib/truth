@@ -65,10 +65,10 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveDoub
   jdouble val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject * __nonnull)outer$
                                                              withDouble:(jdouble)capture$0;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 
@@ -86,10 +86,10 @@ __attribute__((unused)) static ComGoogleCommonTruthPrimitiveDoubleArraySubject_1
   jdouble val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject * __nonnull)outer$
                                                              withDouble:(jdouble)capture$0;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 
@@ -105,8 +105,8 @@ __attribute__((unused)) static ComGoogleCommonTruthPrimitiveDoubleArraySubject_2
 
 - (instancetype)init;
 
-- (jboolean)compareWithId:(JavaLangDouble *)actual
-                   withId:(JavaLangDouble *)expected;
+- (jboolean)compareWithId:(JavaLangDouble * __nonnull)actual
+                   withId:(JavaLangDouble * __nonnull)expected;
 
 - (NSString *)description;
 
@@ -124,8 +124,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveDoubleArraySubject)
 
 @implementation ComGoogleCommonTruthPrimitiveDoubleArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withDoubleArray:(IOSDoubleArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                            withDoubleArray:(IOSDoubleArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveDoubleArraySubject_initWithComGoogleCommonTruthFailureStrategy_withDoubleArray_(self, failureStrategy, o);
   return self;
 }
@@ -138,11 +138,11 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveDoubleArraySubject)
   return ComGoogleCommonPrimitivesDoubles_asListWithDoubleArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Comparing raw equality of doubles is often unsafe. Use either usingTolerance(someTolerance).containsExactly(someValues).inOrder() to compare witha tolerance or usingExactEquality().containsExactly(someValues).inOrder() if youreally want exact equality instead.");
 }
 
-- (void)isEqualToWithId:(id)expected
+- (void)isEqualToWithId:(id __nonnull)expected
              withDouble:(jdouble)tolerance {
   IOSDoubleArray *actual = [self actual];
   if (actual == expected) {
@@ -168,11 +168,11 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveDoubleArraySubject)
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Comparing raw equality of doubles is unsafe, use isNotEqualTo(double[] array, double tolerance) instead.");
 }
 
-- (void)isNotEqualToWithId:(id)expectedArray
+- (void)isNotEqualToWithId:(id __nonnull)expectedArray
                 withDouble:(jdouble)tolerance {
   IOSDoubleArray *actual = [self actual];
   @try {
@@ -305,16 +305,16 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)ofWithDoubleArray:(IOSDoubleArray *)expected {
+- (void)ofWithDoubleArray:(IOSDoubleArray * __nonnull)expected {
   [self ofElementsInWithJavaLangIterable:ComGoogleCommonPrimitivesDoubles_asListWithDoubleArray_(expected)];
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"If you meant to compare double arrays, use .of() or .ofElementsIn() instead.");
 }
 
@@ -365,13 +365,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthPrimitiveDoubleArraySubject
 
 @implementation ComGoogleCommonTruthPrimitiveDoubleArraySubject_1
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject * __nonnull)outer$
                                                              withDouble:(jdouble)capture$0 {
   ComGoogleCommonTruthPrimitiveDoubleArraySubject_1_initWithComGoogleCommonTruthPrimitiveDoubleArraySubject_withDouble_(self, outer$, capture$0);
   return self;
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthDoubleSubject_checkToleranceWithDouble_(val$tolerance_);
   IOSDoubleArray *actual = ComGoogleCommonBasePreconditions_checkNotNullWithId_([this$0_ actual]);
   id<JavaUtilList> mismatches = create_JavaUtilArrayList_init();
@@ -432,13 +432,13 @@ ComGoogleCommonTruthPrimitiveDoubleArraySubject_1 *create_ComGoogleCommonTruthPr
 
 @implementation ComGoogleCommonTruthPrimitiveDoubleArraySubject_2
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveDoubleArraySubject:(ComGoogleCommonTruthPrimitiveDoubleArraySubject * __nonnull)outer$
                                                              withDouble:(jdouble)capture$0 {
   ComGoogleCommonTruthPrimitiveDoubleArraySubject_2_initWithComGoogleCommonTruthPrimitiveDoubleArraySubject_withDouble_(self, outer$, capture$0);
   return self;
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthDoubleSubject_checkToleranceWithDouble_(val$tolerance_);
   IOSDoubleArray *actual = ComGoogleCommonBasePreconditions_checkNotNullWithId_([this$0_ actual]);
   jint expectedCount = 0;
@@ -502,8 +502,8 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (jboolean)compareWithId:(JavaLangDouble *)actual
-                   withId:(JavaLangDouble *)expected {
+- (jboolean)compareWithId:(JavaLangDouble * __nonnull)actual
+                   withId:(JavaLangDouble * __nonnull)expected {
   return [((JavaLangDouble *) nil_chk(actual)) isEqual:ComGoogleCommonBasePreconditions_checkNotNullWithId_(expected)];
 }
 

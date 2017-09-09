@@ -33,18 +33,18 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-+ (id<JavaUtilList>)accumulateWithId:(id)first
-                              withId:(id)second
-                   withNSObjectArray:(IOSObjectArray *)rest {
++ (id<JavaUtilList>)accumulateWithId:(id __nonnull)first
+                              withId:(id __nonnull)second
+                   withNSObjectArray:(IOSObjectArray * __nonnull)rest {
   return ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest);
 }
 
-+ (jint)countOfWithId:(id)t
- withJavaLangIterable:(id<JavaLangIterable>)items {
++ (jint)countOfWithId:(id __nonnull)t
+ withJavaLangIterable:(id<JavaLangIterable> __nonnull)items {
   return ComGoogleCommonTruthSubjectUtils_countOfWithId_withJavaLangIterable_(t, items);
 }
 
-+ (id<JavaUtilList>)countDuplicatesWithJavaUtilCollection:(id<JavaUtilCollection>)items {
++ (id<JavaUtilList>)countDuplicatesWithJavaUtilCollection:(id<JavaUtilCollection> __nonnull)items {
   return ComGoogleCommonTruthSubjectUtils_countDuplicatesWithJavaUtilCollection_(items);
 }
 

@@ -27,23 +27,24 @@
 @class ComGoogleCommonTruthFailureStrategy;
 @class IOSObjectArray;
 @class JavaMathBigDecimal;
+@protocol JavaLangComparable;
 
 @interface ComGoogleCommonTruthBigDecimalSubject : ComGoogleCommonTruthComparableSubject
 
 #pragma mark Public
 
-- (void)isEqualToWithId:(id)expected;
+- (void)isEqualToWithId:(id __nullable)expected;
 
-- (void)isEqualToIgnoringScaleWithJavaMathBigDecimal:(JavaMathBigDecimal *)expected;
+- (void)isEqualToIgnoringScaleWithJavaMathBigDecimal:(JavaMathBigDecimal * __nonnull)expected;
 
 - (void)isEqualToIgnoringScaleWithLong:(jlong)expected;
 
-- (void)isEqualToIgnoringScaleWithNSString:(NSString *)expected;
+- (void)isEqualToIgnoringScaleWithNSString:(NSString * __nonnull)expected;
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaMathBigDecimal *)expected;
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaMathBigDecimal * __nonnull)expected;
 
-- (ComGoogleCommonTruthBigDecimalSubject *)namedWithNSString:(NSString *)arg0
-                                           withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthBigDecimalSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                           withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -53,8 +54,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaMathBigDecimal:(JavaMathBigDecimal *)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)subject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

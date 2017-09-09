@@ -22,7 +22,7 @@
 
 @interface ComGoogleCommonTruthStringSubject ()
 
-+ (NSString *)quoteWithJavaLangCharSequence:(id<JavaLangCharSequence>)toBeWrapped;
++ (NSString *)quoteWithJavaLangCharSequence:(id<JavaLangCharSequence> __nullable)toBeWrapped;
 
 @end
 
@@ -38,8 +38,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
 
 @implementation ComGoogleCommonTruthStringSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)string {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)string {
   ComGoogleCommonTruthStringSubject_initWithComGoogleCommonTruthFailureStrategy_withNSString_(self, failureStrategy, string);
   return self;
 }
@@ -48,7 +48,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   return ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nullable)expected {
   if ([self actual] == nil) {
     if (expected != nil) {
       if ([expected isKindOfClass:[NSString class]]) {
@@ -77,7 +77,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(NSString *)other {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(NSString * __nonnull)other {
   [super isEquivalentAccordingToCompareToWithJavaLangComparable:other];
 }
 
@@ -113,7 +113,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)containsWithJavaLangCharSequence:(id<JavaLangCharSequence>)string {
+- (void)containsWithJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)string {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(string);
   if ([self actual] == nil) {
     [self failWithRawMessageWithNSString:@"Not true that null reference contains <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_(string) } count:1 type:NSObject_class_()]];
@@ -123,7 +123,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)doesNotContainWithJavaLangCharSequence:(id<JavaLangCharSequence>)string {
+- (void)doesNotContainWithJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)string {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(string);
   if ([self actual] == nil) {
     [self failWithRawMessageWithNSString:@"Not true that null reference contains <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_(string) } count:1 type:NSObject_class_()]];
@@ -133,7 +133,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)startsWithWithNSString:(NSString *)string {
+- (void)startsWithWithNSString:(NSString * __nonnull)string {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(string);
   if ([self actual] == nil) {
     [self failWithRawMessageWithNSString:@"Not true that null reference starts with <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_(string) } count:1 type:NSObject_class_()]];
@@ -143,7 +143,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)endsWithWithNSString:(NSString *)string {
+- (void)endsWithWithNSString:(NSString * __nonnull)string {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(string);
   if ([self actual] == nil) {
     [self failWithRawMessageWithNSString:@"Not true that null reference ends with <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_(string) } count:1 type:NSObject_class_()]];
@@ -153,55 +153,55 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthStringSubject
   }
 }
 
-- (void)matchesWithNSString:(NSString *)regex {
+- (void)matchesWithNSString:(NSString * __nonnull)regex {
   if (![((NSString *) nil_chk([self actual])) java_matches:regex]) {
     [self failWithNSString:@"matches" withId:regex];
   }
 }
 
-- (void)matchesWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)regex {
+- (void)matchesWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)regex {
   if (![((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(regex)) matcherWithJavaLangCharSequence:[self actual]])) matches]) {
     [self failWithNSString:@"matches" withId:regex];
   }
 }
 
-- (void)doesNotMatchWithNSString:(NSString *)regex {
+- (void)doesNotMatchWithNSString:(NSString * __nonnull)regex {
   if ([((NSString *) nil_chk([self actual])) java_matches:regex]) {
     [self failWithNSString:@"fails to match" withId:regex];
   }
 }
 
-- (void)doesNotMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)regex {
+- (void)doesNotMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)regex {
   if ([((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(regex)) matcherWithJavaLangCharSequence:[self actual]])) matches]) {
     [self failWithNSString:@"fails to match" withId:regex];
   }
 }
 
-- (void)containsMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)pattern {
+- (void)containsMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)pattern {
   if (![((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(pattern)) matcherWithJavaLangCharSequence:[self actual]])) find]) {
     [self failWithRawMessageWithNSString:@"%s should have contained a match for <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], pattern } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)containsMatchWithNSString:(NSString *)regex {
+- (void)containsMatchWithNSString:(NSString * __nonnull)regex {
   if (!ComGoogleCommonTruthPlatform_containsMatchWithNSString_withNSString_([self actual], regex)) {
     [self failWithRawMessageWithNSString:@"%s should have contained a match for <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], regex } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)doesNotContainMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)pattern {
+- (void)doesNotContainMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)pattern {
   if ([((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(pattern)) matcherWithJavaLangCharSequence:[self actual]])) find]) {
     [self failWithRawMessageWithNSString:@"%s should not have contained a match for <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], pattern } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)doesNotContainMatchWithNSString:(NSString *)regex {
+- (void)doesNotContainMatchWithNSString:(NSString * __nonnull)regex {
   if (ComGoogleCommonTruthPlatform_containsMatchWithNSString_withNSString_([self actual], regex)) {
     [self failWithRawMessageWithNSString:@"%s should not have contained a match for <%s>" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], regex } count:2 type:NSObject_class_()]];
   }
 }
 
-+ (NSString *)quoteWithJavaLangCharSequence:(id<JavaLangCharSequence>)toBeWrapped {
++ (NSString *)quoteWithJavaLangCharSequence:(id<JavaLangCharSequence> __nullable)toBeWrapped {
   return ComGoogleCommonTruthStringSubject_quoteWithJavaLangCharSequence_(toBeWrapped);
 }
 

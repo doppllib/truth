@@ -33,12 +33,12 @@
 
 #pragma mark Public
 
-- (void)hasFirstElementWithId:(id)element;
+- (void)hasFirstElementWithId:(id __nullable)element;
 
-- (void)hasLastElementWithId:(id)element;
+- (void)hasLastElementWithId:(id __nullable)element;
 
-- (ComGoogleCommonTruthSortedSetSubject *)namedWithNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthSortedSetSubject *)namedWithNSString:(NSString * __nonnull)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -48,8 +48,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                      withJavaUtilSortedSet:(id<JavaUtilSortedSet>)set;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)set;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                       withJavaLangIterable:(id<JavaLangIterable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

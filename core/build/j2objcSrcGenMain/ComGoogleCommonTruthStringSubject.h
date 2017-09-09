@@ -28,52 +28,53 @@
 @class IOSObjectArray;
 @class JavaUtilRegexPattern;
 @protocol JavaLangCharSequence;
+@protocol JavaLangComparable;
 
 @interface ComGoogleCommonTruthStringSubject : ComGoogleCommonTruthComparableSubject
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)string;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)string;
 
-- (void)containsWithJavaLangCharSequence:(id<JavaLangCharSequence>)string;
+- (void)containsWithJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)string;
 
-- (void)containsMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)pattern;
+- (void)containsMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)pattern;
 
-- (void)containsMatchWithNSString:(NSString *)regex;
+- (void)containsMatchWithNSString:(NSString * __nonnull)regex;
 
-- (void)doesNotContainWithJavaLangCharSequence:(id<JavaLangCharSequence>)string;
+- (void)doesNotContainWithJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)string;
 
-- (void)doesNotContainMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)pattern;
+- (void)doesNotContainMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)pattern;
 
-- (void)doesNotContainMatchWithNSString:(NSString *)regex;
+- (void)doesNotContainMatchWithNSString:(NSString * __nonnull)regex;
 
-- (void)doesNotMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)regex;
+- (void)doesNotMatchWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)regex;
 
-- (void)doesNotMatchWithNSString:(NSString *)regex;
+- (void)doesNotMatchWithNSString:(NSString * __nonnull)regex;
 
-- (void)endsWithWithNSString:(NSString *)string;
+- (void)endsWithWithNSString:(NSString * __nonnull)string;
 
 - (void)hasLengthWithInt:(jint)expectedLength;
 
 - (void)isEmpty;
 
-- (void)isEqualToWithId:(id)expected;
+- (void)isEqualToWithId:(id __nullable)expected;
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(NSString *)other;
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(NSString * __nonnull)other;
 
 - (void)isNotEmpty;
 
 - (void)isNull;
 
-- (void)matchesWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)regex;
+- (void)matchesWithJavaUtilRegexPattern:(JavaUtilRegexPattern * __nonnull)regex;
 
-- (void)matchesWithNSString:(NSString *)regex;
+- (void)matchesWithNSString:(NSString * __nonnull)regex;
 
-- (ComGoogleCommonTruthStringSubject *)namedWithNSString:(NSString *)arg0
-                                       withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthStringSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
-- (void)startsWithWithNSString:(NSString *)string;
+- (void)startsWithWithNSString:(NSString * __nonnull)string;
 
 #pragma mark Protected
 
@@ -82,6 +83,11 @@
 - (NSString *)actualCustomStringRepresentation;
 
 - (NSString *)getSubject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

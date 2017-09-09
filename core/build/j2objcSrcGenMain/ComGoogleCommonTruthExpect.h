@@ -30,6 +30,7 @@
 
 @class ComGoogleCommonTruthExpect_ExpectationGatherer;
 @class ComGoogleCommonTruthFailureStrategy;
+@class IOSObjectArray;
 @class OrgJunitRunnerDescription;
 @class OrgJunitRunnersModelStatement;
 
@@ -37,12 +38,12 @@
 
 #pragma mark Public
 
-- (OrgJunitRunnersModelStatement *)applyWithOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement *)base
-                                            withOrgJunitRunnerDescription:(OrgJunitRunnerDescription *)description_;
+- (OrgJunitRunnersModelStatement *)applyWithOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement * __nonnull)base
+                                            withOrgJunitRunnerDescription:(OrgJunitRunnerDescription * __nonnull)description_;
 
 + (ComGoogleCommonTruthExpect *)create;
 
-+ (ComGoogleCommonTruthExpect *)createWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer *)gatherer;
++ (ComGoogleCommonTruthExpect *)createWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer * __nonnull)gatherer;
 
 + (ComGoogleCommonTruthExpect *)createAndEnableStackTrace;
 
@@ -54,7 +55,18 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer *)gatherer;
+- (instancetype)initWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer * __nonnull)gatherer;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0 NS_UNAVAILABLE;
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                               withNSString:(NSString * __nonnull)arg1 NS_UNAVAILABLE;
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                               withNSString:(NSString * __nonnull)arg1
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)arg2 NS_UNAVAILABLE;
 
 @end
 
@@ -83,6 +95,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthExpect)
 #define INCLUDE_ComGoogleCommonTruthFailureStrategy 1
 #include "ComGoogleCommonTruthFailureStrategy.h"
 
+@class JavaLangThrowable;
 @protocol JavaLangCharSequence;
 @protocol JavaUtilList;
 
@@ -94,14 +107,14 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthExpect)
 
 - (instancetype)initWithBoolean:(jboolean)showStackTrace;
 
-- (void)failWithNSString:(NSString *)message;
+- (void)failWithNSString:(NSString * __nonnull)message;
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause;
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
 - (id<JavaUtilList>)getMessages;
 
@@ -130,28 +143,34 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthExpect_ExpectationGatherer)
 #if !defined (ComGoogleCommonTruthExpect_ExpectationFailure_) && (INCLUDE_ALL_ComGoogleCommonTruthExpect || defined(INCLUDE_ComGoogleCommonTruthExpect_ExpectationFailure))
 #define ComGoogleCommonTruthExpect_ExpectationFailure_
 
+@class JavaLangThrowable;
+
 @interface ComGoogleCommonTruthExpect_ExpectationFailure : NSObject
 
 #pragma mark Public
 
-- (jboolean)isEqual:(id)other;
+- (jboolean)isEqual:(id __nullable)other;
 
 - (NSUInteger)hash;
 
 #pragma mark Package-Private
 
-- (NSException *)cause;
+- (JavaLangThrowable * __nullable)cause;
 
-+ (ComGoogleCommonTruthExpect_ExpectationFailure *)createWithNSString:(NSString *)message
-                                                      withNSException:(NSException *)cause;
++ (ComGoogleCommonTruthExpect_ExpectationFailure *)createWithNSString:(NSString * __nonnull)message
+                                                withJavaLangThrowable:(JavaLangThrowable * __nullable)cause;
 
 - (NSString *)message;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleCommonTruthExpect_ExpectationFailure)
 
-FOUNDATION_EXPORT ComGoogleCommonTruthExpect_ExpectationFailure *ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withNSException_(NSString *message, NSException *cause);
+FOUNDATION_EXPORT ComGoogleCommonTruthExpect_ExpectationFailure *ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause);
 
 J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthExpect_ExpectationFailure)
 

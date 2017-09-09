@@ -73,6 +73,7 @@
 @class JavaLangFloat;
 @class JavaLangInteger;
 @class JavaLangLong;
+@class JavaLangThrowable;
 @class JavaMathBigDecimal;
 @protocol ComGoogleCommonCollectListMultimap;
 @protocol ComGoogleCommonCollectMultimap;
@@ -89,81 +90,81 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy;
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)message;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)message;
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
-- (ComGoogleCommonTruthAtomicLongMapSubject *)thatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)target;
+- (ComGoogleCommonTruthAtomicLongMapSubject *)thatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)target;
 
-- (ComGoogleCommonTruthBigDecimalSubject *)thatWithJavaMathBigDecimal:(JavaMathBigDecimal *)target;
+- (ComGoogleCommonTruthBigDecimalSubject *)thatWithJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)target;
 
-- (ComGoogleCommonTruthBooleanSubject *)thatWithJavaLangBoolean:(JavaLangBoolean *)target;
+- (ComGoogleCommonTruthBooleanSubject *)thatWithJavaLangBoolean:(JavaLangBoolean * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)thatWithBooleanArray:(IOSBooleanArray *)target;
+- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)thatWithBooleanArray:(IOSBooleanArray * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveByteArraySubject *)thatWithByteArray:(IOSByteArray *)target;
+- (ComGoogleCommonTruthPrimitiveByteArraySubject *)thatWithByteArray:(IOSByteArray * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveCharArraySubject *)thatWithCharArray:(IOSCharArray *)target;
+- (ComGoogleCommonTruthPrimitiveCharArraySubject *)thatWithCharArray:(IOSCharArray * __nullable)target;
 
-- (ComGoogleCommonTruthClassSubject *)thatWithIOSClass:(IOSClass *)target;
+- (ComGoogleCommonTruthClassSubject *)thatWithIOSClass:(IOSClass * __nullable)target;
 
-- (ComGoogleCommonTruthDoubleSubject *)thatWithJavaLangDouble:(JavaLangDouble *)target;
+- (ComGoogleCommonTruthDoubleSubject *)thatWithJavaLangDouble:(JavaLangDouble * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)thatWithDoubleArray:(IOSDoubleArray *)target;
+- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)thatWithDoubleArray:(IOSDoubleArray * __nullable)target;
 
-- (ComGoogleCommonTruthFloatSubject *)thatWithJavaLangFloat:(JavaLangFloat *)target;
+- (ComGoogleCommonTruthFloatSubject *)thatWithJavaLangFloat:(JavaLangFloat * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)thatWithFloatArray:(IOSFloatArray *)target;
+- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)thatWithFloatArray:(IOSFloatArray * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveIntArraySubject *)thatWithIntArray:(IOSIntArray *)target;
+- (ComGoogleCommonTruthPrimitiveIntArraySubject *)thatWithIntArray:(IOSIntArray * __nullable)target;
 
-- (ComGoogleCommonTruthIntegerSubject *)thatWithJavaLangInteger:(JavaLangInteger *)target;
+- (ComGoogleCommonTruthIntegerSubject *)thatWithJavaLangInteger:(JavaLangInteger * __nullable)target;
 
-- (ComGoogleCommonTruthIterableSubject *)thatWithJavaLangIterable:(id<JavaLangIterable>)target;
+- (ComGoogleCommonTruthIterableSubject *)thatWithJavaLangIterable:(id<JavaLangIterable> __nullable)target;
 
-- (ComGoogleCommonTruthListMultimapSubject *)thatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)target;
+- (ComGoogleCommonTruthListMultimapSubject *)thatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)target;
 
-- (ComGoogleCommonTruthLongSubject *)thatWithJavaLangLong:(JavaLangLong *)target;
+- (ComGoogleCommonTruthLongSubject *)thatWithJavaLangLong:(JavaLangLong * __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveLongArraySubject *)thatWithLongArray:(IOSLongArray *)target;
+- (ComGoogleCommonTruthPrimitiveLongArraySubject *)thatWithLongArray:(IOSLongArray * __nullable)target;
 
-- (ComGoogleCommonTruthMapSubject *)thatWithJavaUtilMap:(id<JavaUtilMap>)target;
+- (ComGoogleCommonTruthMapSubject *)thatWithJavaUtilMap:(id<JavaUtilMap> __nullable)target;
 
-- (ComGoogleCommonTruthMultimapSubject *)thatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)target;
+- (ComGoogleCommonTruthMultimapSubject *)thatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)target;
 
-- (ComGoogleCommonTruthMultisetSubject *)thatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)target;
+- (ComGoogleCommonTruthMultisetSubject *)thatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)target;
 
-- (ComGoogleCommonTruthSubject *)thatWithId:(id)target;
+- (ComGoogleCommonTruthSubject *)thatWithId:(id __nullable)target;
 
-- (ComGoogleCommonTruthGuavaOptionalSubject *)thatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional *)target;
+- (ComGoogleCommonTruthGuavaOptionalSubject *)thatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional * __nullable)target;
 
-- (ComGoogleCommonTruthSetMultimapSubject *)thatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)target;
+- (ComGoogleCommonTruthSetMultimapSubject *)thatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)target;
 
-- (ComGoogleCommonTruthPrimitiveShortArraySubject *)thatWithShortArray:(IOSShortArray *)target;
+- (ComGoogleCommonTruthPrimitiveShortArraySubject *)thatWithShortArray:(IOSShortArray * __nullable)target;
 
-- (ComGoogleCommonTruthSortedMapSubject *)thatWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)target;
+- (ComGoogleCommonTruthSortedMapSubject *)thatWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nullable)target;
 
-- (ComGoogleCommonTruthSortedSetSubject *)thatWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)target;
+- (ComGoogleCommonTruthSortedSetSubject *)thatWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nullable)target;
 
-- (ComGoogleCommonTruthStringSubject *)thatWithNSString:(NSString *)target;
+- (ComGoogleCommonTruthStringSubject *)thatWithNSString:(NSString * __nullable)target;
 
-- (ComGoogleCommonTruthComparableSubject *)thatWithJavaLangComparable:(id<JavaLangComparable>)target;
+- (ComGoogleCommonTruthComparableSubject *)thatWithJavaLangComparable:(id<JavaLangComparable> __nullable)target;
 
-- (ComGoogleCommonTruthObjectArraySubject *)thatWithNSObjectArray:(IOSObjectArray *)target;
+- (ComGoogleCommonTruthObjectArraySubject *)thatWithNSObjectArray:(IOSObjectArray * __nullable)target;
 
-- (ComGoogleCommonTruthTableSubject *)thatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)target;
+- (ComGoogleCommonTruthTableSubject *)thatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)target;
 
-- (ComGoogleCommonTruthThrowableSubject *)thatWithNSException:(NSException *)target;
+- (ComGoogleCommonTruthThrowableSubject *)thatWithJavaLangThrowable:(JavaLangThrowable * __nullable)target;
 
-- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString *)failureMessage;
+- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage;
 
-- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString *)format
-                                               withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                               withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 @end
 

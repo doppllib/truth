@@ -28,7 +28,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleErrorproneAnnotationsImm
 }
 
 - (NSString *)description {
-  return @"@com.google.errorprone.annotations.Immutable()";
+  return [NSString stringWithFormat:@"@com.google.errorprone.annotations.Immutable(containerOf=%@)", containerOf_];
 }
 
 - (void)dealloc {

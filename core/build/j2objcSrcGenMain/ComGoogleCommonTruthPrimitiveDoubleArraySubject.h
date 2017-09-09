@@ -39,18 +39,18 @@
 
 - (ComGoogleCommonTruthPrimitiveDoubleArraySubject_TolerantPrimitiveDoubleArrayComparison *)hasValuesWithinWithDouble:(jdouble)tolerance;
 
-- (void)isEqualToWithId:(id)expected;
+- (void)isEqualToWithId:(id __nonnull)expected;
 
-- (void)isEqualToWithId:(id)expected
+- (void)isEqualToWithId:(id __nonnull)expected
              withDouble:(jdouble)tolerance;
 
-- (void)isNotEqualToWithId:(id)expected;
+- (void)isNotEqualToWithId:(id __nonnull)expected;
 
-- (void)isNotEqualToWithId:(id)expectedArray
+- (void)isNotEqualToWithId:(id __nonnull)expectedArray
                 withDouble:(jdouble)tolerance;
 
-- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)namedWithNSString:(NSString *)arg0
-                                                     withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                                     withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 - (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)usingExactEquality;
 
@@ -68,8 +68,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withDoubleArray:(IOSDoubleArray *)o;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                            withDoubleArray:(IOSDoubleArray * __nullable)o;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -95,13 +100,13 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthPrimitiveDoubleArraySubject)
 
 #pragma mark Public
 
-- (jboolean)isEqual:(id)o;
+- (jboolean)isEqual:(id __nullable)o;
 
 - (NSUInteger)hash;
 
-- (void)ofWithDoubleArray:(IOSDoubleArray *)expected;
+- (void)ofWithDoubleArray:(IOSDoubleArray * __nonnull)expected;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 

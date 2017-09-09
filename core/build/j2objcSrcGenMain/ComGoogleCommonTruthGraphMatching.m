@@ -34,19 +34,19 @@ __attribute__((unused)) static ComGoogleCommonTruthGraphMatching *create_ComGoog
   id<ComGoogleCommonCollectMultimap> graph_;
 }
 
-+ (ComGoogleCommonTruthGraphMatching_HopcroftKarp *)overBipartiteGraphWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph;
++ (ComGoogleCommonTruthGraphMatching_HopcroftKarp *)overBipartiteGraphWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph;
 
-- (instancetype)initWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph;
+- (instancetype)initWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph;
 
 - (ComGoogleCommonCollectImmutableBiMap *)perform;
 
-- (ComGoogleCommonBaseOptional *)breadthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)matching
-                                                                   withJavaUtilMap:(id<JavaUtilMap>)layers;
+- (ComGoogleCommonBaseOptional *)breadthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)matching
+                                                                   withJavaUtilMap:(id<JavaUtilMap> __nonnull)layers;
 
-- (jboolean)depthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)matching
-                                            withJavaUtilMap:(id<JavaUtilMap>)layers
+- (jboolean)depthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)matching
+                                            withJavaUtilMap:(id<JavaUtilMap> __nonnull)layers
                                                     withInt:(jint)freeRhsVertexLayer
-                                                     withId:(id)lhs;
+                                                     withId:(id __nonnull)lhs;
 
 @end
 
@@ -70,7 +70,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthGraphMatching_HopcroftKarp)
 
 @implementation ComGoogleCommonTruthGraphMatching
 
-+ (ComGoogleCommonCollectImmutableBiMap *)maximumCardinalityBipartiteMatchingWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph {
++ (ComGoogleCommonCollectImmutableBiMap *)maximumCardinalityBipartiteMatchingWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph {
   return ComGoogleCommonTruthGraphMatching_maximumCardinalityBipartiteMatchingWithComGoogleCommonCollectMultimap_(graph);
 }
 
@@ -119,11 +119,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthGraphMatching)
 
 @implementation ComGoogleCommonTruthGraphMatching_HopcroftKarp
 
-+ (ComGoogleCommonTruthGraphMatching_HopcroftKarp *)overBipartiteGraphWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph {
++ (ComGoogleCommonTruthGraphMatching_HopcroftKarp *)overBipartiteGraphWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph {
   return ComGoogleCommonTruthGraphMatching_HopcroftKarp_overBipartiteGraphWithComGoogleCommonCollectMultimap_(graph);
 }
 
-- (instancetype)initWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph {
+- (instancetype)initWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph {
   ComGoogleCommonTruthGraphMatching_HopcroftKarp_initWithComGoogleCommonCollectMultimap_(self, graph);
   return self;
 }
@@ -145,15 +145,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthGraphMatching)
   return ComGoogleCommonCollectImmutableBiMap_copyOfWithJavaUtilMap_(matching);
 }
 
-- (ComGoogleCommonBaseOptional *)breadthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)matching
-                                                                   withJavaUtilMap:(id<JavaUtilMap>)layers {
+- (ComGoogleCommonBaseOptional *)breadthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)matching
+                                                                   withJavaUtilMap:(id<JavaUtilMap> __nonnull)layers {
   return ComGoogleCommonTruthGraphMatching_HopcroftKarp_breadthFirstSearchWithComGoogleCommonCollectBiMap_withJavaUtilMap_(self, matching, layers);
 }
 
-- (jboolean)depthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)matching
-                                            withJavaUtilMap:(id<JavaUtilMap>)layers
+- (jboolean)depthFirstSearchWithComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)matching
+                                            withJavaUtilMap:(id<JavaUtilMap> __nonnull)layers
                                                     withInt:(jint)freeRhsVertexLayer
-                                                     withId:(id)lhs {
+                                                     withId:(id __nonnull)lhs {
   return ComGoogleCommonTruthGraphMatching_HopcroftKarp_depthFirstSearchWithComGoogleCommonCollectBiMap_withJavaUtilMap_withInt_withId_(self, matching, layers, freeRhsVertexLayer, lhs);
 }
 

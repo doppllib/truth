@@ -26,34 +26,40 @@
 
 @class ComGoogleCommonTruthFailureStrategy;
 @class IOSObjectArray;
+@class JavaLangThrowable;
 
 @interface ComGoogleCommonTruthThrowableSubject : ComGoogleCommonTruthSubject
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withNSException:(NSException *)throwable;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaLangThrowable:(JavaLangThrowable * __nullable)throwable;
 
-- (void)hasMessageWithNSString:(NSString *)expected;
+- (void)hasMessageWithNSString:(NSString * __nullable)expected;
 
-- (ComGoogleCommonTruthThrowableSubject *)namedWithNSString:(NSString *)arg0
-                                          withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthThrowableSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
-- (NSException *)actual;
+- (JavaLangThrowable *)actual;
 
-- (NSException *)getSubject;
+- (JavaLangThrowable *)getSubject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleCommonTruthThrowableSubject)
 
-FOUNDATION_EXPORT void ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthThrowableSubject *self, ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable);
+FOUNDATION_EXPORT void ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthThrowableSubject *self, ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable);
 
-FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *new_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *new_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_(ComGoogleCommonTruthFailureStrategy *failureStrategy, NSException *throwable);
+FOUNDATION_EXPORT ComGoogleCommonTruthThrowableSubject *create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_(ComGoogleCommonTruthFailureStrategy *failureStrategy, JavaLangThrowable *throwable);
 
 J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthThrowableSubject)
 

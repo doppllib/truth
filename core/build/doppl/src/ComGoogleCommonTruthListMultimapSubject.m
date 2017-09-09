@@ -24,19 +24,19 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthListMultimapS
 
 @implementation ComGoogleCommonTruthListMultimapSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                     withComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)multimap {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                     withComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)multimap {
   ComGoogleCommonTruthListMultimapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectListMultimap_(self, failureStrategy, multimap);
   return self;
 }
 
-- (ComGoogleCommonTruthListMultimapSubject *)namedWithNSString:(NSString *)format
-                                             withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthListMultimapSubject *)namedWithNSString:(NSString * __nonnull)format
+                                             withNSObjectArray:(IOSObjectArray * __nonnull)args {
   [super namedWithNSString:format withNSObjectArray:args];
   return self;
 }
 
-- (void)isEqualToWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)other {
+- (void)isEqualToWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)other {
   [super isEqualToWithId:other];
 }
 

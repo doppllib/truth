@@ -26,18 +26,22 @@
 
 #pragma mark Public
 
-- (instancetype)initWithNSString:(NSString *)format
-               withNSObjectArray:(IOSObjectArray *)args;
+- (instancetype)initWithNSString:(NSString * __nullable)format
+               withNSObjectArray:(IOSObjectArray * __nullable)args;
 
 #pragma mark Protected
 
-- (NSString *)getFailureMessage;
+- (NSString * __nullable)getFailureMessage;
 
 - (jboolean)hasFailureMessage;
 
 #pragma mark Package-Private
 
-+ (jint)countPlaceholdersWithNSString:(NSString *)template_;
++ (jint)countPlaceholdersWithNSString:(NSString * __nullable)template_;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

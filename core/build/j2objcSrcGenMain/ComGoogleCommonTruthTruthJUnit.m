@@ -8,6 +8,7 @@
 #include "ComGoogleCommonTruthTruthJUnit.h"
 #include "J2ObjC_source.h"
 #include "java/lang/CharSequence.h"
+#include "java/lang/Throwable.h"
 #include "org/junit/internal/AssumptionViolatedException.h"
 
 @interface ComGoogleCommonTruthTruthJUnit ()
@@ -34,14 +35,14 @@ __attribute__((unused)) static ComGoogleCommonTruthTruthJUnit *create_ComGoogleC
 
 - (instancetype)init;
 
-- (void)failWithNSString:(NSString *)message;
+- (void)failWithNSString:(NSString * __nonnull)message;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause;
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause;
 
 @end
 
@@ -55,18 +56,18 @@ __attribute__((unused)) static ComGoogleCommonTruthTruthJUnit_1 *create_ComGoogl
 
 @interface ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException : OrgJunitInternalAssumptionViolatedException
 
-- (instancetype)initWithNSString:(NSString *)message
-                 withNSException:(NSException *)throwable;
+- (instancetype)initWithNSString:(NSString * __nonnull)message
+           withJavaLangThrowable:(JavaLangThrowable * __nonnull)throwable;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException)
 
-__attribute__((unused)) static void ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *self, NSString *message, NSException *throwable);
+__attribute__((unused)) static void ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *self, NSString *message, JavaLangThrowable *throwable);
 
-__attribute__((unused)) static ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *new_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(NSString *message, NSException *throwable) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *new_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *throwable) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(NSString *message, NSException *throwable);
+__attribute__((unused)) static ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *throwable);
 
 J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException)
 
@@ -153,19 +154,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)failWithNSString:(NSString *)message {
+- (void)failWithNSString:(NSString * __nonnull)message {
   @throw create_OrgJunitInternalAssumptionViolatedException_initWithNSString_(message);
 }
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   @throw create_OrgJunitInternalAssumptionViolatedException_initWithNSString_(ComGoogleCommonTruthStringUtil_messageForWithNSString_withJavaLangCharSequence_withJavaLangCharSequence_(message, expected, actual));
 }
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause {
-  @throw create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(message, cause);
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause {
+  @throw create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(message, cause);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -180,9 +181,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(failWithNSString:);
   methods[2].selector = @selector(failComparingWithNSString:withJavaLangCharSequence:withJavaLangCharSequence:);
-  methods[3].selector = @selector(failWithNSString:withNSException:);
+  methods[3].selector = @selector(failWithNSString:withJavaLangThrowable:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "fail", "LNSString;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LNSString;LNSException;", "LComGoogleCommonTruthTruthJUnit;" };
+  static const void *ptrTable[] = { "fail", "LNSString;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LNSString;LJavaLangThrowable;", "LComGoogleCommonTruthTruthJUnit;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthTruthJUnit_1 = { "", "com.google.common.truth", ptrTable, methods, NULL, 7, 0x8018, 4, 0, 5, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthTruthJUnit_1;
 }
@@ -203,9 +204,9 @@ ComGoogleCommonTruthTruthJUnit_1 *create_ComGoogleCommonTruthTruthJUnit_1_init()
 
 @implementation ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException
 
-- (instancetype)initWithNSString:(NSString *)message
-                 withNSException:(NSException *)throwable {
-  ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(self, message, throwable);
+- (instancetype)initWithNSString:(NSString * __nonnull)message
+           withJavaLangThrowable:(JavaLangThrowable * __nonnull)throwable {
+  ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(self, message, throwable);
   return self;
 }
 
@@ -215,26 +216,26 @@ ComGoogleCommonTruthTruthJUnit_1 *create_ComGoogleCommonTruthTruthJUnit_1_init()
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initWithNSString:withNSException:);
+  methods[0].selector = @selector(initWithNSString:withJavaLangThrowable:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LNSString;LNSException;", "LComGoogleCommonTruthTruthJUnit;" };
+  static const void *ptrTable[] = { "LNSString;LJavaLangThrowable;", "LComGoogleCommonTruthTruthJUnit;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException = { "ThrowableAssumptionViolatedException", "com.google.common.truth", ptrTable, methods, NULL, 7, 0xa, 1, 0, 1, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException;
 }
 
 @end
 
-void ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *self, NSString *message, NSException *throwable) {
+void ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *self, NSString *message, JavaLangThrowable *throwable) {
   OrgJunitInternalAssumptionViolatedException_initWithNSString_(self, message);
-  if (throwable != nil) [self initCauseWithNSException:throwable];
+  if (throwable != nil) [self initCauseWithJavaLangThrowable:throwable];
 }
 
-ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *new_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(NSString *message, NSException *throwable) {
-  J2OBJC_NEW_IMPL(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException, initWithNSString_withNSException_, message, throwable)
+ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *new_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *throwable) {
+  J2OBJC_NEW_IMPL(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException, initWithNSString_withJavaLangThrowable_, message, throwable)
 }
 
-ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withNSException_(NSString *message, NSException *throwable) {
-  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException, initWithNSString_withNSException_, message, throwable)
+ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException *create_ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *throwable) {
+  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException, initWithNSString_withJavaLangThrowable_, message, throwable)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthTruthJUnit_ThrowableAssumptionViolatedException)

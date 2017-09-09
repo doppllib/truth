@@ -32,25 +32,25 @@
 
 #pragma mark Public
 
-- (void)containsWithId:(id)rowKey
-                withId:(id)columnKey;
+- (void)containsWithId:(id __nullable)rowKey
+                withId:(id __nullable)columnKey;
 
-- (void)containsCellWithId:(id)rowKey
-                    withId:(id)colKey
-                    withId:(id)value;
+- (void)containsCellWithId:(id __nullable)rowKey
+                    withId:(id __nullable)colKey
+                    withId:(id __nullable)value;
 
-- (void)containsColumnWithId:(id)columnKey;
+- (void)containsColumnWithId:(id __nullable)columnKey;
 
-- (void)containsRowWithId:(id)rowKey;
+- (void)containsRowWithId:(id __nullable)rowKey;
 
-- (void)containsValueWithId:(id)value;
+- (void)containsValueWithId:(id __nullable)value;
 
-- (void)doesNotContainWithId:(id)rowKey
-                      withId:(id)columnKey;
+- (void)doesNotContainWithId:(id __nullable)rowKey
+                      withId:(id __nullable)columnKey;
 
-- (void)doesNotContainCellWithId:(id)rowKey
-                          withId:(id)colKey
-                          withId:(id)value;
+- (void)doesNotContainCellWithId:(id __nullable)rowKey
+                          withId:(id __nullable)colKey
+                          withId:(id __nullable)value;
 
 - (void)hasSizeWithInt:(jint)expectedSize;
 
@@ -58,8 +58,8 @@
 
 - (void)isNotEmpty;
 
-- (ComGoogleCommonTruthTableSubject *)namedWithNSString:(NSString *)arg0
-                                      withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthTableSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                      withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -69,8 +69,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                            withComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)table;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                            withComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)table;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

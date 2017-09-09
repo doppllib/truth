@@ -17,6 +17,7 @@
 #include "java/lang/CharSequence.h"
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/StringBuilder.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/annotation/Annotation.h"
 #include "java/util/ArrayList.h"
 #include "java/util/List.h"
@@ -47,22 +48,22 @@ J2OBJC_FIELD_SETTER(ComGoogleCommonTruthExpect_ExpectationGatherer, messages_, i
 @interface ComGoogleCommonTruthExpect_ExpectationFailure () {
  @public
   NSString *message_;
-  NSException *cause_;
+  JavaLangThrowable *cause_;
 }
 
-- (instancetype)initWithNSString:(NSString *)message
-                 withNSException:(NSException *)cause;
+- (instancetype)initWithNSString:(NSString * __nonnull)message
+           withJavaLangThrowable:(JavaLangThrowable * __nullable)cause;
 
 @end
 
 J2OBJC_FIELD_SETTER(ComGoogleCommonTruthExpect_ExpectationFailure, message_, NSString *)
-J2OBJC_FIELD_SETTER(ComGoogleCommonTruthExpect_ExpectationFailure, cause_, NSException *)
+J2OBJC_FIELD_SETTER(ComGoogleCommonTruthExpect_ExpectationFailure, cause_, JavaLangThrowable *)
 
-__attribute__((unused)) static void ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(ComGoogleCommonTruthExpect_ExpectationFailure *self, NSString *message, NSException *cause);
+__attribute__((unused)) static void ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(ComGoogleCommonTruthExpect_ExpectationFailure *self, NSString *message, JavaLangThrowable *cause);
 
-__attribute__((unused)) static ComGoogleCommonTruthExpect_ExpectationFailure *new_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(NSString *message, NSException *cause) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleCommonTruthExpect_ExpectationFailure *new_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleCommonTruthExpect_ExpectationFailure *create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(NSString *message, NSException *cause);
+__attribute__((unused)) static ComGoogleCommonTruthExpect_ExpectationFailure *create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause);
 
 __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$0();
 
@@ -80,8 +81,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthExpect_Expect
   OrgJunitRunnersModelStatement *val$base_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthExpect:(ComGoogleCommonTruthExpect *)outer$
-                 withOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement *)capture$0;
+- (instancetype)initWithComGoogleCommonTruthExpect:(ComGoogleCommonTruthExpect * __nonnull)outer$
+                 withOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement * __nonnull)capture$0;
 
 - (void)evaluate;
 
@@ -101,7 +102,7 @@ __attribute__((unused)) static ComGoogleCommonTruthExpect_1 *create_ComGoogleCom
   return ComGoogleCommonTruthExpect_create();
 }
 
-+ (ComGoogleCommonTruthExpect *)createWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer *)gatherer {
++ (ComGoogleCommonTruthExpect *)createWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer * __nonnull)gatherer {
   return ComGoogleCommonTruthExpect_createWithComGoogleCommonTruthExpect_ExpectationGatherer_(gatherer);
 }
 
@@ -109,7 +110,7 @@ __attribute__((unused)) static ComGoogleCommonTruthExpect_1 *create_ComGoogleCom
   return ComGoogleCommonTruthExpect_createAndEnableStackTrace();
 }
 
-- (instancetype)initWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer *)gatherer {
+- (instancetype)initWithComGoogleCommonTruthExpect_ExpectationGatherer:(ComGoogleCommonTruthExpect_ExpectationGatherer * __nonnull)gatherer {
   ComGoogleCommonTruthExpect_initWithComGoogleCommonTruthExpect_ExpectationGatherer_(self, gatherer);
   return self;
 }
@@ -126,8 +127,8 @@ __attribute__((unused)) static ComGoogleCommonTruthExpect_1 *create_ComGoogleCom
   return [super getFailureStrategy];
 }
 
-- (OrgJunitRunnersModelStatement *)applyWithOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement *)base
-                                            withOrgJunitRunnerDescription:(OrgJunitRunnerDescription *)description_ {
+- (OrgJunitRunnersModelStatement *)applyWithOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement * __nonnull)base
+                                            withOrgJunitRunnerDescription:(OrgJunitRunnerDescription * __nonnull)description_ {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(base);
   ComGoogleCommonBasePreconditions_checkNotNullWithId_(description_);
   return create_ComGoogleCommonTruthExpect_1_initWithComGoogleCommonTruthExpect_withOrgJunitRunnersModelStatement_(self, base);
@@ -214,20 +215,20 @@ J2OBJC_IGNORE_DESIGNATED_END
   return self;
 }
 
-- (void)failWithNSString:(NSString *)message {
-  [self failWithNSString:ComGoogleCommonBasePreconditions_checkNotNullWithId_(message) withNSException:create_NSException_initWithNSString_(message)];
+- (void)failWithNSString:(NSString * __nonnull)message {
+  [self failWithNSString:ComGoogleCommonBasePreconditions_checkNotNullWithId_(message) withJavaLangThrowable:create_JavaLangThrowable_initWithNSString_(message)];
 }
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   NSString *errorMessage = ComGoogleCommonTruthStringUtil_messageForWithNSString_withJavaLangCharSequence_withJavaLangCharSequence_(message, expected, actual);
-  [self failWithNSString:errorMessage withNSException:create_NSException_initWithNSString_(errorMessage)];
+  [self failWithNSString:errorMessage withJavaLangThrowable:create_JavaLangThrowable_initWithNSString_(errorMessage)];
 }
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause {
-  [((id<JavaUtilList>) nil_chk(messages_)) addWithId:ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withNSException_(message, cause)];
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause {
+  [((id<JavaUtilList>) nil_chk(messages_)) addWithId:ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withJavaLangThrowable_(message, cause)];
 }
 
 - (id<JavaUtilList>)getMessages {
@@ -235,7 +236,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (NSString *)description {
-  NSException *earliestCause = nil;
+  JavaLangThrowable *earliestCause = nil;
   JavaLangStringBuilder *message = create_JavaLangStringBuilder_initWithNSString_(@"All failed expectations:\n");
   jint count = 0;
   for (ComGoogleCommonTruthExpect_ExpectationFailure * __strong failure in nil_chk([self getMessages])) {
@@ -245,7 +246,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     [((JavaLangStringBuilder *) nil_chk([((JavaLangStringBuilder *) nil_chk([((JavaLangStringBuilder *) nil_chk([((JavaLangStringBuilder *) nil_chk([message appendWithNSString:@"  "])) appendWithInt:(count++) + 1])) appendWithNSString:@". "])) appendWithNSString:[((ComGoogleCommonTruthExpect_ExpectationFailure *) nil_chk(failure)) message]])) appendWithNSString:@"\n"];
     if (showStackTrace_ && [failure cause] != nil) {
       JavaIoStringWriter *stackTraceWriter = create_JavaIoStringWriter_init();
-      [((NSException *) nil_chk([failure cause])) printStackTraceWithJavaIoPrintWriter:create_JavaIoPrintWriter_initWithJavaIoWriter_(stackTraceWriter)];
+      [((JavaLangThrowable *) nil_chk([failure cause])) printStackTraceWithJavaIoPrintWriter:create_JavaIoPrintWriter_initWithJavaIoWriter_(stackTraceWriter)];
       [message appendWithNSString:JreStrcat("@C", stackTraceWriter, 0x000a)];
     }
   }
@@ -273,7 +274,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(initWithBoolean:);
   methods[2].selector = @selector(failWithNSString:);
   methods[3].selector = @selector(failComparingWithNSString:withJavaLangCharSequence:withJavaLangCharSequence:);
-  methods[4].selector = @selector(failWithNSString:withNSException:);
+  methods[4].selector = @selector(failWithNSString:withJavaLangThrowable:);
   methods[5].selector = @selector(getMessages);
   methods[6].selector = @selector(description);
   #pragma clang diagnostic pop
@@ -281,7 +282,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "messages_", "LJavaUtilList;", .constantValue.asLong = 0, 0x12, -1, -1, 8, -1 },
     { "showStackTrace_", "Z", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "Z", "fail", "LNSString;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LNSString;LNSException;", "()Ljava/util/List<Lcom/google/common/truth/Expect$ExpectationFailure;>;", "toString", "Ljava/util/List<Lcom/google/common/truth/Expect$ExpectationFailure;>;", "LComGoogleCommonTruthExpect;" };
+  static const void *ptrTable[] = { "Z", "fail", "LNSString;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "LNSString;LJavaLangThrowable;", "()Ljava/util/List<Lcom/google/common/truth/Expect$ExpectationFailure;>;", "toString", "Ljava/util/List<Lcom/google/common/truth/Expect$ExpectationFailure;>;", "LComGoogleCommonTruthExpect;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthExpect_ExpectationGatherer = { "ExpectationGatherer", "com.google.common.truth", ptrTable, methods, fields, 7, 0x9, 7, 2, 9, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthExpect_ExpectationGatherer;
 }
@@ -320,14 +321,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationGatherer)
 
 @implementation ComGoogleCommonTruthExpect_ExpectationFailure
 
-+ (ComGoogleCommonTruthExpect_ExpectationFailure *)createWithNSString:(NSString *)message
-                                                      withNSException:(NSException *)cause {
-  return ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withNSException_(message, cause);
++ (ComGoogleCommonTruthExpect_ExpectationFailure *)createWithNSString:(NSString * __nonnull)message
+                                                withJavaLangThrowable:(JavaLangThrowable * __nullable)cause {
+  return ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withJavaLangThrowable_(message, cause);
 }
 
-- (instancetype)initWithNSString:(NSString *)message
-                 withNSException:(NSException *)cause {
-  ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(self, message, cause);
+- (instancetype)initWithNSString:(NSString * __nonnull)message
+           withJavaLangThrowable:(JavaLangThrowable * __nullable)cause {
+  ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(self, message, cause);
   return self;
 }
 
@@ -335,11 +336,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationGatherer)
   return message_;
 }
 
-- (NSException *)cause {
+- (JavaLangThrowable * __nullable)cause {
   return cause_;
 }
 
-- (jboolean)isEqual:(id)other {
+- (jboolean)isEqual:(id __nullable)other {
   if ([other isKindOfClass:[ComGoogleCommonTruthExpect_ExpectationFailure class]]) {
     ComGoogleCommonTruthExpect_ExpectationFailure *that = (ComGoogleCommonTruthExpect_ExpectationFailure *) cast_chk(other, [ComGoogleCommonTruthExpect_ExpectationFailure class]);
     return [((NSString *) nil_chk(self->message_)) isEqual:((ComGoogleCommonTruthExpect_ExpectationFailure *) nil_chk(that))->message_] && ComGoogleCommonBaseObjects_equalWithId_withId_(self->cause_, that->cause_);
@@ -364,14 +365,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationGatherer)
     { NULL, "LComGoogleCommonTruthExpect_ExpectationFailure;", 0x8, 0, 1, -1, -1, -1, 2 },
     { NULL, NULL, 0x2, -1, 1, -1, -1, -1, 3 },
     { NULL, "LNSString;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSException;", 0x0, -1, -1, -1, -1, 4, -1 },
+    { NULL, "LJavaLangThrowable;", 0x0, -1, -1, -1, -1, 4, -1 },
     { NULL, "Z", 0x1, 5, 6, -1, -1, -1, 7 },
     { NULL, "I", 0x1, 8, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithNSString:withNSException:);
-  methods[1].selector = @selector(initWithNSString:withNSException:);
+  methods[0].selector = @selector(createWithNSString:withJavaLangThrowable:);
+  methods[1].selector = @selector(initWithNSString:withJavaLangThrowable:);
   methods[2].selector = @selector(message);
   methods[3].selector = @selector(cause);
   methods[4].selector = @selector(isEqual:);
@@ -379,32 +380,32 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationGatherer)
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "message_", "LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "cause_", "LNSException;", .constantValue.asLong = 0, 0x12, -1, -1, -1, 9 },
+    { "cause_", "LJavaLangThrowable;", .constantValue.asLong = 0, 0x12, -1, -1, -1, 9 },
   };
-  static const void *ptrTable[] = { "create", "LNSString;LNSException;", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$0, (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$1, (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$2, "equals", "LNSObject;", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$3, "hashCode", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$4, "LComGoogleCommonTruthExpect;" };
+  static const void *ptrTable[] = { "create", "LNSString;LJavaLangThrowable;", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$0, (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$1, (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$2, "equals", "LNSObject;", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$3, "hashCode", (void *)&ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$4, "LComGoogleCommonTruthExpect;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthExpect_ExpectationFailure = { "ExpectationFailure", "com.google.common.truth", ptrTable, methods, fields, 7, 0x18, 6, 2, 10, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthExpect_ExpectationFailure;
 }
 
 @end
 
-ComGoogleCommonTruthExpect_ExpectationFailure *ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withNSException_(NSString *message, NSException *cause) {
+ComGoogleCommonTruthExpect_ExpectationFailure *ComGoogleCommonTruthExpect_ExpectationFailure_createWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause) {
   ComGoogleCommonTruthExpect_ExpectationFailure_initialize();
-  return create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(message, cause);
+  return create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(message, cause);
 }
 
-void ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(ComGoogleCommonTruthExpect_ExpectationFailure *self, NSString *message, NSException *cause) {
+void ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(ComGoogleCommonTruthExpect_ExpectationFailure *self, NSString *message, JavaLangThrowable *cause) {
   NSObject_init(self);
   JreStrongAssign(&self->message_, ComGoogleCommonBasePreconditions_checkNotNullWithId_(message));
   JreStrongAssign(&self->cause_, cause);
 }
 
-ComGoogleCommonTruthExpect_ExpectationFailure *new_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(NSString *message, NSException *cause) {
-  J2OBJC_NEW_IMPL(ComGoogleCommonTruthExpect_ExpectationFailure, initWithNSString_withNSException_, message, cause)
+ComGoogleCommonTruthExpect_ExpectationFailure *new_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause) {
+  J2OBJC_NEW_IMPL(ComGoogleCommonTruthExpect_ExpectationFailure, initWithNSString_withJavaLangThrowable_, message, cause)
 }
 
-ComGoogleCommonTruthExpect_ExpectationFailure *create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withNSException_(NSString *message, NSException *cause) {
-  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthExpect_ExpectationFailure, initWithNSString_withNSException_, message, cause)
+ComGoogleCommonTruthExpect_ExpectationFailure *create_ComGoogleCommonTruthExpect_ExpectationFailure_initWithNSString_withJavaLangThrowable_(NSString *message, JavaLangThrowable *cause) {
+  J2OBJC_CREATE_IMPL(ComGoogleCommonTruthExpect_ExpectationFailure, initWithNSString_withJavaLangThrowable_, message, cause)
 }
 
 IOSObjectArray *ComGoogleCommonTruthExpect_ExpectationFailure__Annotations$0() {
@@ -431,8 +432,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationFailure)
 
 @implementation ComGoogleCommonTruthExpect_1
 
-- (instancetype)initWithComGoogleCommonTruthExpect:(ComGoogleCommonTruthExpect *)outer$
-                 withOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement *)capture$0 {
+- (instancetype)initWithComGoogleCommonTruthExpect:(ComGoogleCommonTruthExpect * __nonnull)outer$
+                 withOrgJunitRunnersModelStatement:(OrgJunitRunnersModelStatement * __nonnull)capture$0 {
   ComGoogleCommonTruthExpect_1_initWithComGoogleCommonTruthExpect_withOrgJunitRunnersModelStatement_(self, outer$, capture$0);
   return self;
 }
@@ -441,10 +442,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationFailure)
   this$0_->inRuleContext_ = true;
   [((OrgJunitRunnersModelStatement *) nil_chk(val$base_)) evaluate];
   this$0_->inRuleContext_ = false;
-  NSException *earliestCause = nil;
+  JavaLangThrowable *earliestCause = nil;
   if (![((id<JavaUtilList>) nil_chk([((ComGoogleCommonTruthExpect_ExpectationGatherer *) nil_chk(this$0_->gatherer_)) getMessages])) isEmpty]) {
     JavaLangAssertionError *error = create_JavaLangAssertionError_initWithId_([this$0_->gatherer_ description]);
-    [error initCauseWithNSException:earliestCause];
+    [error initCauseWithJavaLangThrowable:earliestCause];
     @throw error;
   }
 }
@@ -469,7 +470,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthExpect_ExpectationFailure)
     { "this$0_", "LComGoogleCommonTruthExpect;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$base_", "LOrgJunitRunnersModelStatement;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LNSException;", "LComGoogleCommonTruthExpect;", "applyWithOrgJunitRunnersModelStatement:withOrgJunitRunnerDescription:" };
+  static const void *ptrTable[] = { "LJavaLangThrowable;", "LComGoogleCommonTruthExpect;", "applyWithOrgJunitRunnersModelStatement:withOrgJunitRunnerDescription:" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthExpect_1 = { "", "com.google.common.truth", ptrTable, methods, fields, 7, 0x8018, 2, 2, 1, -1, 2, -1, -1 };
   return &_ComGoogleCommonTruthExpect_1;
 }

@@ -34,10 +34,10 @@
 
 #pragma mark Public
 
-- (void)isEqualToWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)other;
+- (void)isEqualToWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)other;
 
-- (ComGoogleCommonTruthListMultimapSubject *)namedWithNSString:(NSString *)format
-                                             withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthListMultimapSubject *)namedWithNSString:(NSString * __nonnull)format
+                                             withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -47,8 +47,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                     withComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)multimap;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                     withComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)multimap;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

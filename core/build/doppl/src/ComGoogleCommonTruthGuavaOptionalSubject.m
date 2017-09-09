@@ -19,8 +19,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthGuavaOptional
 
 @implementation ComGoogleCommonTruthGuavaOptionalSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                            withComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional *)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                            withComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional * __nullable)subject {
   ComGoogleCommonTruthGuavaOptionalSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonBaseOptional_(self, failureStrategy, subject);
   return self;
 }
@@ -37,7 +37,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthGuavaOptional
   }
 }
 
-- (void)hasValueWithId:(id)expected {
+- (void)hasValueWithId:(id __nonnull)expected {
   if (expected == nil) {
     @throw create_JavaLangNullPointerException_initWithNSString_(@"Optional cannot have a null value.");
   }

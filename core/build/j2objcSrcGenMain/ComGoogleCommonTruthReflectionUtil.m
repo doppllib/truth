@@ -31,7 +31,7 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-+ (IOSClass *)typeParameterWithIOSClass:(IOSClass *)clazz
++ (IOSClass *)typeParameterWithIOSClass:(IOSClass * __nonnull)clazz
                                 withInt:(jint)paramIndex {
   return ComGoogleCommonTruthReflectionUtil_typeParameterWithIOSClass_withInt_(clazz, paramIndex);
 }

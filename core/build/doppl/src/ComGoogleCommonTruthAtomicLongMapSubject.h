@@ -32,15 +32,15 @@
 
 #pragma mark Public
 
-- (void)containsEntryWithId:(id)key
+- (void)containsEntryWithId:(id __nonnull)key
                    withLong:(jlong)value;
 
-- (void)containsKeyWithId:(id)key;
+- (void)containsKeyWithId:(id __nonnull)key;
 
-- (void)doesNotContainEntryWithId:(id)key
+- (void)doesNotContainEntryWithId:(id __nullable)key
                          withLong:(jlong)value;
 
-- (void)doesNotContainKeyWithId:(id)key;
+- (void)doesNotContainKeyWithId:(id __nonnull)key;
 
 - (void)hasSizeWithInt:(jint)expectedSize;
 
@@ -48,14 +48,14 @@
 
 - (void)isEmpty;
 
-- (void)isEqualToWithId:(id)other;
+- (void)isEqualToWithId:(id __nullable)other;
 
 - (void)isNotEmpty;
 
-- (void)isNotEqualToWithId:(id)other;
+- (void)isNotEqualToWithId:(id __nullable)other;
 
-- (ComGoogleCommonTruthAtomicLongMapSubject *)namedWithNSString:(NSString *)arg0
-                                              withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthAtomicLongMapSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                              withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -65,8 +65,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-             withComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)map;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+             withComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)map;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

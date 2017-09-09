@@ -17,13 +17,13 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthClassSubject_
 
 @implementation ComGoogleCommonTruthClassSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withIOSClass:(IOSClass *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withIOSClass:(IOSClass * __nullable)o {
   ComGoogleCommonTruthClassSubject_initWithComGoogleCommonTruthFailureStrategy_withIOSClass_(self, failureStrategy, o);
   return self;
 }
 
-- (void)isAssignableToWithIOSClass:(IOSClass *)clazz {
+- (void)isAssignableToWithIOSClass:(IOSClass * __nonnull)clazz {
   if (![((IOSClass *) nil_chk(clazz)) isAssignableFrom:[self actual]]) {
     [self failWithNSString:@"is assignable to" withId:clazz];
   }

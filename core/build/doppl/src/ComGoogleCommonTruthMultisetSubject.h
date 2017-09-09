@@ -33,11 +33,11 @@
 
 #pragma mark Public
 
-- (void)hasCountWithId:(id)element
+- (void)hasCountWithId:(id __nullable)element
                withInt:(jint)expectedCount;
 
-- (ComGoogleCommonTruthMultisetSubject *)namedWithNSString:(NSString *)format
-                                         withNSObjectArray:(IOSObjectArray *)args;
+- (ComGoogleCommonTruthMultisetSubject *)namedWithNSString:(NSString * __nonnull)format
+                                         withNSObjectArray:(IOSObjectArray * __nonnull)args;
 
 #pragma mark Protected
 
@@ -47,8 +47,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                         withComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)multiset;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                         withComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)multiset;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                       withJavaLangIterable:(id<JavaLangIterable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

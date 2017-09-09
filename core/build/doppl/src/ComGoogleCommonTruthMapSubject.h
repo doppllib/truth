@@ -35,36 +35,36 @@
 
 #pragma mark Public
 
-- (ComGoogleCommonTruthMapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (ComGoogleCommonTruthMapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
-- (void)containsEntryWithId:(id)key
-                     withId:(id)value;
+- (void)containsEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value;
 
 - (id<ComGoogleCommonTruthOrdered>)containsExactly;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id)k0
-                                                  withId:(id)v0
-                                       withNSObjectArray:(IOSObjectArray *)rest;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id __nullable)k0
+                                                  withId:(id __nullable)v0
+                                       withNSObjectArray:(IOSObjectArray * __nonnull)rest;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap>)expectedMap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap> __nonnull)expectedMap;
 
-- (void)containsKeyWithId:(id)key;
+- (void)containsKeyWithId:(id __nullable)key;
 
-- (void)doesNotContainEntryWithId:(id)key
-                           withId:(id)value;
+- (void)doesNotContainEntryWithId:(id __nullable)key
+                           withId:(id __nullable)value;
 
-- (void)doesNotContainKeyWithId:(id)key;
+- (void)doesNotContainKeyWithId:(id __nullable)key;
 
 - (void)hasSizeWithInt:(jint)expectedSize;
 
 - (void)isEmpty;
 
-- (void)isEqualToWithId:(id)other;
+- (void)isEqualToWithId:(id __nullable)other;
 
 - (void)isNotEmpty;
 
-- (ComGoogleCommonTruthMapSubject *)namedWithNSString:(NSString *)arg0
-                                    withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthMapSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                    withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -74,8 +74,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                            withJavaUtilMap:(id<JavaUtilMap>)map;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                            withJavaUtilMap:(id<JavaUtilMap> __nullable)map;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -98,11 +103,15 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthMapSubject)
 
 #pragma mark Public
 
-- (void)containsEntryWithId:(id)expectedKey
-                     withId:(id)expectedValue;
+- (void)containsEntryWithId:(id __nullable)expectedKey
+                     withId:(id __nullable)expectedValue;
 
-- (void)doesNotContainEntryWithId:(id)excludedKey
-                           withId:(id)excludedValue;
+- (void)doesNotContainEntryWithId:(id __nullable)excludedKey
+                           withId:(id __nullable)excludedValue;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

@@ -27,24 +27,30 @@
 @class ComGoogleCommonTruthFailureStrategy;
 @class IOSObjectArray;
 @class JavaLangLong;
+@protocol JavaLangComparable;
 
 @interface ComGoogleCommonTruthLongSubject : ComGoogleCommonTruthComparableSubject
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                           withJavaLangLong:(JavaLangLong *)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                           withJavaLangLong:(JavaLangLong * __nullable)subject;
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangLong *)other;
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangLong * __nonnull)other;
 
-- (ComGoogleCommonTruthLongSubject *)namedWithNSString:(NSString *)arg0
-                                     withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthLongSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                     withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
 - (JavaLangLong *)actual;
 
 - (JavaLangLong *)getSubject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

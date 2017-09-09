@@ -29,7 +29,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleErrorproneAnnotationsDoN
 }
 
 - (NSString *)description {
-  return @"@com.google.errorprone.annotations.DoNotMock()";
+  return [NSString stringWithFormat:@"@com.google.errorprone.annotations.DoNotMock(value=%@)", value_];
 }
 
 - (void)dealloc {

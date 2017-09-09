@@ -23,19 +23,19 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultisetSubje
 
 @implementation ComGoogleCommonTruthMultisetSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                         withComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)multiset {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                         withComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)multiset {
   ComGoogleCommonTruthMultisetSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectMultiset_(self, failureStrategy, multiset);
   return self;
 }
 
-- (ComGoogleCommonTruthMultisetSubject *)namedWithNSString:(NSString *)format
-                                         withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthMultisetSubject *)namedWithNSString:(NSString * __nonnull)format
+                                         withNSObjectArray:(IOSObjectArray * __nonnull)args {
   [super namedWithNSString:format withNSObjectArray:args];
   return self;
 }
 
-- (void)hasCountWithId:(id)element
+- (void)hasCountWithId:(id __nullable)element
                withInt:(jint)expectedCount {
   ComGoogleCommonBasePreconditions_checkArgumentWithBoolean_withNSString_withNSObjectArray_(expectedCount >= 0, @"expectedCount(%s) must be >= 0", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_(expectedCount) } count:1 type:NSObject_class_()]);
   jint actualCount = [((id<ComGoogleCommonCollectMultiset>) nil_chk(((id<ComGoogleCommonCollectMultiset>) cast_check([self actual], ComGoogleCommonCollectMultiset_class_())))) countWithId:element];

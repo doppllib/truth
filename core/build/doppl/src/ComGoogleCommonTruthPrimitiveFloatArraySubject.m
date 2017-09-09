@@ -65,10 +65,10 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveFloa
   jfloat val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject * __nonnull)outer$
                                                              withFloat:(jfloat)capture$0;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 
@@ -86,10 +86,10 @@ __attribute__((unused)) static ComGoogleCommonTruthPrimitiveFloatArraySubject_1 
   jfloat val$tolerance_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject * __nonnull)outer$
                                                              withFloat:(jfloat)capture$0;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 
@@ -105,8 +105,8 @@ __attribute__((unused)) static ComGoogleCommonTruthPrimitiveFloatArraySubject_2 
 
 - (instancetype)init;
 
-- (jboolean)compareWithId:(JavaLangFloat *)actual
-                   withId:(JavaLangFloat *)expected;
+- (jboolean)compareWithId:(JavaLangFloat * __nonnull)actual
+                   withId:(JavaLangFloat * __nonnull)expected;
 
 - (NSString *)description;
 
@@ -124,8 +124,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveFloatArraySubject)
 
 @implementation ComGoogleCommonTruthPrimitiveFloatArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                             withFloatArray:(IOSFloatArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                             withFloatArray:(IOSFloatArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveFloatArraySubject_initWithComGoogleCommonTruthFailureStrategy_withFloatArray_(self, failureStrategy, o);
   return self;
 }
@@ -138,11 +138,11 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveFloatArraySubject)
   return ComGoogleCommonPrimitivesFloats_asListWithFloatArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Comparing raw equality of floats is often unsafe. Use either usingTolerance(someTolerance).containsExactly(someValues).inOrder() to compare witha tolerance or usingExactEquality().containsExactly(someValues).inOrder() if youreally want exact equality instead.");
 }
 
-- (void)isEqualToWithId:(id)expected
+- (void)isEqualToWithId:(id __nonnull)expected
               withFloat:(jfloat)tolerance {
   IOSFloatArray *actual = [self actual];
   if (actual == expected) {
@@ -168,11 +168,11 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthPrimitiveFloatArraySubject)
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Comparing raw equality of floats is unsafe, use isNotEqualTo(float[] array, float tolerance) instead.");
 }
 
-- (void)isNotEqualToWithId:(id)expectedArray
+- (void)isNotEqualToWithId:(id __nonnull)expectedArray
                  withFloat:(jfloat)tolerance {
   IOSFloatArray *actual = [self actual];
   @try {
@@ -305,16 +305,16 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)ofWithFloatArray:(IOSFloatArray *)expected {
+- (void)ofWithFloatArray:(IOSFloatArray * __nonnull)expected {
   [self ofElementsInWithJavaLangIterable:ComGoogleCommonPrimitivesFloats_asListWithFloatArray_(expected)];
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"If you meant to compare float arrays, use .of() or .ofElementsIn() instead.");
 }
 
@@ -365,13 +365,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthPrimitiveFloatArraySubject_
 
 @implementation ComGoogleCommonTruthPrimitiveFloatArraySubject_1
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject * __nonnull)outer$
                                                              withFloat:(jfloat)capture$0 {
   ComGoogleCommonTruthPrimitiveFloatArraySubject_1_initWithComGoogleCommonTruthPrimitiveFloatArraySubject_withFloat_(self, outer$, capture$0);
   return self;
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthFloatSubject_checkToleranceWithFloat_(val$tolerance_);
   IOSFloatArray *actual = ComGoogleCommonBasePreconditions_checkNotNullWithId_([this$0_ actual]);
   id<JavaUtilList> mismatches = create_JavaUtilArrayList_init();
@@ -432,13 +432,13 @@ ComGoogleCommonTruthPrimitiveFloatArraySubject_1 *create_ComGoogleCommonTruthPri
 
 @implementation ComGoogleCommonTruthPrimitiveFloatArraySubject_2
 
-- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject *)outer$
+- (instancetype)initWithComGoogleCommonTruthPrimitiveFloatArraySubject:(ComGoogleCommonTruthPrimitiveFloatArraySubject * __nonnull)outer$
                                                              withFloat:(jfloat)capture$0 {
   ComGoogleCommonTruthPrimitiveFloatArraySubject_2_initWithComGoogleCommonTruthPrimitiveFloatArraySubject_withFloat_(self, outer$, capture$0);
   return self;
 }
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected {
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected {
   ComGoogleCommonTruthFloatSubject_checkToleranceWithFloat_(val$tolerance_);
   IOSFloatArray *actual = ComGoogleCommonBasePreconditions_checkNotNullWithId_([this$0_ actual]);
   jint expectedCount = 0;
@@ -502,8 +502,8 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (jboolean)compareWithId:(JavaLangFloat *)actual
-                   withId:(JavaLangFloat *)expected {
+- (jboolean)compareWithId:(JavaLangFloat * __nonnull)actual
+                   withId:(JavaLangFloat * __nonnull)expected {
   return [((JavaLangFloat *) nil_chk(actual)) isEqual:ComGoogleCommonBasePreconditions_checkNotNullWithId_(expected)];
 }
 

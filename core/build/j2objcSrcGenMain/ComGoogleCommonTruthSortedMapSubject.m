@@ -53,15 +53,15 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSortedMapSubj
   id<JavaUtilSortedMap> delegate_;
 }
 
-+ (id<JavaUtilNavigableMap>)wrapIfNecessaryWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)map;
++ (id<JavaUtilNavigableMap>)wrapIfNecessaryWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)map;
 
-- (instancetype)initWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)delegate;
+- (instancetype)initWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)delegate;
 
 - (id<JavaUtilSortedMap>)delegate;
 
-- (id<JavaUtilMap_Entry>)ceilingEntryWithId:(id)key;
+- (id<JavaUtilMap_Entry>)ceilingEntryWithId:(id __nonnull)key;
 
-- (id)ceilingKeyWithId:(id)key;
+- (id)ceilingKeyWithId:(id __nonnull)key;
 
 - (id<JavaUtilNavigableSet>)descendingKeySet;
 
@@ -69,22 +69,22 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSortedMapSubj
 
 - (id<JavaUtilMap_Entry>)firstEntry;
 
-- (id<JavaUtilMap_Entry>)floorEntryWithId:(id)key;
+- (id<JavaUtilMap_Entry>)floorEntryWithId:(id __nonnull)key;
 
-- (id)floorKeyWithId:(id)key;
+- (id)floorKeyWithId:(id __nonnull)key;
 
-- (id<JavaUtilNavigableMap>)headMapWithId:(id)toKey
+- (id<JavaUtilNavigableMap>)headMapWithId:(id __nonnull)toKey
                               withBoolean:(jboolean)inclusive;
 
-- (id<JavaUtilMap_Entry>)higherEntryWithId:(id)key;
+- (id<JavaUtilMap_Entry>)higherEntryWithId:(id __nonnull)key;
 
-- (id)higherKeyWithId:(id)key;
+- (id)higherKeyWithId:(id __nonnull)key;
 
 - (id<JavaUtilMap_Entry>)lastEntry;
 
-- (id<JavaUtilMap_Entry>)lowerEntryWithId:(id)key;
+- (id<JavaUtilMap_Entry>)lowerEntryWithId:(id __nonnull)key;
 
-- (id)lowerKeyWithId:(id)key;
+- (id)lowerKeyWithId:(id __nonnull)key;
 
 - (id<JavaUtilNavigableSet>)navigableKeySet;
 
@@ -92,12 +92,12 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSortedMapSubj
 
 - (id<JavaUtilMap_Entry>)pollLastEntry;
 
-- (id<JavaUtilNavigableMap>)subMapWithId:(id)fromKey
+- (id<JavaUtilNavigableMap>)subMapWithId:(id __nonnull)fromKey
                              withBoolean:(jboolean)fromInclusive
-                                  withId:(id)toKey
+                                  withId:(id __nonnull)toKey
                              withBoolean:(jboolean)toInclusive;
 
-- (id<JavaUtilNavigableMap>)tailMapWithId:(id)fromKey
+- (id<JavaUtilNavigableMap>)tailMapWithId:(id __nonnull)fromKey
                               withBoolean:(jboolean)inclusive;
 
 @end
@@ -118,19 +118,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavig
 
 @implementation ComGoogleCommonTruthSortedMapSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                      withJavaUtilSortedMap:(id<JavaUtilSortedMap>)map {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)map {
   ComGoogleCommonTruthSortedMapSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilSortedMap_(self, failureStrategy, map);
   return self;
 }
 
-- (ComGoogleCommonTruthSortedMapSubject *)namedWithNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthSortedMapSubject *)namedWithNSString:(NSString * __nonnull)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args {
   [super namedWithNSString:format withNSObjectArray:args];
   return self;
 }
 
-- (void)hasFirstKeyWithId:(id)key {
+- (void)hasFirstKeyWithId:(id __nullable)key {
   if ([((id<JavaUtilNavigableMap>) nil_chk(ComGoogleCommonTruthSortedMapSubject_actualAsNavigableMap(self))) isEmpty]) {
     [self failWithNSString:@"has first key" withId:key];
   }
@@ -142,8 +142,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavig
   }
 }
 
-- (void)hasFirstEntryWithId:(id)key
-                     withId:(id)value {
+- (void)hasFirstEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value {
   id<JavaUtilMap_Entry> expectedEntry = ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value);
   if ([((id<JavaUtilNavigableMap>) nil_chk(ComGoogleCommonTruthSortedMapSubject_actualAsNavigableMap(self))) isEmpty]) {
     [self failWithNSString:@"has first entry" withId:expectedEntry];
@@ -176,7 +176,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavig
   }
 }
 
-- (void)hasLastKeyWithId:(id)key {
+- (void)hasLastKeyWithId:(id __nullable)key {
   if ([((id<JavaUtilNavigableMap>) nil_chk(ComGoogleCommonTruthSortedMapSubject_actualAsNavigableMap(self))) isEmpty]) {
     [self failWithNSString:@"has last key" withId:key];
   }
@@ -188,8 +188,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavig
   }
 }
 
-- (void)hasLastEntryWithId:(id)key
-                    withId:(id)value {
+- (void)hasLastEntryWithId:(id __nullable)key
+                    withId:(id __nullable)value {
   id<JavaUtilMap_Entry> expectedEntry = ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value);
   if ([((id<JavaUtilNavigableMap>) nil_chk(ComGoogleCommonTruthSortedMapSubject_actualAsNavigableMap(self))) isEmpty]) {
     [self failWithNSString:@"has last entry" withId:expectedEntry];
@@ -298,11 +298,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedMapSubject)
 
 @implementation ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavigableMap
 
-+ (id<JavaUtilNavigableMap>)wrapIfNecessaryWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)map {
++ (id<JavaUtilNavigableMap>)wrapIfNecessaryWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)map {
   return ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavigableMap_wrapIfNecessaryWithJavaUtilSortedMap_(map);
 }
 
-- (instancetype)initWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)delegate {
+- (instancetype)initWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nonnull)delegate {
   ComGoogleCommonTruthSortedMapSubject_SortedMapAsNavigableMap_initWithJavaUtilSortedMap_(self, delegate);
   return self;
 }
@@ -311,11 +311,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedMapSubject)
   return delegate_;
 }
 
-- (id<JavaUtilMap_Entry>)ceilingEntryWithId:(id)key {
+- (id<JavaUtilMap_Entry>)ceilingEntryWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)ceilingKeyWithId:(id)key {
+- (id)ceilingKeyWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
@@ -332,24 +332,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedMapSubject)
   return [((id<JavaUtilIterator>) nil_chk(entryIterator)) hasNext] ? [entryIterator next] : nil;
 }
 
-- (id<JavaUtilMap_Entry>)floorEntryWithId:(id)key {
+- (id<JavaUtilMap_Entry>)floorEntryWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)floorKeyWithId:(id)key {
+- (id)floorKeyWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableMap>)headMapWithId:(id)toKey
+- (id<JavaUtilNavigableMap>)headMapWithId:(id __nonnull)toKey
                               withBoolean:(jboolean)inclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilMap_Entry>)higherEntryWithId:(id)key {
+- (id<JavaUtilMap_Entry>)higherEntryWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)higherKeyWithId:(id)key {
+- (id)higherKeyWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
@@ -363,11 +363,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedMapSubject)
   }
 }
 
-- (id<JavaUtilMap_Entry>)lowerEntryWithId:(id)key {
+- (id<JavaUtilMap_Entry>)lowerEntryWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)lowerKeyWithId:(id)key {
+- (id)lowerKeyWithId:(id __nonnull)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
@@ -383,14 +383,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedMapSubject)
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableMap>)subMapWithId:(id)fromKey
+- (id<JavaUtilNavigableMap>)subMapWithId:(id __nonnull)fromKey
                              withBoolean:(jboolean)fromInclusive
-                                  withId:(id)toKey
+                                  withId:(id __nonnull)toKey
                              withBoolean:(jboolean)toInclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableMap>)tailMapWithId:(id)fromKey
+- (id<JavaUtilNavigableMap>)tailMapWithId:(id __nonnull)fromKey
                               withBoolean:(jboolean)inclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }

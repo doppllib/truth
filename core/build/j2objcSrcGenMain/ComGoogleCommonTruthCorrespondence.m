@@ -29,8 +29,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthCorrespondenc
 
 - (instancetype)initWithDouble:(jdouble)tolerance;
 
-- (jboolean)compareWithId:(NSNumber *)actual
-                   withId:(NSNumber *)expected;
+- (jboolean)compareWithId:(NSNumber * __nonnull)actual
+                   withId:(NSNumber * __nonnull)expected;
 
 - (NSString *)description;
 
@@ -59,8 +59,8 @@ J2OBJC_IGNORE_DESIGNATED_END
   return ComGoogleCommonTruthCorrespondence_toleranceWithDouble_(tolerance);
 }
 
-- (jboolean)compareWithId:(id)actual
-                   withId:(id)expected {
+- (jboolean)compareWithId:(id __nullable)actual
+                   withId:(id __nullable)expected {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
   return 0;
@@ -72,7 +72,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   return 0;
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Correspondence.equals(object) is not supported. If you meant to compare objects, use .compare(actual, expected) instead.");
 }
 
@@ -139,8 +139,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthCorrespondence)
   return self;
 }
 
-- (jboolean)compareWithId:(NSNumber *)actual
-                   withId:(NSNumber *)expected {
+- (jboolean)compareWithId:(NSNumber * __nonnull)actual
+                   withId:(NSNumber * __nonnull)expected {
   ComGoogleCommonTruthDoubleSubject_checkToleranceWithDouble_(tolerance_);
   jdouble actualDouble = [((NSNumber *) nil_chk(ComGoogleCommonBasePreconditions_checkNotNullWithId_(actual))) doubleValue];
   jdouble expectedDouble = [((NSNumber *) nil_chk(ComGoogleCommonBasePreconditions_checkNotNullWithId_(expected))) doubleValue];

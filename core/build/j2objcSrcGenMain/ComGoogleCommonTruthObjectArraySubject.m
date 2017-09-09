@@ -43,15 +43,15 @@
   jint numberOfDimensions_;
 }
 
-+ (id<JavaLangIterable>)stringableIterableWithNSObjectArray:(IOSObjectArray *)array;
++ (id<JavaLangIterable>)stringableIterableWithNSObjectArray:(IOSObjectArray * __nonnull)array;
 
-+ (NSString *)typeNameFromInstanceWithId:(id)instance;
++ (NSString *)typeNameFromInstanceWithId:(id __nonnull)instance;
 
-+ (jint)numberOfDimensionsWithId:(id)instance;
++ (jint)numberOfDimensionsWithId:(id __nonnull)instance;
 
-- (NSString *)checkArrayEqualsRecursiveWithId:(id)expectedArray
-                                       withId:(id)actualArray
-                                 withNSString:(NSString *)lastIndex;
+- (NSString * __nullable)checkArrayEqualsRecursiveWithId:(id __nonnull)expectedArray
+                                                  withId:(id __nonnull)actualArray
+                                            withNSString:(NSString * __nonnull)lastIndex;
 
 @end
 
@@ -77,7 +77,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthObjectArraySu
 
 - (instancetype)init;
 
-- (id)applyWithId:(id)input;
+- (id)applyWithId:(id __nullable)input;
 
 @end
 
@@ -95,8 +95,8 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthObjectArraySubject)
 
 @implementation ComGoogleCommonTruthObjectArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                          withNSObjectArray:(IOSObjectArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                          withNSObjectArray:(IOSObjectArray * __nullable)o {
   ComGoogleCommonTruthObjectArraySubject_initWithComGoogleCommonTruthFailureStrategy_withNSObjectArray_(self, failureStrategy, o);
   return self;
 }
@@ -113,19 +113,19 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthObjectArraySubject)
   return ComGoogleCommonCollectLists_newArrayListWithJavaLangIterable_(ComGoogleCommonTruthObjectArraySubject_stringableIterableWithNSObjectArray_([self actual]));
 }
 
-+ (id<JavaLangIterable>)stringableIterableWithNSObjectArray:(IOSObjectArray *)array {
++ (id<JavaLangIterable>)stringableIterableWithNSObjectArray:(IOSObjectArray * __nonnull)array {
   return ComGoogleCommonTruthObjectArraySubject_stringableIterableWithNSObjectArray_(array);
 }
 
-+ (NSString *)typeNameFromInstanceWithId:(id)instance {
++ (NSString *)typeNameFromInstanceWithId:(id __nonnull)instance {
   return ComGoogleCommonTruthObjectArraySubject_typeNameFromInstanceWithId_(instance);
 }
 
-+ (jint)numberOfDimensionsWithId:(id)instance {
++ (jint)numberOfDimensionsWithId:(id __nonnull)instance {
   return ComGoogleCommonTruthObjectArraySubject_numberOfDimensionsWithId_(instance);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   IOSObjectArray *actual = [self actual];
   if (actual == expected) {
     return;
@@ -147,13 +147,13 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleCommonTruthObjectArraySubject)
   }
 }
 
-- (NSString *)checkArrayEqualsRecursiveWithId:(id)expectedArray
-                                       withId:(id)actualArray
-                                 withNSString:(NSString *)lastIndex {
+- (NSString * __nullable)checkArrayEqualsRecursiveWithId:(id __nonnull)expectedArray
+                                                  withId:(id __nonnull)actualArray
+                                            withNSString:(NSString * __nonnull)lastIndex {
   return ComGoogleCommonTruthObjectArraySubject_checkArrayEqualsRecursiveWithId_withId_withNSString_(self, expectedArray, actualArray, lastIndex);
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   IOSObjectArray *actual = [self actual];
   @try {
     IOSObjectArray *expectedArray = (IOSObjectArray *) cast_check(expected, IOSClass_arrayType(NSObject_class_(), 1));
@@ -317,7 +317,7 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (id)applyWithId:(id)input {
+- (id)applyWithId:(id __nullable)input {
   if (input != nil && [[input java_getClass] isArray]) {
     id<JavaLangIterable> iterable;
     if ([input java_getClass] == IOSClass_booleanArray(1)) {

@@ -13,6 +13,7 @@
 #include "J2ObjC_source.h"
 #include "com/google/common/base/Preconditions.h"
 #include "java/lang/CharSequence.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/annotation/Annotation.h"
 #include "javax/annotation/Nullable.h"
 
@@ -56,7 +57,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthAbstractVerb_
   ComGoogleCommonTruthFailureContext *messageHolder_;
 }
 
-- (NSString *)prependFailureMessageIfAnyWithNSString:(NSString *)message;
+- (NSString *)prependFailureMessageIfAnyWithNSString:(NSString * __nonnull)message;
 
 @end
 
@@ -67,14 +68,14 @@ __attribute__((unused)) static NSString *ComGoogleCommonTruthAbstractVerb_Messag
 
 @implementation ComGoogleCommonTruthAbstractVerb
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy {
   ComGoogleCommonTruthAbstractVerb_initWithComGoogleCommonTruthFailureStrategy_(self, failureStrategy);
   return self;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args {
   ComGoogleCommonTruthAbstractVerb_initWithComGoogleCommonTruthFailureStrategy_withNSString_withNSObjectArray_(self, failureStrategy, format, args);
   return self;
 }
@@ -87,25 +88,25 @@ __attribute__((unused)) static NSString *ComGoogleCommonTruthAbstractVerb_Messag
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk([self getFailureStrategy])) failWithNSString:@""];
 }
 
-- (void)failWithNSString:(NSString *)format
-       withNSObjectArray:(IOSObjectArray *)args {
+- (void)failWithNSString:(NSString * __nullable)format
+       withNSObjectArray:(IOSObjectArray * __nonnull)args {
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk([self getFailureStrategy])) failWithNSString:ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(format, args)];
 }
 
-- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString *)failureMessage {
+- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
   return 0;
 }
 
-- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString *)format
-                                                   withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthAbstractVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                                   withNSObjectArray:(IOSObjectArray * __nonnull)args {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
   return 0;
 }
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)aboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory {
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)aboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory {
   return create_ComGoogleCommonTruthAbstractVerb_DelegatedVerb_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthSubjectFactory_([self getFailureStrategy], factory);
 }
 
@@ -175,22 +176,22 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthAbstractVerb)
 
 @implementation ComGoogleCommonTruthAbstractVerb_DelegatedVerb
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                     withComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                     withComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory {
   ComGoogleCommonTruthAbstractVerb_DelegatedVerb_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthSubjectFactory_(self, failureStrategy, factory);
   return self;
 }
 
-- (ComGoogleCommonTruthSubject *)thatWithId:(id)target {
+- (ComGoogleCommonTruthSubject *)thatWithId:(id __nullable)target {
   return [((ComGoogleCommonTruthSubjectFactory *) nil_chk(factory_)) getSubjectWithComGoogleCommonTruthFailureStrategy:failureStrategy_ withId:target];
 }
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString *)failureMessage {
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage {
   return failureMessage == nil ? [self withFailureMessageWithNSString:nil withNSObjectArray:[IOSObjectArray arrayWithLength:0 type:NSObject_class_()]] : [self withFailureMessageWithNSString:@"%s" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ failureMessage } count:1 type:NSObject_class_()]];
 }
 
-- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString *)format
-                                                                 withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                                                 withNSObjectArray:(IOSObjectArray * __nonnull)args {
   ComGoogleCommonTruthFailureContext *holder = create_ComGoogleCommonTruthFailureContext_initWithNSString_withNSObjectArray_(format, args);
   return create_ComGoogleCommonTruthAbstractVerb_DelegatedVerb_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthSubjectFactory_(create_ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthFailureContext_(failureStrategy_, holder), factory_);
 }
@@ -256,28 +257,28 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthAbstractVerb_DelegatedVerb)
 
 @implementation ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)delegate
-                     withComGoogleCommonTruthFailureContext:(ComGoogleCommonTruthFailureContext *)messageHolder {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)delegate
+                     withComGoogleCommonTruthFailureContext:(ComGoogleCommonTruthFailureContext * __nonnull)messageHolder {
   ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthFailureContext_(self, delegate, messageHolder);
   return self;
 }
 
-- (void)failWithNSString:(NSString *)message {
+- (void)failWithNSString:(NSString * __nonnull)message {
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk(delegate_)) failWithNSString:ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_prependFailureMessageIfAnyWithNSString_(self, message)];
 }
 
-- (void)failWithNSString:(NSString *)message
-         withNSException:(NSException *)cause {
-  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(delegate_)) failWithNSString:ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_prependFailureMessageIfAnyWithNSString_(self, message) withNSException:cause];
+- (void)failWithNSString:(NSString * __nonnull)message
+   withJavaLangThrowable:(JavaLangThrowable * __nonnull)cause {
+  [((ComGoogleCommonTruthFailureStrategy *) nil_chk(delegate_)) failWithNSString:ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_prependFailureMessageIfAnyWithNSString_(self, message) withJavaLangThrowable:cause];
 }
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk(delegate_)) failComparingWithNSString:ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_prependFailureMessageIfAnyWithNSString_(self, message) withJavaLangCharSequence:expected withJavaLangCharSequence:actual];
 }
 
-- (NSString *)prependFailureMessageIfAnyWithNSString:(NSString *)message {
+- (NSString *)prependFailureMessageIfAnyWithNSString:(NSString * __nonnull)message {
   return ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy_prependFailureMessageIfAnyWithNSString_(self, message);
 }
 
@@ -299,7 +300,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthAbstractVerb_DelegatedVerb)
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithComGoogleCommonTruthFailureStrategy:withComGoogleCommonTruthFailureContext:);
   methods[1].selector = @selector(failWithNSString:);
-  methods[2].selector = @selector(failWithNSString:withNSException:);
+  methods[2].selector = @selector(failWithNSString:withJavaLangThrowable:);
   methods[3].selector = @selector(failComparingWithNSString:withJavaLangCharSequence:withJavaLangCharSequence:);
   methods[4].selector = @selector(prependFailureMessageIfAnyWithNSString:);
   #pragma clang diagnostic pop
@@ -307,7 +308,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthAbstractVerb_DelegatedVerb)
     { "delegate_", "LComGoogleCommonTruthFailureStrategy;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "messageHolder_", "LComGoogleCommonTruthFailureContext;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;LComGoogleCommonTruthFailureContext;", "fail", "LNSString;", "LNSString;LNSException;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "prependFailureMessageIfAny", "LComGoogleCommonTruthAbstractVerb;" };
+  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;LComGoogleCommonTruthFailureContext;", "fail", "LNSString;", "LNSString;LJavaLangThrowable;", "failComparing", "LNSString;LJavaLangCharSequence;LJavaLangCharSequence;", "prependFailureMessageIfAny", "LComGoogleCommonTruthAbstractVerb;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy = { "MessagePrependingFailureStrategy", "com.google.common.truth", ptrTable, methods, fields, 7, 0xc, 5, 2, 7, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthAbstractVerb_MessagePrependingFailureStrategy;
 }

@@ -22,53 +22,53 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthComparableSub
 
 @implementation ComGoogleCommonTruthComparableSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaLangComparable:(id<JavaLangComparable>)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaLangComparable:(id<JavaLangComparable> __nullable)subject {
   ComGoogleCommonTruthComparableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangComparable_(self, failureStrategy, subject);
   return self;
 }
 
-- (void)isInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange *)range {
+- (void)isInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange * __nonnull)range {
   if (![((ComGoogleCommonCollectRange *) nil_chk(range)) containsWithJavaLangComparable:[self actual]]) {
     [self failWithNSString:@"is in" withId:range];
   }
 }
 
-- (void)isNotInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange *)range {
+- (void)isNotInWithComGoogleCommonCollectRange:(ComGoogleCommonCollectRange * __nonnull)range {
   if ([((ComGoogleCommonCollectRange *) nil_chk(range)) containsWithJavaLangComparable:[self actual]]) {
     [self failWithNSString:@"is not in" withId:range];
   }
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   if ([((id<JavaLangComparable>) nil_chk([self actual])) compareToWithId:other] != 0) {
     [self failWithRawMessageWithNSString:@"%s should have been equivalent to <%s> according to compareTo()" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ [self actualAsString], other } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)comparesEqualToWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)comparesEqualToWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   [self isEquivalentAccordingToCompareToWithJavaLangComparable:other];
 }
 
-- (void)isGreaterThanWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)isGreaterThanWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   if ([((id<JavaLangComparable>) nil_chk([self actual])) compareToWithId:other] <= 0) {
     [self failWithNSString:@"is greater than" withId:other];
   }
 }
 
-- (void)isLessThanWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)isLessThanWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   if ([((id<JavaLangComparable>) nil_chk([self actual])) compareToWithId:other] >= 0) {
     [self failWithNSString:@"is less than" withId:other];
   }
 }
 
-- (void)isAtMostWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)isAtMostWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   if ([((id<JavaLangComparable>) nil_chk([self actual])) compareToWithId:other] > 0) {
     [self failWithNSString:@"is at most" withId:other];
   }
 }
 
-- (void)isAtLeastWithJavaLangComparable:(id<JavaLangComparable>)other {
+- (void)isAtLeastWithJavaLangComparable:(id<JavaLangComparable> __nonnull)other {
   if ([((id<JavaLangComparable>) nil_chk([self actual])) compareToWithId:other] < 0) {
     [self failWithNSString:@"is at least" withId:other];
   }

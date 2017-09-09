@@ -59,6 +59,7 @@
 #include "java/lang/Integer.h"
 #include "java/lang/Iterable.h"
 #include "java/lang/Long.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/annotation/Annotation.h"
 #include "java/math/BigDecimal.h"
 #include "java/util/Map.h"
@@ -148,9 +149,9 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthTruth__Annota
 
 - (instancetype)init;
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual;
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual;
 
 @end
 
@@ -168,6 +169,10 @@ ComGoogleCommonTruthFailureStrategy *ComGoogleCommonTruthTruth_THROW_ASSERTION_E
 
 @implementation ComGoogleCommonTruthTruth
 
++ (ComGoogleCommonTruthFailureStrategy *)THROW_ASSERTION_ERROR {
+  return ComGoogleCommonTruthTruth_THROW_ASSERTION_ERROR;
+}
+
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComGoogleCommonTruthTruth_init(self);
@@ -179,140 +184,140 @@ J2OBJC_IGNORE_DESIGNATED_END
   return ComGoogleCommonTruthTruth_assert_();
 }
 
-+ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString *)messageToPrepend {
++ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString * __nonnull)messageToPrepend {
   return ComGoogleCommonTruthTruth_assertWithMessageWithNSString_(messageToPrepend);
 }
 
-+ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString *)format
-                                              withNSObjectArray:(IOSObjectArray *)args {
++ (ComGoogleCommonTruthTestVerb *)assertWithMessageWithNSString:(NSString * __nonnull)format
+                                              withNSObjectArray:(IOSObjectArray * __nonnull)args {
   return ComGoogleCommonTruthTruth_assertWithMessageWithNSString_withNSObjectArray_(format, args);
 }
 
-+ (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)assertAboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory *)factory {
++ (ComGoogleCommonTruthAbstractVerb_DelegatedVerb *)assertAboutWithComGoogleCommonTruthSubjectFactory:(ComGoogleCommonTruthSubjectFactory * __nonnull)factory {
   return ComGoogleCommonTruthTruth_assertAboutWithComGoogleCommonTruthSubjectFactory_(factory);
 }
 
-+ (ComGoogleCommonTruthComparableSubject *)assertThatWithJavaLangComparable:(id<JavaLangComparable>)target {
++ (ComGoogleCommonTruthComparableSubject *)assertThatWithJavaLangComparable:(id<JavaLangComparable> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangComparable_(target);
 }
 
-+ (ComGoogleCommonTruthBigDecimalSubject *)assertThatWithJavaMathBigDecimal:(JavaMathBigDecimal *)target {
++ (ComGoogleCommonTruthBigDecimalSubject *)assertThatWithJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaMathBigDecimal_(target);
 }
 
-+ (ComGoogleCommonTruthSubject *)assertThatWithId:(id)target {
++ (ComGoogleCommonTruthSubject *)assertThatWithId:(id __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithId_(target);
 }
 
-+ (ComGoogleCommonTruthClassSubject *)assertThatWithIOSClass:(IOSClass *)target {
++ (ComGoogleCommonTruthClassSubject *)assertThatWithIOSClass:(IOSClass * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithIOSClass_(target);
 }
 
-+ (ComGoogleCommonTruthThrowableSubject *)assertThatWithNSException:(NSException *)target {
-  return ComGoogleCommonTruthTruth_assertThatWithNSException_(target);
++ (ComGoogleCommonTruthThrowableSubject *)assertThatWithJavaLangThrowable:(JavaLangThrowable * __nullable)target {
+  return ComGoogleCommonTruthTruth_assertThatWithJavaLangThrowable_(target);
 }
 
-+ (ComGoogleCommonTruthLongSubject *)assertThatWithJavaLangLong:(JavaLangLong *)target {
++ (ComGoogleCommonTruthLongSubject *)assertThatWithJavaLangLong:(JavaLangLong * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangLong_(target);
 }
 
-+ (ComGoogleCommonTruthDoubleSubject *)assertThatWithJavaLangDouble:(JavaLangDouble *)target {
++ (ComGoogleCommonTruthDoubleSubject *)assertThatWithJavaLangDouble:(JavaLangDouble * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangDouble_(target);
 }
 
-+ (ComGoogleCommonTruthFloatSubject *)assertThatWithJavaLangFloat:(JavaLangFloat *)target {
++ (ComGoogleCommonTruthFloatSubject *)assertThatWithJavaLangFloat:(JavaLangFloat * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangFloat_(target);
 }
 
-+ (ComGoogleCommonTruthIntegerSubject *)assertThatWithJavaLangInteger:(JavaLangInteger *)target {
++ (ComGoogleCommonTruthIntegerSubject *)assertThatWithJavaLangInteger:(JavaLangInteger * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangInteger_(target);
 }
 
-+ (ComGoogleCommonTruthBooleanSubject *)assertThatWithJavaLangBoolean:(JavaLangBoolean *)target {
++ (ComGoogleCommonTruthBooleanSubject *)assertThatWithJavaLangBoolean:(JavaLangBoolean * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangBoolean_(target);
 }
 
-+ (ComGoogleCommonTruthStringSubject *)assertThatWithNSString:(NSString *)target {
++ (ComGoogleCommonTruthStringSubject *)assertThatWithNSString:(NSString * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithNSString_(target);
 }
 
-+ (ComGoogleCommonTruthIterableSubject *)assertThatWithJavaLangIterable:(id<JavaLangIterable>)target {
++ (ComGoogleCommonTruthIterableSubject *)assertThatWithJavaLangIterable:(id<JavaLangIterable> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaLangIterable_(target);
 }
 
-+ (ComGoogleCommonTruthSortedSetSubject *)assertThatWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)target {
++ (ComGoogleCommonTruthSortedSetSubject *)assertThatWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaUtilSortedSet_(target);
 }
 
-+ (ComGoogleCommonTruthObjectArraySubject *)assertThatWithNSObjectArray:(IOSObjectArray *)target {
++ (ComGoogleCommonTruthObjectArraySubject *)assertThatWithNSObjectArray:(IOSObjectArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithNSObjectArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)assertThatWithBooleanArray:(IOSBooleanArray *)target {
++ (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)assertThatWithBooleanArray:(IOSBooleanArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithBooleanArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveShortArraySubject *)assertThatWithShortArray:(IOSShortArray *)target {
++ (ComGoogleCommonTruthPrimitiveShortArraySubject *)assertThatWithShortArray:(IOSShortArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithShortArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveIntArraySubject *)assertThatWithIntArray:(IOSIntArray *)target {
++ (ComGoogleCommonTruthPrimitiveIntArraySubject *)assertThatWithIntArray:(IOSIntArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithIntArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveLongArraySubject *)assertThatWithLongArray:(IOSLongArray *)target {
++ (ComGoogleCommonTruthPrimitiveLongArraySubject *)assertThatWithLongArray:(IOSLongArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithLongArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveByteArraySubject *)assertThatWithByteArray:(IOSByteArray *)target {
++ (ComGoogleCommonTruthPrimitiveByteArraySubject *)assertThatWithByteArray:(IOSByteArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithByteArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveCharArraySubject *)assertThatWithCharArray:(IOSCharArray *)target {
++ (ComGoogleCommonTruthPrimitiveCharArraySubject *)assertThatWithCharArray:(IOSCharArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithCharArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveFloatArraySubject *)assertThatWithFloatArray:(IOSFloatArray *)target {
++ (ComGoogleCommonTruthPrimitiveFloatArraySubject *)assertThatWithFloatArray:(IOSFloatArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithFloatArray_(target);
 }
 
-+ (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)assertThatWithDoubleArray:(IOSDoubleArray *)target {
++ (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)assertThatWithDoubleArray:(IOSDoubleArray * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithDoubleArray_(target);
 }
 
-+ (ComGoogleCommonTruthGuavaOptionalSubject *)assertThatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional *)target {
++ (ComGoogleCommonTruthGuavaOptionalSubject *)assertThatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonBaseOptional_(target);
 }
 
-+ (ComGoogleCommonTruthMapSubject *)assertThatWithJavaUtilMap:(id<JavaUtilMap>)target {
++ (ComGoogleCommonTruthMapSubject *)assertThatWithJavaUtilMap:(id<JavaUtilMap> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaUtilMap_(target);
 }
 
-+ (ComGoogleCommonTruthSortedMapSubject *)assertThatWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)target {
++ (ComGoogleCommonTruthSortedMapSubject *)assertThatWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithJavaUtilSortedMap_(target);
 }
 
-+ (ComGoogleCommonTruthMultimapSubject *)assertThatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)target {
++ (ComGoogleCommonTruthMultimapSubject *)assertThatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonCollectMultimap_(target);
 }
 
-+ (ComGoogleCommonTruthListMultimapSubject *)assertThatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)target {
++ (ComGoogleCommonTruthListMultimapSubject *)assertThatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonCollectListMultimap_(target);
 }
 
-+ (ComGoogleCommonTruthSetMultimapSubject *)assertThatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)target {
++ (ComGoogleCommonTruthSetMultimapSubject *)assertThatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonCollectSetMultimap_(target);
 }
 
-+ (ComGoogleCommonTruthMultisetSubject *)assertThatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)target {
++ (ComGoogleCommonTruthMultisetSubject *)assertThatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonCollectMultiset_(target);
 }
 
-+ (ComGoogleCommonTruthTableSubject *)assertThatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)target {
++ (ComGoogleCommonTruthTableSubject *)assertThatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonCollectTable_(target);
 }
 
-+ (ComGoogleCommonTruthAtomicLongMapSubject *)assertThatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)target {
++ (ComGoogleCommonTruthAtomicLongMapSubject *)assertThatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)target {
   return ComGoogleCommonTruthTruth_assertThatWithComGoogleCommonUtilConcurrentAtomicLongMap_(target);
 }
 
@@ -366,7 +371,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[6].selector = @selector(assertThatWithJavaMathBigDecimal:);
   methods[7].selector = @selector(assertThatWithId:);
   methods[8].selector = @selector(assertThatWithIOSClass:);
-  methods[9].selector = @selector(assertThatWithNSException:);
+  methods[9].selector = @selector(assertThatWithJavaLangThrowable:);
   methods[10].selector = @selector(assertThatWithJavaLangLong:);
   methods[11].selector = @selector(assertThatWithJavaLangDouble:);
   methods[12].selector = @selector(assertThatWithJavaLangFloat:);
@@ -398,7 +403,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "THROW_ASSERTION_ERROR", "LComGoogleCommonTruthFailureStrategy;", .constantValue.asLong = 0, 0x19, -1, 83, -1, -1 },
     { "ASSERT", "LComGoogleCommonTruthTestVerb;", .constantValue.asLong = 0, 0x1a, -1, 84, -1, -1 },
   };
-  static const void *ptrTable[] = { "assertWithMessage", "LNSString;", "LNSString;[LNSObject;", "assertAbout", "LComGoogleCommonTruthSubjectFactory;", "<S:Lcom/google/common/truth/Subject<TS;TT;>;T:Ljava/lang/Object;>(Lcom/google/common/truth/SubjectFactory<TS;TT;>;)Lcom/google/common/truth/AbstractVerb$DelegatedVerb<TS;TT;>;", "assertThat", "LJavaLangComparable;", "<T::Ljava/lang/Comparable<*>;>(TT;)Lcom/google/common/truth/ComparableSubject<*TT;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$0, "LJavaMathBigDecimal;", (void *)&ComGoogleCommonTruthTruth__Annotations$1, "LNSObject;", "(Ljava/lang/Object;)Lcom/google/common/truth/Subject<Lcom/google/common/truth/DefaultSubject;Ljava/lang/Object;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$2, "LIOSClass;", "(Ljava/lang/Class<*>;)Lcom/google/common/truth/ClassSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$3, "LNSException;", (void *)&ComGoogleCommonTruthTruth__Annotations$4, "LJavaLangLong;", (void *)&ComGoogleCommonTruthTruth__Annotations$5, "LJavaLangDouble;", (void *)&ComGoogleCommonTruthTruth__Annotations$6, "LJavaLangFloat;", (void *)&ComGoogleCommonTruthTruth__Annotations$7, "LJavaLangInteger;", (void *)&ComGoogleCommonTruthTruth__Annotations$8, "LJavaLangBoolean;", (void *)&ComGoogleCommonTruthTruth__Annotations$9, (void *)&ComGoogleCommonTruthTruth__Annotations$10, "LJavaLangIterable;", "(Ljava/lang/Iterable<*>;)Lcom/google/common/truth/IterableSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$11, "LJavaUtilSortedSet;", "(Ljava/util/SortedSet<*>;)Lcom/google/common/truth/SortedSetSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$12, "[LNSObject;", "<T:Ljava/lang/Object;>([TT;)Lcom/google/common/truth/ObjectArraySubject<TT;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$13, "[Z", (void *)&ComGoogleCommonTruthTruth__Annotations$14, "[S", (void *)&ComGoogleCommonTruthTruth__Annotations$15, "[I", (void *)&ComGoogleCommonTruthTruth__Annotations$16, "[J", (void *)&ComGoogleCommonTruthTruth__Annotations$17, "[B", (void *)&ComGoogleCommonTruthTruth__Annotations$18, "[C", (void *)&ComGoogleCommonTruthTruth__Annotations$19, "[F", (void *)&ComGoogleCommonTruthTruth__Annotations$20, "[D", (void *)&ComGoogleCommonTruthTruth__Annotations$21, "LComGoogleCommonBaseOptional;", "(Lcom/google/common/base/Optional<*>;)Lcom/google/common/truth/GuavaOptionalSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$22, "LJavaUtilMap;", "(Ljava/util/Map<**>;)Lcom/google/common/truth/MapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$23, "LJavaUtilSortedMap;", "(Ljava/util/SortedMap<**>;)Lcom/google/common/truth/SortedMapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$24, "LComGoogleCommonCollectMultimap;", "(Lcom/google/common/collect/Multimap<**>;)Lcom/google/common/truth/MultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$25, "LComGoogleCommonCollectListMultimap;", "(Lcom/google/common/collect/ListMultimap<**>;)Lcom/google/common/truth/ListMultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$26, "LComGoogleCommonCollectSetMultimap;", "(Lcom/google/common/collect/SetMultimap<**>;)Lcom/google/common/truth/SetMultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$27, "LComGoogleCommonCollectMultiset;", "(Lcom/google/common/collect/Multiset<*>;)Lcom/google/common/truth/MultisetSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$28, "LComGoogleCommonCollectTable;", "(Lcom/google/common/collect/Table<***>;)Lcom/google/common/truth/TableSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$29, "LComGoogleCommonUtilConcurrentAtomicLongMap;", "(Lcom/google/common/util/concurrent/AtomicLongMap<*>;)Lcom/google/common/truth/AtomicLongMapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$30, &ComGoogleCommonTruthTruth_THROW_ASSERTION_ERROR, &ComGoogleCommonTruthTruth_ASSERT };
+  static const void *ptrTable[] = { "assertWithMessage", "LNSString;", "LNSString;[LNSObject;", "assertAbout", "LComGoogleCommonTruthSubjectFactory;", "<S:Lcom/google/common/truth/Subject<TS;TT;>;T:Ljava/lang/Object;>(Lcom/google/common/truth/SubjectFactory<TS;TT;>;)Lcom/google/common/truth/AbstractVerb$DelegatedVerb<TS;TT;>;", "assertThat", "LJavaLangComparable;", "<T::Ljava/lang/Comparable<*>;>(TT;)Lcom/google/common/truth/ComparableSubject<*TT;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$0, "LJavaMathBigDecimal;", (void *)&ComGoogleCommonTruthTruth__Annotations$1, "LNSObject;", "(Ljava/lang/Object;)Lcom/google/common/truth/Subject<Lcom/google/common/truth/DefaultSubject;Ljava/lang/Object;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$2, "LIOSClass;", "(Ljava/lang/Class<*>;)Lcom/google/common/truth/ClassSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$3, "LJavaLangThrowable;", (void *)&ComGoogleCommonTruthTruth__Annotations$4, "LJavaLangLong;", (void *)&ComGoogleCommonTruthTruth__Annotations$5, "LJavaLangDouble;", (void *)&ComGoogleCommonTruthTruth__Annotations$6, "LJavaLangFloat;", (void *)&ComGoogleCommonTruthTruth__Annotations$7, "LJavaLangInteger;", (void *)&ComGoogleCommonTruthTruth__Annotations$8, "LJavaLangBoolean;", (void *)&ComGoogleCommonTruthTruth__Annotations$9, (void *)&ComGoogleCommonTruthTruth__Annotations$10, "LJavaLangIterable;", "(Ljava/lang/Iterable<*>;)Lcom/google/common/truth/IterableSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$11, "LJavaUtilSortedSet;", "(Ljava/util/SortedSet<*>;)Lcom/google/common/truth/SortedSetSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$12, "[LNSObject;", "<T:Ljava/lang/Object;>([TT;)Lcom/google/common/truth/ObjectArraySubject<TT;>;", (void *)&ComGoogleCommonTruthTruth__Annotations$13, "[Z", (void *)&ComGoogleCommonTruthTruth__Annotations$14, "[S", (void *)&ComGoogleCommonTruthTruth__Annotations$15, "[I", (void *)&ComGoogleCommonTruthTruth__Annotations$16, "[J", (void *)&ComGoogleCommonTruthTruth__Annotations$17, "[B", (void *)&ComGoogleCommonTruthTruth__Annotations$18, "[C", (void *)&ComGoogleCommonTruthTruth__Annotations$19, "[F", (void *)&ComGoogleCommonTruthTruth__Annotations$20, "[D", (void *)&ComGoogleCommonTruthTruth__Annotations$21, "LComGoogleCommonBaseOptional;", "(Lcom/google/common/base/Optional<*>;)Lcom/google/common/truth/GuavaOptionalSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$22, "LJavaUtilMap;", "(Ljava/util/Map<**>;)Lcom/google/common/truth/MapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$23, "LJavaUtilSortedMap;", "(Ljava/util/SortedMap<**>;)Lcom/google/common/truth/SortedMapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$24, "LComGoogleCommonCollectMultimap;", "(Lcom/google/common/collect/Multimap<**>;)Lcom/google/common/truth/MultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$25, "LComGoogleCommonCollectListMultimap;", "(Lcom/google/common/collect/ListMultimap<**>;)Lcom/google/common/truth/ListMultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$26, "LComGoogleCommonCollectSetMultimap;", "(Lcom/google/common/collect/SetMultimap<**>;)Lcom/google/common/truth/SetMultimapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$27, "LComGoogleCommonCollectMultiset;", "(Lcom/google/common/collect/Multiset<*>;)Lcom/google/common/truth/MultisetSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$28, "LComGoogleCommonCollectTable;", "(Lcom/google/common/collect/Table<***>;)Lcom/google/common/truth/TableSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$29, "LComGoogleCommonUtilConcurrentAtomicLongMap;", "(Lcom/google/common/util/concurrent/AtomicLongMap<*>;)Lcom/google/common/truth/AtomicLongMapSubject;", (void *)&ComGoogleCommonTruthTruth__Annotations$30, &ComGoogleCommonTruthTruth_THROW_ASSERTION_ERROR, &ComGoogleCommonTruthTruth_ASSERT };
   static const J2ObjcClassInfo _ComGoogleCommonTruthTruth = { "Truth", "com.google.common.truth", ptrTable, methods, fields, 7, 0x11, 36, 2, -1, -1, -1, -1, -1 };
   return &_ComGoogleCommonTruthTruth;
 }
@@ -465,9 +470,9 @@ ComGoogleCommonTruthClassSubject *ComGoogleCommonTruthTruth_assertThatWithIOSCla
   return [((ComGoogleCommonTruthTestVerb *) nil_chk(ComGoogleCommonTruthTruth_assert_())) thatWithIOSClass:target];
 }
 
-ComGoogleCommonTruthThrowableSubject *ComGoogleCommonTruthTruth_assertThatWithNSException_(NSException *target) {
+ComGoogleCommonTruthThrowableSubject *ComGoogleCommonTruthTruth_assertThatWithJavaLangThrowable_(JavaLangThrowable *target) {
   ComGoogleCommonTruthTruth_initialize();
-  return [((ComGoogleCommonTruthTestVerb *) nil_chk(ComGoogleCommonTruthTruth_assert_())) thatWithNSException:target];
+  return [((ComGoogleCommonTruthTestVerb *) nil_chk(ComGoogleCommonTruthTruth_assert_())) thatWithJavaLangThrowable:target];
 }
 
 ComGoogleCommonTruthLongSubject *ComGoogleCommonTruthTruth_assertThatWithJavaLangLong_(JavaLangLong *target) {
@@ -735,10 +740,10 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (void)failComparingWithNSString:(NSString *)message
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)expected
-         withJavaLangCharSequence:(id<JavaLangCharSequence>)actual {
-  @throw ComGoogleCommonTruthPlatform_comparisonFailureWithNSString_withNSString_withNSString_(message, [((id<JavaLangCharSequence>) nil_chk(expected)) description], [((id<JavaLangCharSequence>) nil_chk(actual)) description]);
+- (void)failComparingWithNSString:(NSString * __nonnull)message
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)expected
+         withJavaLangCharSequence:(id<JavaLangCharSequence> __nonnull)actual {
+  @throw nil_chk(ComGoogleCommonTruthPlatform_comparisonFailureWithNSString_withNSString_withNSString_(message, [((id<JavaLangCharSequence>) nil_chk(expected)) description], [((id<JavaLangCharSequence>) nil_chk(actual)) description]));
 }
 
 + (const J2ObjcClassInfo *)__metadata {

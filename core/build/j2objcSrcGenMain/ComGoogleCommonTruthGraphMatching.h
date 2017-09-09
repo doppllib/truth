@@ -27,7 +27,7 @@
 
 #pragma mark Package-Private
 
-+ (ComGoogleCommonCollectImmutableBiMap *)maximumCardinalityBipartiteMatchingWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)graph;
++ (ComGoogleCommonCollectImmutableBiMap *)maximumCardinalityBipartiteMatchingWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)graph;
 
 @end
 

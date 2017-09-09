@@ -42,19 +42,19 @@
 
 @interface ComGoogleCommonTruthMultimapSubject ()
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSString:(NSString *)failVerb
-                            withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSString:(NSString * __nonnull)failVerb
+                            withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap;
 
-+ (id<JavaUtilCollection>)getWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap
-                                                         withId:(id)key;
++ (id<JavaUtilCollection>)getWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)multimap
+                                                         withId:(id __nullable)key;
 
-+ (id<ComGoogleCommonCollectMultimap>)differenceWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)minuend
-                                                withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)subtrahend;
++ (id<ComGoogleCommonCollectMultimap>)differenceWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)minuend
+                                                withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)subtrahend;
 
-+ (id<JavaUtilList>)differenceWithJavaUtilList:(id<JavaUtilList>)minuend
-                              withJavaUtilList:(id<JavaUtilList>)subtrahend;
++ (id<JavaUtilList>)differenceWithJavaUtilList:(id<JavaUtilList> __nonnull)minuend
+                              withJavaUtilList:(id<JavaUtilList> __nonnull)subtrahend;
 
-+ (NSString *)countDuplicatesMultimapWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap;
++ (NSString *)countDuplicatesMultimapWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)multimap;
 
 @end
 
@@ -92,10 +92,10 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
   NSString *stringRepresentation_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                    withComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                    withComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)multimapSubject
-                                                     withId:(id)key;
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                    withComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                    withComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)multimapSubject
+                                                     withId:(id __nullable)key;
 
 - (NSString *)actualCustomStringRepresentation;
 
@@ -103,8 +103,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
 
 - (id<JavaLangIterable>)actual;
 
-- (ComGoogleCommonTruthIterableSubject *)namedWithNSString:(NSString *)arg0
-                                         withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthIterableSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                         withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 @end
 
@@ -133,8 +133,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthMultimapSubject_IterableValuesFor
   id<ComGoogleCommonCollectMultimap> expectedMultimap_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap;
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap;
 
 - (void)inOrder;
 
@@ -158,12 +158,12 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthMultimapSubject_MultimapInOrder)
   ComGoogleCommonTruthCorrespondence *correspondence_;
 }
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap;
 
-- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)valuesForKeyWithId:(id)key;
+- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)valuesForKeyWithId:(id __nullable)key;
 
 - (id<ComGoogleCommonCollectMultimap>)getCastSubject;
 
@@ -187,8 +187,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
 
 @implementation ComGoogleCommonTruthMultimapSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)multimap {
   ComGoogleCommonTruthMultimapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectMultimap_(self, failureStrategy, multimap);
   return self;
 }
@@ -213,20 +213,20 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
   }
 }
 
-- (void)containsKeyWithId:(id)key {
+- (void)containsKeyWithId:(id __nullable)key {
   if (![((id<ComGoogleCommonCollectMultimap>) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"contains key" withId:key];
   }
 }
 
-- (void)doesNotContainKeyWithId:(id)key {
+- (void)doesNotContainKeyWithId:(id __nullable)key {
   if ([((id<ComGoogleCommonCollectMultimap>) nil_chk([self actual])) containsKeyWithId:key]) {
     [self failWithNSString:@"does not contain key" withId:key];
   }
 }
 
-- (void)containsEntryWithId:(id)key
-                     withId:(id)value {
+- (void)containsEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value {
   if (![((id<ComGoogleCommonCollectMultimap>) nil_chk([self actual])) containsEntryWithId:key withId:value]) {
     id<JavaUtilMap_Entry> entry_ = ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value);
     if ([((id<ComGoogleCommonCollectMultimap>) nil_chk([self actual])) containsKeyWithId:key]) {
@@ -245,18 +245,18 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
   }
 }
 
-- (void)doesNotContainEntryWithId:(id)key
-                           withId:(id)value {
+- (void)doesNotContainEntryWithId:(id __nullable)key
+                           withId:(id __nullable)value {
   if ([((id<ComGoogleCommonCollectMultimap>) nil_chk([self actual])) containsEntryWithId:key withId:value]) {
     [self failWithNSString:@"does not contain entry" withId:ComGoogleCommonCollectMaps_immutableEntryWithId_withId_(key, value)];
   }
 }
 
-- (ComGoogleCommonTruthIterableSubject *)valuesForKeyWithId:(id)key {
+- (ComGoogleCommonTruthIterableSubject *)valuesForKeyWithId:(id __nullable)key {
   return create_ComGoogleCommonTruthMultimapSubject_IterableValuesForKey_initWithComGoogleCommonTruthMultimapSubject_withComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthMultimapSubject_withId_(self, failureStrategy_, self, key);
 }
 
-- (void)isEqualToWithId:(id)other {
+- (void)isEqualToWithId:(id __nullable)other {
   if (!ComGoogleCommonBaseObjects_equalWithId_withId_([self actual], other)) {
     if (([ComGoogleCommonCollectListMultimap_class_() isInstance:[self actual]] && [ComGoogleCommonCollectSetMultimap_class_() isInstance:other]) || ([ComGoogleCommonCollectSetMultimap_class_() isInstance:[self actual]] && [ComGoogleCommonCollectListMultimap_class_() isInstance:other])) {
       NSString *mapType1 = ([ComGoogleCommonCollectListMultimap_class_() isInstance:[self actual]]) ? @"ListMultimap" : @"SetMultimap";
@@ -275,40 +275,40 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMultimapSubje
   }
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_withId_(expectedMultimap, @"expectedMultimap");
   return ComGoogleCommonTruthMultimapSubject_containsExactlyWithNSString_withComGoogleCommonCollectMultimap_(self, @"contains exactly", expectedMultimap);
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap {
   return [self containsExactlyEntriesInWithComGoogleCommonCollectMultimap:expectedMultimap];
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSString:(NSString *)failVerb
-                            withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSString:(NSString * __nonnull)failVerb
+                            withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap {
   return ComGoogleCommonTruthMultimapSubject_containsExactlyWithNSString_withComGoogleCommonCollectMultimap_(self, failVerb, expectedMultimap);
 }
 
-+ (id<JavaUtilCollection>)getWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap
-                                                         withId:(id)key {
++ (id<JavaUtilCollection>)getWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)multimap
+                                                         withId:(id __nullable)key {
   return ComGoogleCommonTruthMultimapSubject_getWithComGoogleCommonCollectMultimap_withId_(multimap, key);
 }
 
-+ (id<ComGoogleCommonCollectMultimap>)differenceWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)minuend
-                                                withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)subtrahend {
++ (id<ComGoogleCommonCollectMultimap>)differenceWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)minuend
+                                                withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)subtrahend {
   return ComGoogleCommonTruthMultimapSubject_differenceWithComGoogleCommonCollectMultimap_withComGoogleCommonCollectMultimap_(minuend, subtrahend);
 }
 
-+ (id<JavaUtilList>)differenceWithJavaUtilList:(id<JavaUtilList>)minuend
-                              withJavaUtilList:(id<JavaUtilList>)subtrahend {
++ (id<JavaUtilList>)differenceWithJavaUtilList:(id<JavaUtilList> __nonnull)minuend
+                              withJavaUtilList:(id<JavaUtilList> __nonnull)subtrahend {
   return ComGoogleCommonTruthMultimapSubject_differenceWithJavaUtilList_withJavaUtilList_(minuend, subtrahend);
 }
 
-+ (NSString *)countDuplicatesMultimapWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap {
++ (NSString *)countDuplicatesMultimapWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)multimap {
   return ComGoogleCommonTruthMultimapSubject_countDuplicatesMultimapWithComGoogleCommonCollectMultimap_(multimap);
 }
 
-- (ComGoogleCommonTruthMultimapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (ComGoogleCommonTruthMultimapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   return create_ComGoogleCommonTruthMultimapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMultimapSubject_withComGoogleCommonTruthCorrespondence_(self, correspondence);
 }
 
@@ -475,10 +475,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMultimapSubject)
 
 @implementation ComGoogleCommonTruthMultimapSubject_IterableValuesForKey
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                    withComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                    withComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)multimapSubject
-                                                     withId:(id)key {
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                    withComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                    withComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)multimapSubject
+                                                     withId:(id __nullable)key {
   ComGoogleCommonTruthMultimapSubject_IterableValuesForKey_initWithComGoogleCommonTruthMultimapSubject_withComGoogleCommonTruthFailureStrategy_withComGoogleCommonTruthMultimapSubject_withId_(self, outer$, failureStrategy, multimapSubject, key);
   return self;
 }
@@ -544,8 +544,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMultimapSubject_IterableVal
 
 @implementation ComGoogleCommonTruthMultimapSubject_MultimapInOrder
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap {
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap {
   ComGoogleCommonTruthMultimapSubject_MultimapInOrder_initWithComGoogleCommonTruthMultimapSubject_withComGoogleCommonCollectMultimap_(self, outer$, expectedMultimap);
   return self;
 }
@@ -621,14 +621,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMultimapSubject_MultimapInO
 
 @implementation ComGoogleCommonTruthMultimapSubject_UsingCorrespondence
 
-- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject *)outer$
-                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence {
+- (instancetype)initWithComGoogleCommonTruthMultimapSubject:(ComGoogleCommonTruthMultimapSubject * __nonnull)outer$
+                     withComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence {
   ComGoogleCommonTruthMultimapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMultimapSubject_withComGoogleCommonTruthCorrespondence_(self, outer$, correspondence);
   return self;
 }
 
-- (void)containsEntryWithId:(id)expectedKey
-                     withId:(id)expectedValue {
+- (void)containsEntryWithId:(id __nullable)expectedKey
+                     withId:(id __nullable)expectedValue {
   if ([((id<ComGoogleCommonCollectMultimap>) nil_chk([this$0_ actual])) containsKeyWithId:expectedKey]) {
     id<JavaUtilCollection> actualValues = [((id<JavaUtilMap>) nil_chk([((id<ComGoogleCommonCollectMultimap>) nil_chk(ComGoogleCommonTruthMultimapSubject_UsingCorrespondence_getCastSubject(self))) asMap])) getWithId:expectedKey];
     for (id __strong actualValue in nil_chk(actualValues)) {
@@ -654,8 +654,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMultimapSubject_MultimapInO
   }
 }
 
-- (void)doesNotContainEntryWithId:(id)excludedKey
-                           withId:(id)excludedValue {
+- (void)doesNotContainEntryWithId:(id __nullable)excludedKey
+                           withId:(id __nullable)excludedValue {
   if ([((id<ComGoogleCommonCollectMultimap>) nil_chk([this$0_ actual])) containsKeyWithId:excludedKey]) {
     id<JavaUtilCollection> actualValues = [((id<JavaUtilMap>) nil_chk([((id<ComGoogleCommonCollectMultimap>) nil_chk(ComGoogleCommonTruthMultimapSubject_UsingCorrespondence_getCastSubject(self))) asMap])) getWithId:excludedKey];
     id<JavaUtilList> matchingValues = create_JavaUtilArrayList_init();
@@ -670,11 +670,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMultimapSubject_MultimapInO
   }
 }
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap {
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)valuesForKeyWithId:(id)key {
+- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)valuesForKeyWithId:(id __nullable)key {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 

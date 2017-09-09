@@ -23,8 +23,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveBool
 
 @implementation ComGoogleCommonTruthPrimitiveBooleanArraySubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                           withBooleanArray:(IOSBooleanArray *)o {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                           withBooleanArray:(IOSBooleanArray * __nullable)o {
   ComGoogleCommonTruthPrimitiveBooleanArraySubject_initWithComGoogleCommonTruthFailureStrategy_withBooleanArray_(self, failureStrategy, o);
   return self;
 }
@@ -37,7 +37,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveBool
   return ComGoogleCommonPrimitivesBooleans_asListWithBooleanArray_([self actual]);
 }
 
-- (void)isEqualToWithId:(id)expected {
+- (void)isEqualToWithId:(id __nonnull)expected {
   IOSBooleanArray *actual = [self actual];
   if (actual == expected) {
     return;
@@ -53,7 +53,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthPrimitiveBool
   }
 }
 
-- (void)isNotEqualToWithId:(id)expected {
+- (void)isNotEqualToWithId:(id __nonnull)expected {
   IOSBooleanArray *actual = [self actual];
   @try {
     IOSBooleanArray *expectedArray = (IOSBooleanArray *) cast_chk(expected, [IOSBooleanArray class]);

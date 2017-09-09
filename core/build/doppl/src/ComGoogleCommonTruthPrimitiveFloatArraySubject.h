@@ -39,18 +39,18 @@
 
 - (ComGoogleCommonTruthPrimitiveFloatArraySubject_TolerantPrimitiveFloatArrayComparison *)hasValuesWithinWithFloat:(jfloat)tolerance;
 
-- (void)isEqualToWithId:(id)expected;
+- (void)isEqualToWithId:(id __nonnull)expected;
 
-- (void)isEqualToWithId:(id)expected
+- (void)isEqualToWithId:(id __nonnull)expected
               withFloat:(jfloat)tolerance;
 
-- (void)isNotEqualToWithId:(id)expected;
+- (void)isNotEqualToWithId:(id __nonnull)expected;
 
-- (void)isNotEqualToWithId:(id)expectedArray
+- (void)isNotEqualToWithId:(id __nonnull)expectedArray
                  withFloat:(jfloat)tolerance;
 
-- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)namedWithNSString:(NSString *)arg0
-                                                    withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                                    withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 - (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)usingExactEquality;
 
@@ -68,8 +68,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                             withFloatArray:(IOSFloatArray *)o;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                             withFloatArray:(IOSFloatArray * __nullable)o;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -95,13 +100,13 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthPrimitiveFloatArraySubject)
 
 #pragma mark Public
 
-- (jboolean)isEqual:(id)o;
+- (jboolean)isEqual:(id __nullable)o;
 
 - (NSUInteger)hash;
 
-- (void)ofWithFloatArray:(IOSFloatArray *)expected;
+- (void)ofWithFloatArray:(IOSFloatArray * __nonnull)expected;
 
-- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)ofElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 @end
 

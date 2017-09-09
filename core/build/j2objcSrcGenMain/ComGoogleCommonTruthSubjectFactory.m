@@ -31,8 +31,8 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (ComGoogleCommonTruthSubject *)getSubjectWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)fs
-                                                                            withId:(id)that {
+- (ComGoogleCommonTruthSubject *)getSubjectWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)fs
+                                                                            withId:(id __nonnull)that {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
   return 0;

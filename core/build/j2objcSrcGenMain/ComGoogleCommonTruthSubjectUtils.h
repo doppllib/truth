@@ -29,14 +29,14 @@
 
 #pragma mark Package-Private
 
-+ (id<JavaUtilList>)accumulateWithId:(id)first
-                              withId:(id)second
-                   withNSObjectArray:(IOSObjectArray *)rest;
++ (id<JavaUtilList>)accumulateWithId:(id __nonnull)first
+                              withId:(id __nonnull)second
+                   withNSObjectArray:(IOSObjectArray * __nonnull)rest;
 
-+ (id<JavaUtilList>)countDuplicatesWithJavaUtilCollection:(id<JavaUtilCollection>)items;
++ (id<JavaUtilList>)countDuplicatesWithJavaUtilCollection:(id<JavaUtilCollection> __nonnull)items;
 
-+ (jint)countOfWithId:(id)t
- withJavaLangIterable:(id<JavaLangIterable>)items;
++ (jint)countOfWithId:(id __nonnull)t
+ withJavaLangIterable:(id<JavaLangIterable> __nonnull)items;
 
 @end
 

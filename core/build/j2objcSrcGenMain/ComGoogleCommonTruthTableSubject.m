@@ -36,8 +36,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthTableSubject_
 
 @implementation ComGoogleCommonTruthTableSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                            withComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)table {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                            withComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)table {
   ComGoogleCommonTruthTableSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectTable_(self, failureStrategy, table);
   return self;
 }
@@ -62,51 +62,51 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthTableSubject_
   }
 }
 
-- (void)containsWithId:(id)rowKey
-                withId:(id)columnKey {
+- (void)containsWithId:(id __nullable)rowKey
+                withId:(id __nullable)columnKey {
   if (![((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) containsWithId:rowKey withId:columnKey]) {
     [self failWithNSString:@"contains mapping for row/column" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ rowKey, columnKey } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)doesNotContainWithId:(id)rowKey
-                      withId:(id)columnKey {
+- (void)doesNotContainWithId:(id __nullable)rowKey
+                      withId:(id __nullable)columnKey {
   if ([((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) containsWithId:rowKey withId:columnKey]) {
     [self failWithNSString:@"does not contain mapping for row/column" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ rowKey, columnKey } count:2 type:NSObject_class_()]];
   }
 }
 
-- (void)containsCellWithId:(id)rowKey
-                    withId:(id)colKey
-                    withId:(id)value {
+- (void)containsCellWithId:(id __nullable)rowKey
+                    withId:(id __nullable)colKey
+                    withId:(id __nullable)value {
   id<ComGoogleCommonCollectTable_Cell> cell = ComGoogleCommonCollectTables_immutableCellWithId_withId_withId_(rowKey, colKey, value);
   if (![((id<JavaUtilSet>) nil_chk([((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) cellSet])) containsWithId:cell]) {
     [self failWithNSString:@"contains cell" withId:cell];
   }
 }
 
-- (void)doesNotContainCellWithId:(id)rowKey
-                          withId:(id)colKey
-                          withId:(id)value {
+- (void)doesNotContainCellWithId:(id __nullable)rowKey
+                          withId:(id __nullable)colKey
+                          withId:(id __nullable)value {
   id<ComGoogleCommonCollectTable_Cell> cell = ComGoogleCommonCollectTables_immutableCellWithId_withId_withId_(rowKey, colKey, value);
   if ([((id<JavaUtilSet>) nil_chk([((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) cellSet])) containsWithId:cell]) {
     [self failWithNSString:@"does not contain cell" withId:cell];
   }
 }
 
-- (void)containsRowWithId:(id)rowKey {
+- (void)containsRowWithId:(id __nullable)rowKey {
   if (![((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) containsRowWithId:rowKey]) {
     [self failWithNSString:@"contains row" withId:rowKey];
   }
 }
 
-- (void)containsColumnWithId:(id)columnKey {
+- (void)containsColumnWithId:(id __nullable)columnKey {
   if (![((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) containsColumnWithId:columnKey]) {
     [self failWithNSString:@"contains column" withId:columnKey];
   }
 }
 
-- (void)containsValueWithId:(id)value {
+- (void)containsValueWithId:(id __nullable)value {
   if (![((id<ComGoogleCommonCollectTable>) nil_chk([self actual])) containsValueWithId:value]) {
     [self failWithNSString:@"contains value" withId:value];
   }

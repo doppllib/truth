@@ -36,35 +36,35 @@
 
 #pragma mark Public
 
-- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)comparingElementsUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (ComGoogleCommonTruthIterableSubject_UsingCorrespondence *)comparingElementsUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
-- (void)containsWithId:(id)element;
+- (void)containsWithId:(id __nullable)element;
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id)firstExpected
-                                                withId:(id)secondExpected
-                                     withNSObjectArray:(IOSObjectArray *)restOfExpected;
+- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id __nullable)firstExpected
+                                                withId:(id __nullable)secondExpected
+                                     withNSObjectArray:(IOSObjectArray * __nullable)restOfExpected;
 
-- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (void)containsAnyOfWithId:(id)first
-                     withId:(id)second
-          withNSObjectArray:(IOSObjectArray *)rest;
+- (void)containsAnyOfWithId:(id __nullable)first
+                     withId:(id __nullable)second
+          withNSObjectArray:(IOSObjectArray * __nullable)rest;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray *)varargs;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray * __nullable)varargs;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
 - (void)containsNoDuplicates;
 
-- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable>)excluded;
+- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded;
 
-- (void)containsNoneOfWithId:(id)firstExcluded
-                      withId:(id)secondExcluded
-           withNSObjectArray:(IOSObjectArray *)restOfExcluded;
+- (void)containsNoneOfWithId:(id __nullable)firstExcluded
+                      withId:(id __nullable)secondExcluded
+           withNSObjectArray:(IOSObjectArray * __nullable)restOfExcluded;
 
-- (void)doesNotContainWithId:(id)element;
+- (void)doesNotContainWithId:(id __nullable)element;
 
 - (void)hasSizeWithInt:(jint)expectedSize;
 
@@ -74,33 +74,38 @@
 
 - (void)isOrdered;
 
-- (void)isOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator;
+- (void)isOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator;
 
 - (void)isPartiallyOrdered;
 
-- (void)isPartiallyOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator;
+- (void)isPartiallyOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator;
 
 - (void)isStrictlyOrdered;
 
-- (void)isStrictlyOrderedWithJavaUtilComparator:(id<JavaUtilComparator>)comparator;
+- (void)isStrictlyOrderedWithJavaUtilComparator:(id<JavaUtilComparator> __nonnull)comparator;
 
-- (ComGoogleCommonTruthIterableSubject *)namedWithNSString:(NSString *)arg0
-                                         withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthIterableSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                         withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                       withJavaLangIterable:(id<JavaLangIterable>)list;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                       withJavaLangIterable:(id<JavaLangIterable> __nullable)list;
 
 - (id<JavaLangIterable>)actual;
 
-- (void)failWithBadResultsAndSuffixWithNSString:(NSString *)verb
-                                         withId:(id)expected
-                                   withNSString:(NSString *)failVerb
-                                         withId:(id)actual
-                                   withNSString:(NSString *)suffix;
+- (void)failWithBadResultsAndSuffixWithNSString:(NSString * __nonnull)verb
+                                         withId:(id __nonnull)expected
+                                   withNSString:(NSString * __nonnull)failVerb
+                                         withId:(id __nonnull)actual
+                                   withNSString:(NSString * __nonnull)suffix;
 
 - (id<JavaLangIterable>)getSubject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -130,47 +135,51 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthIterableSubject)
 
 #pragma mark Public
 
-- (void)containsWithId:(id)expected;
+- (void)containsWithId:(id __nullable)expected;
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (id<ComGoogleCommonTruthOrdered>)containsAllInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id)first
-                                                withId:(id)second
-                                     withNSObjectArray:(IOSObjectArray *)rest;
+- (id<ComGoogleCommonTruthOrdered>)containsAllOfWithId:(id __nullable)first
+                                                withId:(id __nullable)second
+                                     withNSObjectArray:(IOSObjectArray * __nullable)rest;
 
-- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (void)containsAnyInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (void)containsAnyOfWithId:(id)first
-                     withId:(id)second
-          withNSObjectArray:(IOSObjectArray *)rest;
+- (void)containsAnyOfWithId:(id __nullable)first
+                     withId:(id __nullable)second
+          withNSObjectArray:(IOSObjectArray * __nullable)rest;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray *)expected;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithNSObjectArray:(IOSObjectArray * __nullable)expected;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable>)expected;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyElementsInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)expected;
 
-- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable>)excluded;
+- (void)containsNoneInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)excluded;
 
-- (void)containsNoneOfWithId:(id)firstExcluded
-                      withId:(id)secondExcluded
-           withNSObjectArray:(IOSObjectArray *)restOfExcluded;
+- (void)containsNoneOfWithId:(id __nullable)firstExcluded
+                      withId:(id __nullable)secondExcluded
+           withNSObjectArray:(IOSObjectArray * __nullable)restOfExcluded;
 
-- (void)doesNotContainWithId:(id)excluded;
+- (void)doesNotContainWithId:(id __nullable)excluded;
 
 #pragma mark Package-Private
 
-- (void)failIfCandidateMappingHasMissingWithJavaUtilList:(id<JavaUtilList>)expected
-             withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)mapping;
+- (void)failIfCandidateMappingHasMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)expected
+             withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)mapping;
 
-- (void)failIfCandidateMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)actual
-                                               withJavaUtilList:(id<JavaUtilList>)expected
-                    withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap *)mapping;
+- (void)failIfCandidateMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                               withJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                    withComGoogleCommonCollectImmutableMultimap:(ComGoogleCommonCollectImmutableMultimap * __nonnull)mapping;
 
-- (void)failIfOneToOneMappingHasMissingWithJavaUtilList:(id<JavaUtilList>)expected
-                        withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)mapping;
+- (void)failIfOneToOneMappingHasMissingWithJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                        withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)mapping;
 
-- (void)failIfOneToOneMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList>)actual
-                                              withJavaUtilList:(id<JavaUtilList>)expected
-                               withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap>)mapping;
+- (void)failIfOneToOneMappingHasMissingOrExtraWithJavaUtilList:(id<JavaUtilList> __nonnull)actual
+                                              withJavaUtilList:(id<JavaUtilList> __nonnull)expected
+                               withComGoogleCommonCollectBiMap:(id<ComGoogleCommonCollectBiMap> __nonnull)mapping;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

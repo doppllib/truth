@@ -56,6 +56,7 @@
 #include "java/lang/Integer.h"
 #include "java/lang/Iterable.h"
 #include "java/lang/Long.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/annotation/Annotation.h"
 #include "java/math/BigDecimal.h"
 #include "java/util/Map.h"
@@ -135,8 +136,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthTestVerb__Ann
 
 @interface ComGoogleCommonTruthTestVerb_1 : ComGoogleCommonTruthComparableSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaLangComparable:(id<JavaLangComparable>)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)subject;
 
 @end
 
@@ -150,154 +151,154 @@ __attribute__((unused)) static ComGoogleCommonTruthTestVerb_1 *create_ComGoogleC
 
 @implementation ComGoogleCommonTruthTestVerb
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy {
   ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_(self, failureStrategy);
   return self;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)message {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)message {
   ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_withNSString_(self, failureStrategy, message);
   return self;
 }
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                               withNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                               withNSString:(NSString * __nullable)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args {
   ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_withNSString_withNSObjectArray_(self, failureStrategy, format, args);
   return self;
 }
 
-- (ComGoogleCommonTruthComparableSubject *)thatWithJavaLangComparable:(id<JavaLangComparable>)target {
+- (ComGoogleCommonTruthComparableSubject *)thatWithJavaLangComparable:(id<JavaLangComparable> __nullable)target {
   return create_ComGoogleCommonTruthTestVerb_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangComparable_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthBigDecimalSubject *)thatWithJavaMathBigDecimal:(JavaMathBigDecimal *)target {
+- (ComGoogleCommonTruthBigDecimalSubject *)thatWithJavaMathBigDecimal:(JavaMathBigDecimal * __nullable)target {
   return create_ComGoogleCommonTruthBigDecimalSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaMathBigDecimal_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthSubject *)thatWithId:(id)target {
+- (ComGoogleCommonTruthSubject *)thatWithId:(id __nullable)target {
   return create_ComGoogleCommonTruthDefaultSubject_initWithComGoogleCommonTruthFailureStrategy_withId_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthClassSubject *)thatWithIOSClass:(IOSClass *)target {
+- (ComGoogleCommonTruthClassSubject *)thatWithIOSClass:(IOSClass * __nullable)target {
   return create_ComGoogleCommonTruthClassSubject_initWithComGoogleCommonTruthFailureStrategy_withIOSClass_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthThrowableSubject *)thatWithNSException:(NSException *)target {
-  return create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withNSException_([self getFailureStrategy], target);
+- (ComGoogleCommonTruthThrowableSubject *)thatWithJavaLangThrowable:(JavaLangThrowable * __nullable)target {
+  return create_ComGoogleCommonTruthThrowableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangThrowable_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthLongSubject *)thatWithJavaLangLong:(JavaLangLong *)target {
+- (ComGoogleCommonTruthLongSubject *)thatWithJavaLangLong:(JavaLangLong * __nullable)target {
   return create_ComGoogleCommonTruthLongSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangLong_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthDoubleSubject *)thatWithJavaLangDouble:(JavaLangDouble *)target {
+- (ComGoogleCommonTruthDoubleSubject *)thatWithJavaLangDouble:(JavaLangDouble * __nullable)target {
   return create_ComGoogleCommonTruthDoubleSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangDouble_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthFloatSubject *)thatWithJavaLangFloat:(JavaLangFloat *)target {
+- (ComGoogleCommonTruthFloatSubject *)thatWithJavaLangFloat:(JavaLangFloat * __nullable)target {
   return create_ComGoogleCommonTruthFloatSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangFloat_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthIntegerSubject *)thatWithJavaLangInteger:(JavaLangInteger *)target {
+- (ComGoogleCommonTruthIntegerSubject *)thatWithJavaLangInteger:(JavaLangInteger * __nullable)target {
   return create_ComGoogleCommonTruthIntegerSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangInteger_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthBooleanSubject *)thatWithJavaLangBoolean:(JavaLangBoolean *)target {
+- (ComGoogleCommonTruthBooleanSubject *)thatWithJavaLangBoolean:(JavaLangBoolean * __nullable)target {
   return create_ComGoogleCommonTruthBooleanSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangBoolean_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthStringSubject *)thatWithNSString:(NSString *)target {
+- (ComGoogleCommonTruthStringSubject *)thatWithNSString:(NSString * __nullable)target {
   return create_ComGoogleCommonTruthStringSubject_initWithComGoogleCommonTruthFailureStrategy_withNSString_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthIterableSubject *)thatWithJavaLangIterable:(id<JavaLangIterable>)target {
+- (ComGoogleCommonTruthIterableSubject *)thatWithJavaLangIterable:(id<JavaLangIterable> __nullable)target {
   return create_ComGoogleCommonTruthIterableSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangIterable_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthSortedSetSubject *)thatWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)target {
+- (ComGoogleCommonTruthSortedSetSubject *)thatWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nullable)target {
   return create_ComGoogleCommonTruthSortedSetSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilSortedSet_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthObjectArraySubject *)thatWithNSObjectArray:(IOSObjectArray *)target {
+- (ComGoogleCommonTruthObjectArraySubject *)thatWithNSObjectArray:(IOSObjectArray * __nullable)target {
   return create_ComGoogleCommonTruthObjectArraySubject_initWithComGoogleCommonTruthFailureStrategy_withNSObjectArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)thatWithBooleanArray:(IOSBooleanArray *)target {
+- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)thatWithBooleanArray:(IOSBooleanArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveBooleanArraySubject_initWithComGoogleCommonTruthFailureStrategy_withBooleanArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveShortArraySubject *)thatWithShortArray:(IOSShortArray *)target {
+- (ComGoogleCommonTruthPrimitiveShortArraySubject *)thatWithShortArray:(IOSShortArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveShortArraySubject_initWithComGoogleCommonTruthFailureStrategy_withShortArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveIntArraySubject *)thatWithIntArray:(IOSIntArray *)target {
+- (ComGoogleCommonTruthPrimitiveIntArraySubject *)thatWithIntArray:(IOSIntArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveIntArraySubject_initWithComGoogleCommonTruthFailureStrategy_withIntArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveLongArraySubject *)thatWithLongArray:(IOSLongArray *)target {
+- (ComGoogleCommonTruthPrimitiveLongArraySubject *)thatWithLongArray:(IOSLongArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveLongArraySubject_initWithComGoogleCommonTruthFailureStrategy_withLongArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveCharArraySubject *)thatWithCharArray:(IOSCharArray *)target {
+- (ComGoogleCommonTruthPrimitiveCharArraySubject *)thatWithCharArray:(IOSCharArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveCharArraySubject_initWithComGoogleCommonTruthFailureStrategy_withCharArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveByteArraySubject *)thatWithByteArray:(IOSByteArray *)target {
+- (ComGoogleCommonTruthPrimitiveByteArraySubject *)thatWithByteArray:(IOSByteArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveByteArraySubject_initWithComGoogleCommonTruthFailureStrategy_withByteArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)thatWithFloatArray:(IOSFloatArray *)target {
+- (ComGoogleCommonTruthPrimitiveFloatArraySubject *)thatWithFloatArray:(IOSFloatArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveFloatArraySubject_initWithComGoogleCommonTruthFailureStrategy_withFloatArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)thatWithDoubleArray:(IOSDoubleArray *)target {
+- (ComGoogleCommonTruthPrimitiveDoubleArraySubject *)thatWithDoubleArray:(IOSDoubleArray * __nullable)target {
   return create_ComGoogleCommonTruthPrimitiveDoubleArraySubject_initWithComGoogleCommonTruthFailureStrategy_withDoubleArray_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthGuavaOptionalSubject *)thatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional *)target {
+- (ComGoogleCommonTruthGuavaOptionalSubject *)thatWithComGoogleCommonBaseOptional:(ComGoogleCommonBaseOptional * __nullable)target {
   return create_ComGoogleCommonTruthGuavaOptionalSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonBaseOptional_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthMapSubject *)thatWithJavaUtilMap:(id<JavaUtilMap>)target {
+- (ComGoogleCommonTruthMapSubject *)thatWithJavaUtilMap:(id<JavaUtilMap> __nullable)target {
   return create_ComGoogleCommonTruthMapSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilMap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthSortedMapSubject *)thatWithJavaUtilSortedMap:(id<JavaUtilSortedMap>)target {
+- (ComGoogleCommonTruthSortedMapSubject *)thatWithJavaUtilSortedMap:(id<JavaUtilSortedMap> __nullable)target {
   return create_ComGoogleCommonTruthSortedMapSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilSortedMap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthMultimapSubject *)thatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)target {
+- (ComGoogleCommonTruthMultimapSubject *)thatWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)target {
   return create_ComGoogleCommonTruthMultimapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectMultimap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthListMultimapSubject *)thatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap>)target {
+- (ComGoogleCommonTruthListMultimapSubject *)thatWithComGoogleCommonCollectListMultimap:(id<ComGoogleCommonCollectListMultimap> __nullable)target {
   return create_ComGoogleCommonTruthListMultimapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectListMultimap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthSetMultimapSubject *)thatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap>)target {
+- (ComGoogleCommonTruthSetMultimapSubject *)thatWithComGoogleCommonCollectSetMultimap:(id<ComGoogleCommonCollectSetMultimap> __nullable)target {
   return create_ComGoogleCommonTruthSetMultimapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectSetMultimap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthMultisetSubject *)thatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset>)target {
+- (ComGoogleCommonTruthMultisetSubject *)thatWithComGoogleCommonCollectMultiset:(id<ComGoogleCommonCollectMultiset> __nullable)target {
   return create_ComGoogleCommonTruthMultisetSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectMultiset_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthTableSubject *)thatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable>)target {
+- (ComGoogleCommonTruthTableSubject *)thatWithComGoogleCommonCollectTable:(id<ComGoogleCommonCollectTable> __nullable)target {
   return create_ComGoogleCommonTruthTableSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonCollectTable_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthAtomicLongMapSubject *)thatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap *)target {
+- (ComGoogleCommonTruthAtomicLongMapSubject *)thatWithComGoogleCommonUtilConcurrentAtomicLongMap:(ComGoogleCommonUtilConcurrentAtomicLongMap * __nullable)target {
   return create_ComGoogleCommonTruthAtomicLongMapSubject_initWithComGoogleCommonTruthFailureStrategy_withComGoogleCommonUtilConcurrentAtomicLongMap_([self getFailureStrategy], target);
 }
 
-- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString *)failureMessage {
+- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString * __nullable)failureMessage {
   return create_ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_withNSString_withNSObjectArray_([self getFailureStrategy], @"%s", [IOSObjectArray arrayWithObjects:(id[]){ failureMessage } count:1 type:NSObject_class_()]);
 }
 
-- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString *)format
-                                               withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthTestVerb *)withFailureMessageWithNSString:(NSString * __nullable)format
+                                               withNSObjectArray:(IOSObjectArray * __nonnull)args {
   return create_ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_withNSString_withNSObjectArray_([self getFailureStrategy], format, args);
 }
 
@@ -349,7 +350,7 @@ __attribute__((unused)) static ComGoogleCommonTruthTestVerb_1 *create_ComGoogleC
   methods[4].selector = @selector(thatWithJavaMathBigDecimal:);
   methods[5].selector = @selector(thatWithId:);
   methods[6].selector = @selector(thatWithIOSClass:);
-  methods[7].selector = @selector(thatWithNSException:);
+  methods[7].selector = @selector(thatWithJavaLangThrowable:);
   methods[8].selector = @selector(thatWithJavaLangLong:);
   methods[9].selector = @selector(thatWithJavaLangDouble:);
   methods[10].selector = @selector(thatWithJavaLangFloat:);
@@ -379,7 +380,7 @@ __attribute__((unused)) static ComGoogleCommonTruthTestVerb_1 *create_ComGoogleC
   methods[34].selector = @selector(withFailureMessageWithNSString:);
   methods[35].selector = @selector(withFailureMessageWithNSString:withNSObjectArray:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;", "LComGoogleCommonTruthFailureStrategy;LNSString;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$0, "LComGoogleCommonTruthFailureStrategy;LNSString;[LNSObject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$1, "that", "LJavaLangComparable;", "<T::Ljava/lang/Comparable<*>;>(TT;)Lcom/google/common/truth/ComparableSubject<*TT;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$2, "LJavaMathBigDecimal;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$3, "LNSObject;", "(Ljava/lang/Object;)Lcom/google/common/truth/Subject<Lcom/google/common/truth/DefaultSubject;Ljava/lang/Object;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$4, "LIOSClass;", "(Ljava/lang/Class<*>;)Lcom/google/common/truth/ClassSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$5, "LNSException;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$6, "LJavaLangLong;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$7, "LJavaLangDouble;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$8, "LJavaLangFloat;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$9, "LJavaLangInteger;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$10, "LJavaLangBoolean;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$11, "LNSString;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$12, "LJavaLangIterable;", "(Ljava/lang/Iterable<*>;)Lcom/google/common/truth/IterableSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$13, "LJavaUtilSortedSet;", "(Ljava/util/SortedSet<*>;)Lcom/google/common/truth/SortedSetSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$14, "[LNSObject;", "<T:Ljava/lang/Object;>([TT;)Lcom/google/common/truth/ObjectArraySubject<TT;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$15, "[Z", (void *)&ComGoogleCommonTruthTestVerb__Annotations$16, "[S", (void *)&ComGoogleCommonTruthTestVerb__Annotations$17, "[I", (void *)&ComGoogleCommonTruthTestVerb__Annotations$18, "[J", (void *)&ComGoogleCommonTruthTestVerb__Annotations$19, "[C", (void *)&ComGoogleCommonTruthTestVerb__Annotations$20, "[B", (void *)&ComGoogleCommonTruthTestVerb__Annotations$21, "[F", (void *)&ComGoogleCommonTruthTestVerb__Annotations$22, "[D", (void *)&ComGoogleCommonTruthTestVerb__Annotations$23, "LComGoogleCommonBaseOptional;", "(Lcom/google/common/base/Optional<*>;)Lcom/google/common/truth/GuavaOptionalSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$24, "LJavaUtilMap;", "(Ljava/util/Map<**>;)Lcom/google/common/truth/MapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$25, "LJavaUtilSortedMap;", "(Ljava/util/SortedMap<**>;)Lcom/google/common/truth/SortedMapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$26, "LComGoogleCommonCollectMultimap;", "(Lcom/google/common/collect/Multimap<**>;)Lcom/google/common/truth/MultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$27, "LComGoogleCommonCollectListMultimap;", "(Lcom/google/common/collect/ListMultimap<**>;)Lcom/google/common/truth/ListMultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$28, "LComGoogleCommonCollectSetMultimap;", "(Lcom/google/common/collect/SetMultimap<**>;)Lcom/google/common/truth/SetMultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$29, "LComGoogleCommonCollectMultiset;", "(Lcom/google/common/collect/Multiset<*>;)Lcom/google/common/truth/MultisetSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$30, "LComGoogleCommonCollectTable;", "(Lcom/google/common/collect/Table<***>;)Lcom/google/common/truth/TableSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$31, "LComGoogleCommonUtilConcurrentAtomicLongMap;", "(Lcom/google/common/util/concurrent/AtomicLongMap<*>;)Lcom/google/common/truth/AtomicLongMapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$32, "withFailureMessage", (void *)&ComGoogleCommonTruthTestVerb__Annotations$33, "LNSString;[LNSObject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$34, "Lcom/google/common/truth/AbstractVerb<Lcom/google/common/truth/TestVerb;>;" };
+  static const void *ptrTable[] = { "LComGoogleCommonTruthFailureStrategy;", "LComGoogleCommonTruthFailureStrategy;LNSString;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$0, "LComGoogleCommonTruthFailureStrategy;LNSString;[LNSObject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$1, "that", "LJavaLangComparable;", "<T::Ljava/lang/Comparable<*>;>(TT;)Lcom/google/common/truth/ComparableSubject<*TT;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$2, "LJavaMathBigDecimal;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$3, "LNSObject;", "(Ljava/lang/Object;)Lcom/google/common/truth/Subject<Lcom/google/common/truth/DefaultSubject;Ljava/lang/Object;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$4, "LIOSClass;", "(Ljava/lang/Class<*>;)Lcom/google/common/truth/ClassSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$5, "LJavaLangThrowable;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$6, "LJavaLangLong;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$7, "LJavaLangDouble;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$8, "LJavaLangFloat;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$9, "LJavaLangInteger;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$10, "LJavaLangBoolean;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$11, "LNSString;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$12, "LJavaLangIterable;", "(Ljava/lang/Iterable<*>;)Lcom/google/common/truth/IterableSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$13, "LJavaUtilSortedSet;", "(Ljava/util/SortedSet<*>;)Lcom/google/common/truth/SortedSetSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$14, "[LNSObject;", "<T:Ljava/lang/Object;>([TT;)Lcom/google/common/truth/ObjectArraySubject<TT;>;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$15, "[Z", (void *)&ComGoogleCommonTruthTestVerb__Annotations$16, "[S", (void *)&ComGoogleCommonTruthTestVerb__Annotations$17, "[I", (void *)&ComGoogleCommonTruthTestVerb__Annotations$18, "[J", (void *)&ComGoogleCommonTruthTestVerb__Annotations$19, "[C", (void *)&ComGoogleCommonTruthTestVerb__Annotations$20, "[B", (void *)&ComGoogleCommonTruthTestVerb__Annotations$21, "[F", (void *)&ComGoogleCommonTruthTestVerb__Annotations$22, "[D", (void *)&ComGoogleCommonTruthTestVerb__Annotations$23, "LComGoogleCommonBaseOptional;", "(Lcom/google/common/base/Optional<*>;)Lcom/google/common/truth/GuavaOptionalSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$24, "LJavaUtilMap;", "(Ljava/util/Map<**>;)Lcom/google/common/truth/MapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$25, "LJavaUtilSortedMap;", "(Ljava/util/SortedMap<**>;)Lcom/google/common/truth/SortedMapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$26, "LComGoogleCommonCollectMultimap;", "(Lcom/google/common/collect/Multimap<**>;)Lcom/google/common/truth/MultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$27, "LComGoogleCommonCollectListMultimap;", "(Lcom/google/common/collect/ListMultimap<**>;)Lcom/google/common/truth/ListMultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$28, "LComGoogleCommonCollectSetMultimap;", "(Lcom/google/common/collect/SetMultimap<**>;)Lcom/google/common/truth/SetMultimapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$29, "LComGoogleCommonCollectMultiset;", "(Lcom/google/common/collect/Multiset<*>;)Lcom/google/common/truth/MultisetSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$30, "LComGoogleCommonCollectTable;", "(Lcom/google/common/collect/Table<***>;)Lcom/google/common/truth/TableSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$31, "LComGoogleCommonUtilConcurrentAtomicLongMap;", "(Lcom/google/common/util/concurrent/AtomicLongMap<*>;)Lcom/google/common/truth/AtomicLongMapSubject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$32, "withFailureMessage", (void *)&ComGoogleCommonTruthTestVerb__Annotations$33, "LNSString;[LNSObject;", (void *)&ComGoogleCommonTruthTestVerb__Annotations$34, "Lcom/google/common/truth/AbstractVerb<Lcom/google/common/truth/TestVerb;>;" };
   static const J2ObjcClassInfo _ComGoogleCommonTruthTestVerb = { "TestVerb", "com.google.common.truth", ptrTable, methods, NULL, 7, 0x1, 36, 0, -1, -1, -1, 87, -1 };
   return &_ComGoogleCommonTruthTestVerb;
 }
@@ -566,8 +567,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthTestVerb)
 
 @implementation ComGoogleCommonTruthTestVerb_1
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                     withJavaLangComparable:(id<JavaLangComparable>)subject {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                     withJavaLangComparable:(id<JavaLangComparable> __nonnull)subject {
   ComGoogleCommonTruthTestVerb_1_initWithComGoogleCommonTruthFailureStrategy_withJavaLangComparable_(self, failureStrategy, subject);
   return self;
 }

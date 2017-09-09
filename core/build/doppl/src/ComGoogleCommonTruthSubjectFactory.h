@@ -30,8 +30,8 @@
 
 - (instancetype)init;
 
-- (ComGoogleCommonTruthSubject *)getSubjectWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)fs
-                                                                            withId:(id)that;
+- (ComGoogleCommonTruthSubject *)getSubjectWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)fs
+                                                                            withId:(id __nonnull)that;
 
 - (IOSClass *)getSubjectClass;
 

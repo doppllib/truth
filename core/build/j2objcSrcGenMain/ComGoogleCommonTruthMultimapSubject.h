@@ -36,34 +36,34 @@
 
 #pragma mark Public
 
-- (ComGoogleCommonTruthMultimapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence *)correspondence;
+- (ComGoogleCommonTruthMultimapSubject_UsingCorrespondence *)comparingValuesUsingWithComGoogleCommonTruthCorrespondence:(ComGoogleCommonTruthCorrespondence * __nonnull)correspondence;
 
-- (void)containsEntryWithId:(id)key
-                     withId:(id)value;
+- (void)containsEntryWithId:(id __nullable)key
+                     withId:(id __nullable)value;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap;
 
-- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)expectedMultimap;
+- (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nonnull)expectedMultimap;
 
-- (void)containsKeyWithId:(id)key;
+- (void)containsKeyWithId:(id __nullable)key;
 
-- (void)doesNotContainEntryWithId:(id)key
-                           withId:(id)value;
+- (void)doesNotContainEntryWithId:(id __nullable)key
+                           withId:(id __nullable)value;
 
-- (void)doesNotContainKeyWithId:(id)key;
+- (void)doesNotContainKeyWithId:(id __nullable)key;
 
 - (void)hasSizeWithInt:(jint)expectedSize;
 
 - (void)isEmpty;
 
-- (void)isEqualToWithId:(id)other;
+- (void)isEqualToWithId:(id __nullable)other;
 
 - (void)isNotEmpty;
 
-- (ComGoogleCommonTruthMultimapSubject *)namedWithNSString:(NSString *)arg0
-                                         withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthMultimapSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                         withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
-- (ComGoogleCommonTruthIterableSubject *)valuesForKeyWithId:(id)key;
+- (ComGoogleCommonTruthIterableSubject *)valuesForKeyWithId:(id __nullable)key;
 
 #pragma mark Protected
 
@@ -73,8 +73,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap>)multimap;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                         withComGoogleCommonCollectMultimap:(id<ComGoogleCommonCollectMultimap> __nullable)multimap;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -97,11 +102,15 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthMultimapSubject)
 
 #pragma mark Public
 
-- (void)containsEntryWithId:(id)expectedKey
-                     withId:(id)expectedValue;
+- (void)containsEntryWithId:(id __nullable)expectedKey
+                     withId:(id __nullable)expectedValue;
 
-- (void)doesNotContainEntryWithId:(id)excludedKey
-                           withId:(id)excludedValue;
+- (void)doesNotContainEntryWithId:(id __nullable)excludedKey
+                           withId:(id __nullable)excludedValue;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

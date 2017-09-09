@@ -42,37 +42,37 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSortedSetSubj
   id<JavaUtilSortedSet> delegate_;
 }
 
-+ (id<JavaUtilNavigableSet>)wrapIfNecessaryWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)set;
++ (id<JavaUtilNavigableSet>)wrapIfNecessaryWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)set;
 
-- (instancetype)initWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)delegate;
+- (instancetype)initWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)delegate;
 
 - (id<JavaUtilSortedSet>)delegate;
 
-- (id)ceilingWithId:(id)e;
+- (id)ceilingWithId:(id __nonnull)e;
 
 - (id<JavaUtilIterator>)descendingIterator;
 
 - (id<JavaUtilNavigableSet>)descendingSet;
 
-- (id)floorWithId:(id)e;
+- (id)floorWithId:(id __nonnull)e;
 
-- (id<JavaUtilNavigableSet>)headSetWithId:(id)toElement
+- (id<JavaUtilNavigableSet>)headSetWithId:(id __nonnull)toElement
                               withBoolean:(jboolean)inclusive;
 
-- (id)higherWithId:(id)e;
+- (id)higherWithId:(id __nonnull)e;
 
-- (id)lowerWithId:(id)e;
+- (id)lowerWithId:(id __nonnull)e;
 
 - (id)pollFirst;
 
 - (id)pollLast;
 
-- (id<JavaUtilNavigableSet>)subSetWithId:(id)fromElement
+- (id<JavaUtilNavigableSet>)subSetWithId:(id __nonnull)fromElement
                              withBoolean:(jboolean)fromInclusive
-                                  withId:(id)toElement
+                                  withId:(id __nonnull)toElement
                              withBoolean:(jboolean)toInclusive;
 
-- (id<JavaUtilNavigableSet>)tailSetWithId:(id)fromElement
+- (id<JavaUtilNavigableSet>)tailSetWithId:(id __nonnull)fromElement
                               withBoolean:(jboolean)inclusive;
 
 @end
@@ -93,19 +93,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedSetSubject_SortedSetAsNavig
 
 @implementation ComGoogleCommonTruthSortedSetSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                      withJavaUtilSortedSet:(id<JavaUtilSortedSet>)set {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                      withJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)set {
   ComGoogleCommonTruthSortedSetSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaUtilSortedSet_(self, failureStrategy, set);
   return self;
 }
 
-- (ComGoogleCommonTruthSortedSetSubject *)namedWithNSString:(NSString *)format
-                                          withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthSortedSetSubject *)namedWithNSString:(NSString * __nonnull)format
+                                          withNSObjectArray:(IOSObjectArray * __nonnull)args {
   [super namedWithNSString:format withNSObjectArray:args];
   return self;
 }
 
-- (void)hasFirstElementWithId:(id)element {
+- (void)hasFirstElementWithId:(id __nullable)element {
   if ([((id<JavaUtilNavigableSet>) nil_chk(ComGoogleCommonTruthSortedSetSubject_actualAsNavigableSet(self))) isEmpty]) {
     [self failWithNSString:@"has first element" withId:element];
   }
@@ -117,7 +117,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleCommonTruthSortedSetSubject_SortedSetAsNavig
   }
 }
 
-- (void)hasLastElementWithId:(id)element {
+- (void)hasLastElementWithId:(id __nullable)element {
   if ([((id<JavaUtilNavigableSet>) nil_chk(ComGoogleCommonTruthSortedSetSubject_actualAsNavigableSet(self))) isEmpty]) {
     [self failWithNSString:@"has last element" withId:element];
   }
@@ -193,11 +193,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedSetSubject)
 
 @implementation ComGoogleCommonTruthSortedSetSubject_SortedSetAsNavigableSet
 
-+ (id<JavaUtilNavigableSet>)wrapIfNecessaryWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)set {
++ (id<JavaUtilNavigableSet>)wrapIfNecessaryWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)set {
   return ComGoogleCommonTruthSortedSetSubject_SortedSetAsNavigableSet_wrapIfNecessaryWithJavaUtilSortedSet_(set);
 }
 
-- (instancetype)initWithJavaUtilSortedSet:(id<JavaUtilSortedSet>)delegate {
+- (instancetype)initWithJavaUtilSortedSet:(id<JavaUtilSortedSet> __nonnull)delegate {
   ComGoogleCommonTruthSortedSetSubject_SortedSetAsNavigableSet_initWithJavaUtilSortedSet_(self, delegate);
   return self;
 }
@@ -206,7 +206,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedSetSubject)
   return delegate_;
 }
 
-- (id)ceilingWithId:(id)e {
+- (id)ceilingWithId:(id __nonnull)e {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
@@ -218,20 +218,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedSetSubject)
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)floorWithId:(id)e {
+- (id)floorWithId:(id __nonnull)e {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableSet>)headSetWithId:(id)toElement
+- (id<JavaUtilNavigableSet>)headSetWithId:(id __nonnull)toElement
                               withBoolean:(jboolean)inclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)higherWithId:(id)e {
+- (id)higherWithId:(id __nonnull)e {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id)lowerWithId:(id)e {
+- (id)lowerWithId:(id __nonnull)e {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
@@ -243,14 +243,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthSortedSetSubject)
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableSet>)subSetWithId:(id)fromElement
+- (id<JavaUtilNavigableSet>)subSetWithId:(id __nonnull)fromElement
                              withBoolean:(jboolean)fromInclusive
-                                  withId:(id)toElement
+                                  withId:(id __nonnull)toElement
                              withBoolean:(jboolean)toInclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
 
-- (id<JavaUtilNavigableSet>)tailSetWithId:(id)fromElement
+- (id<JavaUtilNavigableSet>)tailSetWithId:(id __nonnull)fromElement
                               withBoolean:(jboolean)inclusive {
   @throw create_JavaLangUnsupportedOperationException_init();
 }

@@ -31,11 +31,11 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)o;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)o;
 
-- (ComGoogleCommonTruthDefaultSubject *)namedWithNSString:(NSString *)arg0
-                                        withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthDefaultSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                        withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 @end
 

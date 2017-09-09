@@ -37,18 +37,18 @@
   NSString *customName_;
 }
 
-- (void)doEqualCheckWithId:(id)rawSubject
-                    withId:(id)rawOther
+- (void)doEqualCheckWithId:(id __nullable)rawSubject
+                    withId:(id __nullable)rawOther
                withBoolean:(jboolean)expectEqual;
 
-+ (jboolean)isIntegralBoxedPrimitiveWithId:(id)o;
++ (jboolean)isIntegralBoxedPrimitiveWithId:(id __nullable)o;
 
-+ (JavaLangLong *)integralValueWithId:(id)o;
++ (JavaLangLong *)integralValueWithId:(id __nonnull)o;
 
-- (void)failComparingToStringsWithNSString:(NSString *)verb
-                                    withId:(id)subject
-                                    withId:(id)other
-                                    withId:(id)displayOther
+- (void)failComparingToStringsWithNSString:(NSString * __nonnull)verb
+                                    withId:(id __nonnull)subject
+                                    withId:(id __nonnull)other
+                                    withId:(id __nonnull)displayOther
                                withBoolean:(jboolean)compareToStrings;
 
 @end
@@ -110,8 +110,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
 
 @implementation ComGoogleCommonTruthSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)actual {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)actual {
   ComGoogleCommonTruthSubject_initWithComGoogleCommonTruthFailureStrategy_withId_(self, failureStrategy, actual);
   return self;
 }
@@ -120,8 +120,8 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   return customName_;
 }
 
-- (ComGoogleCommonTruthSubject *)namedWithNSString:(NSString *)format
-                                 withNSObjectArray:(IOSObjectArray *)args {
+- (ComGoogleCommonTruthSubject *)namedWithNSString:(NSString * __nonnull)format
+                                 withNSObjectArray:(IOSObjectArray * __nonnull)args {
   ComGoogleCommonBasePreconditions_checkNotNullWithId_withId_(format, @"Name passed to named() cannot be null.");
   JreStrongAssign(&self->customName_, ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(format, args));
   return self;
@@ -139,41 +139,41 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   }
 }
 
-- (void)isEqualToWithId:(id)other {
+- (void)isEqualToWithId:(id __nullable)other {
   ComGoogleCommonTruthSubject_doEqualCheckWithId_withId_withBoolean_(self, ComGoogleCommonTruthSubject_actual(self), other, true);
 }
 
-- (void)isNotEqualToWithId:(id)other {
+- (void)isNotEqualToWithId:(id __nullable)other {
   ComGoogleCommonTruthSubject_doEqualCheckWithId_withId_withBoolean_(self, ComGoogleCommonTruthSubject_actual(self), other, false);
 }
 
-- (void)doEqualCheckWithId:(id)rawSubject
-                    withId:(id)rawOther
+- (void)doEqualCheckWithId:(id __nullable)rawSubject
+                    withId:(id __nullable)rawOther
                withBoolean:(jboolean)expectEqual {
   ComGoogleCommonTruthSubject_doEqualCheckWithId_withId_withBoolean_(self, rawSubject, rawOther, expectEqual);
 }
 
-+ (jboolean)isIntegralBoxedPrimitiveWithId:(id)o {
++ (jboolean)isIntegralBoxedPrimitiveWithId:(id __nullable)o {
   return ComGoogleCommonTruthSubject_isIntegralBoxedPrimitiveWithId_(o);
 }
 
-+ (JavaLangLong *)integralValueWithId:(id)o {
++ (JavaLangLong *)integralValueWithId:(id __nonnull)o {
   return ComGoogleCommonTruthSubject_integralValueWithId_(o);
 }
 
-- (void)isSameAsWithId:(id)other {
+- (void)isSameAsWithId:(id __nullable)other {
   if (ComGoogleCommonTruthSubject_actual(self) != other) {
     ComGoogleCommonTruthSubject_failComparingToStringsWithNSString_withId_withId_withId_withBoolean_(self, @"is the same instance as", ComGoogleCommonTruthSubject_actual(self), other, other, true);
   }
 }
 
-- (void)isNotSameAsWithId:(id)other {
+- (void)isNotSameAsWithId:(id __nullable)other {
   if (ComGoogleCommonTruthSubject_actual(self) == other) {
     ComGoogleCommonTruthSubject_failWithNSString_withId_(self, @"is not the same instance as", other);
   }
 }
 
-- (void)isInstanceOfWithIOSClass:(IOSClass *)clazz {
+- (void)isInstanceOfWithIOSClass:(IOSClass * __nonnull)clazz {
   if (clazz == nil) {
     @throw create_JavaLangNullPointerException_initWithNSString_(@"clazz");
   }
@@ -187,7 +187,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   }
 }
 
-- (void)isNotInstanceOfWithIOSClass:(IOSClass *)clazz {
+- (void)isNotInstanceOfWithIOSClass:(IOSClass * __nonnull)clazz {
   if (clazz == nil) {
     @throw create_JavaLangNullPointerException_initWithNSString_(@"clazz");
   }
@@ -199,31 +199,31 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   }
 }
 
-- (void)isInWithJavaLangIterable:(id<JavaLangIterable>)iterable {
+- (void)isInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable {
   if (!ComGoogleCommonCollectIterables_containsWithJavaLangIterable_withId_(iterable, ComGoogleCommonTruthSubject_actual(self))) {
     ComGoogleCommonTruthSubject_failWithNSString_withId_(self, @"is equal to any element in", iterable);
   }
 }
 
-- (void)isAnyOfWithId:(id)first
-               withId:(id)second
-    withNSObjectArray:(IOSObjectArray *)rest {
+- (void)isAnyOfWithId:(id __nullable)first
+               withId:(id __nullable)second
+    withNSObjectArray:(IOSObjectArray * __nullable)rest {
   id<JavaUtilList> list = ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest);
   if (![((id<JavaUtilList>) nil_chk(list)) containsWithId:ComGoogleCommonTruthSubject_actual(self)]) {
     ComGoogleCommonTruthSubject_failWithNSString_withId_(self, @"is equal to any of", list);
   }
 }
 
-- (void)isNotInWithJavaLangIterable:(id<JavaLangIterable>)iterable {
+- (void)isNotInWithJavaLangIterable:(id<JavaLangIterable> __nonnull)iterable {
   jint index = ComGoogleCommonCollectIterables_indexOfWithJavaLangIterable_withComGoogleCommonBasePredicate_(iterable, ComGoogleCommonBasePredicates_equalToWithId_(ComGoogleCommonTruthSubject_actual(self)));
   if (index != -1) {
     [self failWithRawMessageWithNSString:@"Not true that %s is not in %s. It was found at index %s" withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ ComGoogleCommonTruthSubject_actualAsString(self), iterable, JavaLangInteger_valueOfWithInt_(index) } count:3 type:NSObject_class_()]];
   }
 }
 
-- (void)isNoneOfWithId:(id)first
-                withId:(id)second
-     withNSObjectArray:(IOSObjectArray *)rest {
+- (void)isNoneOfWithId:(id __nullable)first
+                withId:(id __nullable)second
+     withNSObjectArray:(IOSObjectArray * __nullable)rest {
   [self isNotInWithJavaLangIterable:ComGoogleCommonTruthSubjectUtils_accumulateWithId_withId_withNSObjectArray_(first, second, rest)];
 }
 
@@ -257,25 +257,25 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   return create_ComGoogleCommonTruthTestVerb_initWithComGoogleCommonTruthFailureStrategy_(failureStrategy_);
 }
 
-- (void)failWithNSString:(NSString *)proposition {
+- (void)failWithNSString:(NSString * __nonnull)proposition {
   ComGoogleCommonTruthSubject_failWithNSString_(self, proposition);
 }
 
-- (void)failWithNSString:(NSString *)verb
-                  withId:(id)other {
+- (void)failWithNSString:(NSString * __nonnull)verb
+                  withId:(id __nonnull)other {
   ComGoogleCommonTruthSubject_failWithNSString_withId_(self, verb, other);
 }
 
-- (void)failComparingToStringsWithNSString:(NSString *)verb
-                                    withId:(id)subject
-                                    withId:(id)other
-                                    withId:(id)displayOther
+- (void)failComparingToStringsWithNSString:(NSString * __nonnull)verb
+                                    withId:(id __nonnull)subject
+                                    withId:(id __nonnull)other
+                                    withId:(id __nonnull)displayOther
                                withBoolean:(jboolean)compareToStrings {
   ComGoogleCommonTruthSubject_failComparingToStringsWithNSString_withId_withId_withId_withBoolean_(self, verb, subject, other, displayOther, compareToStrings);
 }
 
-- (void)failWithNSString:(NSString *)verb
-       withNSObjectArray:(IOSObjectArray *)messageParts {
+- (void)failWithNSString:(NSString * __nonnull)verb
+       withNSObjectArray:(IOSObjectArray * __nonnull)messageParts {
   if (((IOSObjectArray *) nil_chk(messageParts))->size_ == 0) {
     ComGoogleCommonTruthSubject_failWithNSString_(self, verb);
   }
@@ -298,34 +298,34 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthSubject__Anno
   }
 }
 
-- (void)failWithBadResultsWithNSString:(NSString *)verb
-                                withId:(id)expected
-                          withNSString:(NSString *)failVerb
-                                withId:(id)actual {
+- (void)failWithBadResultsWithNSString:(NSString * __nonnull)verb
+                                withId:(id __nonnull)expected
+                          withNSString:(NSString * __nonnull)failVerb
+                                withId:(id __nonnull)actual {
   ComGoogleCommonTruthSubject_failWithBadResultsWithNSString_withId_withNSString_withId_(self, verb, expected, failVerb, actual);
 }
 
-- (void)failWithCustomSubjectWithNSString:(NSString *)verb
-                                   withId:(id)expected
-                                   withId:(id)actual {
+- (void)failWithCustomSubjectWithNSString:(NSString * __nonnull)verb
+                                   withId:(id __nonnull)expected
+                                   withId:(id __nonnull)actual {
   NSString *message = ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(@"Not true that <%s> %s <%s>", [IOSObjectArray arrayWithObjects:(id[]){ (actual == nil) ? @"null reference" : actual, verb, expected } count:3 type:NSObject_class_()]);
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk(failureStrategy_)) failWithNSString:message];
 }
 
-- (void)failWithoutSubjectWithNSString:(NSString *)proposition {
+- (void)failWithoutSubjectWithNSString:(NSString * __nonnull)proposition {
   ComGoogleCommonTruthSubject_failWithoutSubjectWithNSString_(self, proposition);
 }
 
-- (void)failWithoutActualWithNSString:(NSString *)proposition {
+- (void)failWithoutActualWithNSString:(NSString * __nonnull)proposition {
   ComGoogleCommonTruthSubject_failWithoutActualWithNSString_(self, proposition);
 }
 
-- (void)failWithRawMessageWithNSString:(NSString *)message
-                     withNSObjectArray:(IOSObjectArray *)parameters {
+- (void)failWithRawMessageWithNSString:(NSString * __nonnull)message
+                     withNSObjectArray:(IOSObjectArray * __nonnull)parameters {
   [((ComGoogleCommonTruthFailureStrategy *) nil_chk(failureStrategy_)) failWithNSString:ComGoogleCommonTruthStringUtil_formatWithNSString_withNSObjectArray_(message, parameters)];
 }
 
-- (jboolean)isEqual:(id)o {
+- (jboolean)isEqual:(id __nullable)o {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"If you meant to test object equality, use .isEqualTo(other) instead.");
 }
 

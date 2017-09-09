@@ -36,12 +36,12 @@
 
 - (ComGoogleCommonTruthIterableSubject *)asList;
 
-- (void)isEqualToWithId:(id)expected;
+- (void)isEqualToWithId:(id __nonnull)expected;
 
-- (void)isNotEqualToWithId:(id)expected;
+- (void)isNotEqualToWithId:(id __nonnull)expected;
 
-- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)namedWithNSString:(NSString *)arg0
-                                                      withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthPrimitiveBooleanArraySubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                                      withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -55,8 +55,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                           withBooleanArray:(IOSBooleanArray *)o;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                           withBooleanArray:(IOSBooleanArray * __nullable)o;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

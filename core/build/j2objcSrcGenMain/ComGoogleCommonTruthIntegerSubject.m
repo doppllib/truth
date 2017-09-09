@@ -21,13 +21,13 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthIntegerSubjec
 
 @implementation ComGoogleCommonTruthIntegerSubject
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                        withJavaLangInteger:(JavaLangInteger *)integer {
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                        withJavaLangInteger:(JavaLangInteger * __nullable)integer {
   ComGoogleCommonTruthIntegerSubject_initWithComGoogleCommonTruthFailureStrategy_withJavaLangInteger_(self, failureStrategy, integer);
   return self;
 }
 
-- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangInteger *)other {
+- (void)isEquivalentAccordingToCompareToWithJavaLangComparable:(JavaLangInteger * __nonnull)other {
   [super isEquivalentAccordingToCompareToWithJavaLangComparable:other];
 }
 

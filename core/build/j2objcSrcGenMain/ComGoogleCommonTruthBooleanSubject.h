@@ -36,8 +36,8 @@
 
 - (void)isTrue;
 
-- (ComGoogleCommonTruthBooleanSubject *)namedWithNSString:(NSString *)arg0
-                                        withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthBooleanSubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                        withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -47,8 +47,13 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                        withJavaLangBoolean:(JavaLangBoolean *)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                        withJavaLangBoolean:(JavaLangBoolean * __nullable)subject;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)arg0
+                                                     withId:(id __nonnull)arg1 NS_UNAVAILABLE;
 
 @end
 

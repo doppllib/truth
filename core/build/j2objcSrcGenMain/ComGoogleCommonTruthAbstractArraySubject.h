@@ -38,8 +38,8 @@
 
 - (void)isNotEmpty;
 
-- (ComGoogleCommonTruthAbstractArraySubject *)namedWithNSString:(NSString *)arg0
-                                              withNSObjectArray:(IOSObjectArray *)arg1;
+- (ComGoogleCommonTruthAbstractArraySubject *)namedWithNSString:(NSString * __nonnull)arg0
+                                              withNSObjectArray:(IOSObjectArray * __nonnull)arg1;
 
 #pragma mark Protected
 
@@ -47,12 +47,12 @@
 
 #pragma mark Package-Private
 
-- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy *)failureStrategy
-                                                     withId:(id)subject;
+- (instancetype)initWithComGoogleCommonTruthFailureStrategy:(ComGoogleCommonTruthFailureStrategy * __nonnull)failureStrategy
+                                                     withId:(id __nullable)subject;
 
 - (NSString *)brackets;
 
-- (void)failWithBadTypeWithId:(id)expected;
+- (void)failWithBadTypeWithId:(id __nonnull)expected;
 
 - (id<JavaUtilList>)listRepresentation;
 
