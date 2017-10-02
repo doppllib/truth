@@ -1,4 +1,3 @@
-apply from: '../../dopplversions.gradle'
 
 buildscript {
     repositories {
@@ -8,7 +7,7 @@ buildscript {
         maven { url dopplRepo }
     }
     dependencies {
-        classpath 'co.doppl:gradle:0.8.5'
+        classpath 'co.doppl:gradle:0.8.7'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }
 }
@@ -28,7 +27,7 @@ apply plugin: 'maven-publish'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-def dopplTruthVersion = '0.0.3'
+def dopplTruthVersion = '0.0.4'
 
 dependencies {
     compile 'junit:junit:4.11'

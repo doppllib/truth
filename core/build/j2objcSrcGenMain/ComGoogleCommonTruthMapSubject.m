@@ -72,6 +72,12 @@ __attribute__((unused)) static ComGoogleCommonTruthMapSubject_UsingCorrespondenc
 
 __attribute__((unused)) static ComGoogleCommonTruthMapSubject_UsingCorrespondence *create_ComGoogleCommonTruthMapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMapSubject_withComGoogleCommonTruthCorrespondence_(ComGoogleCommonTruthMapSubject *outer$, ComGoogleCommonTruthCorrespondence *correspondence);
 
+__attribute__((unused)) static id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactly(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self);
+
+__attribute__((unused)) static id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyWithId_withId_withNSObjectArray_(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self, id k0, id v0, IOSObjectArray *rest);
+
+__attribute__((unused)) static id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyEntriesInWithJavaUtilMap_(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self, id<JavaUtilMap> expectedMap);
+
 __attribute__((unused)) static id<JavaUtilMap> ComGoogleCommonTruthMapSubject_UsingCorrespondence_getCastSubject(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self);
 
 __attribute__((unused)) static IOSObjectArray *ComGoogleCommonTruthMapSubject_UsingCorrespondence__Annotations$0();
@@ -330,17 +336,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleCommonTruthMapSubject)
 }
 
 - (id<ComGoogleCommonTruthOrdered>)containsExactly {
-  @throw create_JavaLangUnsupportedOperationException_init();
+  return ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactly(self);
 }
 
 - (id<ComGoogleCommonTruthOrdered>)containsExactlyWithId:(id __nullable)k0
                                                   withId:(id __nullable)v0
                                        withNSObjectArray:(IOSObjectArray * __nonnull)rest {
-  @throw create_JavaLangUnsupportedOperationException_init();
+  return ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyWithId_withId_withNSObjectArray_(self, k0, v0, rest);
 }
 
 - (id<ComGoogleCommonTruthOrdered>)containsExactlyEntriesInWithJavaUtilMap:(id<JavaUtilMap> __nonnull)expectedMap {
-  @throw create_JavaLangUnsupportedOperationException_init();
+  return ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyEntriesInWithJavaUtilMap_(self, expectedMap);
 }
 
 - (id<JavaUtilMap>)getCastSubject {
@@ -396,6 +402,18 @@ ComGoogleCommonTruthMapSubject_UsingCorrespondence *new_ComGoogleCommonTruthMapS
 
 ComGoogleCommonTruthMapSubject_UsingCorrespondence *create_ComGoogleCommonTruthMapSubject_UsingCorrespondence_initWithComGoogleCommonTruthMapSubject_withComGoogleCommonTruthCorrespondence_(ComGoogleCommonTruthMapSubject *outer$, ComGoogleCommonTruthCorrespondence *correspondence) {
   J2OBJC_CREATE_IMPL(ComGoogleCommonTruthMapSubject_UsingCorrespondence, initWithComGoogleCommonTruthMapSubject_withComGoogleCommonTruthCorrespondence_, outer$, correspondence)
+}
+
+id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactly(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self) {
+  @throw create_JavaLangUnsupportedOperationException_init();
+}
+
+id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyWithId_withId_withNSObjectArray_(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self, id k0, id v0, IOSObjectArray *rest) {
+  @throw create_JavaLangUnsupportedOperationException_init();
+}
+
+id<ComGoogleCommonTruthOrdered> ComGoogleCommonTruthMapSubject_UsingCorrespondence_containsExactlyEntriesInWithJavaUtilMap_(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self, id<JavaUtilMap> expectedMap) {
+  @throw create_JavaLangUnsupportedOperationException_init();
 }
 
 id<JavaUtilMap> ComGoogleCommonTruthMapSubject_UsingCorrespondence_getCastSubject(ComGoogleCommonTruthMapSubject_UsingCorrespondence *self) {
