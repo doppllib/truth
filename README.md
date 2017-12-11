@@ -1,22 +1,15 @@
 # Doppl Fork
 
 This is a wildly divergent fork of Google's truth. It's a quick and dirty way to
-get Dagger's tests up and running for Doppl. If you plan to seriously use truth,
-please consider creating and actual tracking fork and push real versions. We may, but
-probably not till much bigger fish are fried.
-
-## Versions
-
-[0.0.2](https://github.com/doppllib/truth/tree/doppel-notest)
+get Dagger's tests up and running for Doppl. You can use it but keep in mind it
+might need some TLC.
 
 ## Usage
-
-Don't, but if you must:
 
 ```groovy
 dependencies {
   testCompile "com.google.truth:truth:0.30"
-  testDoppl "co.doppl.com.google.truth:truth:0.0.2"
+  testDoppl "co.doppl.com.google.truth:truth:0.0.5"
 }
 ```
 

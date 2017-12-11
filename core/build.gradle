@@ -32,6 +32,7 @@ def dopplTruthVersion = doppl_truth_doppl
 
 dependencies {
     compile "junit:junit:$doppl_junit_java"
+    doppl "co.doppl.junit:junit:$doppl_junit_doppl"
 
     compileOnly 'javax.inject:javax.inject:1'
     compile 'com.google.guava:guava:19.0'
@@ -48,4 +49,7 @@ apply from: "$dopplSharedScriptHome/bintray.gradle"
 
 test{
     enabled = false
+}
+dopplConfig {
+    skipTests = true
 }
